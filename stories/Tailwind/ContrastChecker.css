@@ -1,0 +1,5 @@
+.rotated-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+  transform: rotate(180deg);
+}

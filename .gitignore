@@ -1,0 +1,5 @@
+static/tailwind_config_viewer
+!static/tailwind_config_viewer/.gitkeep
+.cache
+storybook-static
+static/css/storybook-built.css

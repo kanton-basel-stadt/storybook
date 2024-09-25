@@ -1,0 +1,49 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import '../../static/css/storybook.css'
+
+<Meta title="4. Storybook" />
+<Unstyled>
+
+# About Storybook
+
+Storybook provides a set of default components, such as form inputs, form elements (stepper navigation, fieldsets etc.),
+the page header and footer, tables, typography and much more.
+
+The structure roughly follows the structure of the CSS files provided in the Unplugin.
+
+## Usage
+
+To create a component, you can install the DDS unplugin, configure it according to your framework and start using the
+markup provided in Storybook.
+
+To do so, you can select the components you want from the left and open them by clicking. The should open up the
+component detail page. Together with some additional documentation, you have the possibility to look the HTML code
+necessary to create this component by opening the "HTML" tab located beneath the component preview. You can copy this
+code and use it in your framework of choice. You may alter the code to your liking and adapt it to your needs.
+
+**Make sure to check the markup you copied for icons (usually starting with `<icon-`) and import them according to the
+Unplugin documentation.**
+
+## Configuring a component
+
+Some components offer some form of configuration. All options can be found in the tab "Controls" of the component detail
+page. If you conigure a component, the markup in the "HTML" tab changes as well. This means you can configure your
+component in a WYSIWYG style and copy the finished markup, which is ready to use.
+
+## The structure
+
+The structure of the components is as follows:
+
+ * **Buttons** (Contains all sorts of buttons, such as standard buttons, "super" variants, etc.)
+ * **Form elements** (For all things forms.)
+   * **Building blocks** (To build everything a form needs which is not form inputs, such as stepper navigation, field sets, etc.)
+   * **Inputs** (all form inputs and their variants.)
+ * **Icons** (A list of all icons.)
+ * **Page frame** (Contains everything to build entire pages without much content, such as header, footer, container, etc.)
+ * **Sections** (Special sections used to build content.)
+ * **Typography** (Titles, leads, paragraphs, etc.)
+ * **Tailwind** (For all things Tailwind.)
+   * Contrast checker (To check if any two colors provide enough contrast to be used as background and foreground together, with alternatives.)
+   * Config viewer (To view the entire Tailwind config.)
+
+</Unstyled>

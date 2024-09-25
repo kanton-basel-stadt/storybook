@@ -1,0 +1,46 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import '../../static/css/storybook.css'
+import '@kanton-basel-stadt/designsystem/icons/symbol/baselstab'
+
+<Meta title="1. About the BS.ch Design system" />
+
+<Unstyled>
+<div className="flex whitespace-nowrap leading-none relative text-base lg:text-lg xl:text-2xl mb-50">
+  <icon-symbol-baselstab aria-hidden="true" className="[&>svg]:mt-[0.18em] [&>svg]:text-[0.59em] [&>svg]:w-[1em] [&>svg]:h-[1.7em]" />
+  <span className="h-[1.2083em] ml-[0.3em] pl-[0.25em] leading-[1.2em] border-l border-gray-900 font-bold"><span className="sr-only">Herausgeber: </span> Kanton Basel-Stadt </span>
+</div>
+
+# About the BS.ch design system
+
+Welcome to the Design System documentation of BS.ch. This page aims
+
+## Purpose and goals
+
+The purpose of the DDS ("Digital Design System") is to provide a unified and low-threshold way to build websites in the look & feel of www.bs.ch.
+
+The system itself consists of three pillars:
+ * The Figma files: These contain the overall design specifications, reasoning and the nitty gritty details.
+ * The Unplugin: The software used to install all the CSS necessary to create the look & feel.
+ * The Storybook: The thing you're currently looking at.
+
+The individual pillars are discussed in their respective chapters found in the navigation.
+
+## Usage
+
+To create a website using the DDS, follow these steps:
+
+ 1. Create your application with a framework of choice. The only hard dependency is a frontend build tool, such as Vite, Webpack, ESBuild or similar.
+ 2. Install the DDS Unplugin as a dependency and configure it according to its documentation.
+ 3. Start building your application backend and frontend.
+ 4. Build frontend components with markup found in Storybook
+
+It is important that you keep the DDS Unplugin up to date. The maintainers will inform you of any major update.
+
+## Questions, contributing and support
+
+If you need any support, have questions or want to contribute, please use Github's issues and pull requests.
+
+## Copyright and license
+
+The DDS is published currently under GNU General Public License v3.0 and is Copyright © 2024 and onwards Kanton Basel-Stadt. The license may be subject to change in the future.
+</Unstyled>

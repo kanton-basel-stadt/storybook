@@ -1,0 +1,41 @@
+{
+  "name": "bs-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "npm run tw-build && npm run twc-build && storybook dev -p 6006",
+    "build-storybook": "npm run tw-build && npm run twc-build && storybook build",
+    "start": "npm run storybook",
+    "twc-build": "./node_modules/.bin/tailwind-config-viewer -c ./node_modules/@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js export ./static/tailwind_config_viewer",
+    "tw-build": "./node_modules/.bin/tailwindcss -i ./static/css/storybook.css -o ./static/css/storybook-built.css -c ./node_modules/\\@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js"
+  },
+  "keywords": [""],
+  "type": "module",
+  "author": "Liip AG",
+  "license": "GPL-v3.0",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-a11y": "^8.3.2",
+    "@storybook/addon-essentials": "^8.3.2",
+    "@storybook/addon-links": "^8.3.2",
+    "@storybook/blocks": "^8.3.2",
+    "@storybook/builder-vite": "^8.3.2",
+    "@storybook/test": "^8.3.2",
+    "@storybook/web-components": "^8.3.2",
+    "@storybook/web-components-vite": "^8.3.2",
+    "@whitespace/storybook-addon-html": "^6.1.1",
+    "lit": "^3.2.0",
+    "storybook": "^8.3.2",
+    "tailwind-config-viewer": "^2.0.4"
+  },
+  "dependencies": {
+    "@kanton-basel-stadt/designsystem": "github:kanton-basel-stadt/designsystem",
+    "tailwindcss": "^3.4.13"
+  }
+}
+
+
+
+

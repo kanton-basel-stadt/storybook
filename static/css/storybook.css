@@ -1,0 +1,416 @@
+@import '../../node_modules/@kanton-basel-stadt/designsystem/dist/assets/css/tailwind.css';
+
+/* Root prefix is necessary to have higher specificity than the Storybook theme itself. */
+
+body {
+  @apply !bg-gray-50;
+}
+
+#root {
+  * {
+    @apply ring-green-500;
+  }
+
+  .sidebar-header {
+    @apply mx-[-12px] mt-[-18px] h-40 border-b border-gray-200 bg-white !pl-0;
+
+    button {
+      @apply text-gray-900;
+
+      &:hover {
+        @apply bg-transparent text-blue-500;
+      }
+    }
+  }
+
+  .search-field input {
+
+    /* Manually setting the height ensures consistent look&feel for all browsers. */
+    @apply border border-blue-900 bg-white rounded p-10 text-base text-gray-900 transition-all ease-in-out duration-250 h-[46px];
+    @apply hover:border-blue-500;
+    @apply focus:outline-none focus:shadow-purple-600 focus:border-purple-600;
+    @apply focus-within:outline-none focus-within:shadow-purple-600 focus-within:border-purple-600;
+
+    @apply disabled:border-gray-300 disabled:bg-gray-300 disabled:text-gray-800 disabled:cursor-default;
+
+    &::placeholder {
+      @apply text-gray-500;
+    }
+
+    &:disabled::placeholder {
+      @apply text-gray-800;
+    }
+
+    &[type='date'] {
+      /* Fix issues on iOS Safari. */
+      @apply appearance-none;
+      &::-webkit-date-and-time-value {
+        @apply text-left;
+      }
+    }
+
+    @apply !pl-30;
+  }
+
+  .sidebar-subheading,
+  .search-result-recentlyOpened {
+    @apply capitalize tracking-normal text-sm text-gray-900 font-bold;
+
+    button span:first-of-type {
+      @apply mt-[7px] text-gray-500;
+    }
+  }
+
+  .sidebar-subheading-action {
+    @apply text-gray-900;
+
+    &:focus {
+      @apply text-purple-600;
+    }
+  }
+
+  .sidebar-item,
+  .search-result-item {
+    @apply text-sm text-gray-900;
+
+    svg {
+      @apply text-green-500;
+    }
+
+    &[data-selected='true'] {
+      @apply text-white bg-green-500;
+
+      svg {
+        @apply text-white;
+      }
+    }
+
+    &:hover {
+      @apply !bg-green-100;
+    }
+  }
+
+  .search-result-item--label {
+    & > strong {
+      @apply text-sm text-gray-900 font-normal;
+
+      mark {
+        @apply text-sm text-green-500 font-bold;
+      }
+    }
+
+    & > span {
+      @apply text-xs;
+
+      & > span {
+        @apply text-gray-600;
+      }
+
+      mark {
+        @apply text-green-500 font-bold;
+      }
+    }
+  }
+
+  .search-result-back,
+  .search-result-clearHistory {
+    span {
+      @apply text-gray-900 text-sm;
+    }
+
+    &:hover {
+      @apply !bg-green-100;
+    }
+  }
+}
+
+div[role='main'] > div > div > div > div {
+  button,
+  a {
+    @apply text-gray-900;
+
+    &:hover {
+      @apply bg-transparent text-blue-500;
+    }
+
+    /* These are likely to change, as the class name looks very much generated */
+    &.css-888fv8,
+    .css-1wp2a2y {
+      @apply !bg-green-100;
+    }
+  }
+}
+
+.css-1rb1jn6 {
+  @apply w-auto h-auto;
+}
+
+.css-dvjsav {
+  @apply text-gray-900;
+
+  &:hover {
+    @apply !bg-green-100;
+  }
+}
+.css-e7l6fs {
+  @apply text-sm text-gray-900;
+}
+.css-121f7xv {
+  @apply text-sm !text-gray-900 font-bold;
+}
+.css-1qjsijr {
+  @apply !shadow-none border-gray-200 border-l;
+}
+.css-14tjqbs {
+  @apply !shadow-none border-gray-200 border-b;
+}
+.css-1wp2a2y {
+  @apply !bg-green-100;
+}
+.css-1q5nkad,
+.css-vxcmzt {
+  @apply text-gray-900 text-sm font-normal;
+}
+.css-10iahqc {
+  @apply text-gray-900 text-sm;
+}
+.css-r1h6ug {
+  @apply !text-gray-900 !text-xs;
+}
+.css-1qjsijr {
+  @apply !rounded-none;
+}
+
+.css-18rvurk,
+.css-i75ajs {
+  @apply hover:!bg-green-100 hover:!text-green-500;
+}
+
+.css-18rvurk,
+.css-wbg9f7,
+.css-c3junj,
+.css-n2j2tx {
+  &:focus {
+    box-shadow: #2a713f 0 0 0 1px inset !important;
+  }
+}
+
+.css-pnd7tr {
+  @apply hover:!bg-green-100;
+}
+
+.css-1fgdyuc,
+.css-u3udq3 {
+  @apply hover:!text-green-500;
+}
+
+.css-n2j2tx,
+.css-wbg9f7 {
+  @apply !text-green-500 hover:!bg-green-100;
+}
+
+#storybook-panel-root {
+  .tabbutton {
+    @apply text-gray-900 text-sm;
+
+    &:active {
+      @apply border-b-green-100;
+    }
+
+    &.tabbutton-active {
+      @apply border-b-green-500;
+    }
+
+    .css-1gyeqhe {
+      @apply border-gray-500 bg-white text-xs;
+    }
+  }
+}
+
+.sidebar-container {
+  @apply !p-0 !min-w-[auto] !max-w-[auto] !w-auto;
+}
+
+#panel-tab-content {
+  textarea {
+    @apply h-auto;
+
+    /* Manually setting the height ensures consistent look&feel for all browsers. */
+    @apply border border-blue-900 bg-white rounded p-10 text-base text-gray-900 transition-all ease-in-out duration-250 h-[46px];
+    @apply hover:border-blue-500;
+    @apply focus:outline-none focus:shadow-purple-600 focus:border-purple-600;
+    @apply focus-within:outline-none focus-within:shadow-purple-600 focus-within:border-purple-600;
+
+    @apply disabled:border-gray-300 disabled:bg-gray-300 disabled:text-gray-800 disabled:cursor-default;
+
+    &::placeholder {
+      @apply text-gray-500;
+    }
+
+    &:disabled::placeholder {
+      @apply text-gray-800;
+    }
+
+    &[type='date'] {
+      /* Fix issues on iOS Safari. */
+      @apply appearance-none;
+      &::-webkit-date-and-time-value {
+        @apply text-left;
+      }
+    }
+  }
+
+  button {
+    @apply text-xs px-15 py-5;
+    /* Basics */
+    @apply rounded-[20px] border font-medium inline-grid min-h-40 min-w-40 text-left relative overflow-hidden w-auto items-center gap-[7px] justify-start max-w-fit;
+    @apply text-base px-[0.75em] pt-[0.55em] pb-[0.45em];
+    @apply hyphens-auto;
+    @apply focus-visible:outline focus-visible:outline-blue-900 focus-visible:outline-[3px] grid-flow-col;
+
+    /* Color Variables */
+    --button-text: theme(colors.blue-900);
+    --button-bg: theme(colors.gray-20);
+    --button-border: theme(colors.blue-900);
+
+    color: var(--button-text);
+    background: var(--button-bg);
+    border-color: var(--button-border);
+
+    &.is-strong {
+      --button-bg: theme(colors.blue-900);
+      --button-text: white;
+      /* Strong buttons never have a border, so we can force it to be the same as the background. */
+      --button-border: var(--button-bg) !important;
+
+      &:focus-visible,
+      &:active,
+      .group\/button:focus-visible &,
+      .group\/button:active &,
+      &.is-focus,
+      &.is-active {
+        --button-bg: theme(colors.purple-600);
+        --button-text: white;
+      }
+
+      @apply contrast-more:font-bold contrast-more:border-3;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      @apply pointer-events-none;
+      --button-text: theme(colors.gray-800);
+      --button-bg: theme(colors.gray-300);
+      --button-border: theme(colors.gray-300);
+    }
+
+    &:hover,
+    &.is-hover,
+    .group\/button:hover & {
+      --button-text: white;
+      --button-bg: theme(colors.blue-600);
+      --button-border: theme(colors.blue-900);
+    }
+
+    &:focus-visible,
+    &:active,
+    .group\/button:focus-visible &,
+    .group\/button:active &,
+    &.is-focus,
+    &.is-active {
+      --button-text: theme(colors.purple-900);
+      --button-bg: theme(colors.purple-200);
+      --button-border: theme(colors.purple-900);
+    }
+
+    svg {
+      @apply shrink-0; /* So any flexbox shenanigans don't resize the icon. */
+      @apply w-20 h-20;
+    }
+
+    &.is-sm {
+      @apply text-sm min-w-30 min-h-30 leading-none px-10 rounded-[15px] gap-5;
+
+      svg {
+        @apply w-[16px] h-[16px] -my-5;
+      }
+
+      &.is-icon-only {
+        @apply !w-30 !h-30;
+      }
+    }
+
+    &.is-icon-only {
+      @apply w-40 h-40 p-0 items-center justify-center;
+    }
+  }
+
+  .css-4uvelx {
+    button {
+      border: 1px solid theme(colors.blue-900) !important;
+      @apply m-10;
+      &:hover span {
+        @apply text-white;
+      }
+    }
+  }
+}
+
+.sbdocs,
+#panel-tab-content {
+  @apply break-words;
+
+  h1, h2, h3, h4, p {
+    @apply !font-sans;
+  }
+
+  h1 {
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-green-600 hyphens-auto text-balance mb-30;
+  }
+
+  h2 {
+    @apply font-bold text-2xl lg:text-3xl xl:text-4xl break-words hyphens-auto print:!text-xl !border-b-0;
+  }
+
+  h3 {
+    @apply text-lg lg:text-xl xl:text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-lg lg:text-xl font-bold;
+  }
+
+  p {
+    @apply not-first:mt-20 not-last:mb-20 xl:not-first:mt-25 xl:not-last:mb-25;
+  }
+
+  a:not([href^='#']) {
+    @apply inline-link;
+  }
+
+  ol,
+  ul {
+    @apply not-first:mt-20 ml-25;
+
+    & li {
+      @apply pb-20 ml-30 pl-[8px];
+    }
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+  ul {
+    @apply list-disc;
+  }
+
+  .token.tag {
+    @apply !p-0 !bg-transparent;
+  }
+}
+
+.sbdocs-wrapper, .sbdocs-content {
+  &:has(.sb-fullscreen), .sb-fullscreen .sb-unstyled, .sb-fullscreen {
+    @apply !p-0 flex justify-items-stretch items-stretch w-full !max-w-[100%];
+  }
+}

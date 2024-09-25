@@ -11,7 +11,9 @@
     "twc-build": "./node_modules/.bin/tailwind-config-viewer -c ./node_modules/@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js export ./static/tailwind_config_viewer",
     "tw-build": "./node_modules/.bin/tailwindcss -i ./static/css/storybook.css -o ./static/css/storybook-built.css -c ./node_modules/\\@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js"
   },
-  "keywords": [""],
+  "keywords": [
+    ""
+  ],
   "type": "module",
   "author": "Liip AG",
   "license": "GPL-v3.0",
@@ -35,7 +37,3 @@
     "tailwindcss": "^3.4.13"
   }
 }
-
-
-
-

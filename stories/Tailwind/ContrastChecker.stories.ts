@@ -2,7 +2,7 @@ import COLORS from '@kanton-basel-stadt/designsystem/dist/configs/colors'
 import { ContrastChecker } from './ContrastChecker'
 
 export default {
-  title: 'Tailwind/Contrast Checker',
+  title: '5. Tailwind/Contrast Checker',
   render: (args) => ContrastChecker(COLORS, args.foregroundColor, args.backgroundColor),
   argTypes: {
     foregroundColor: {

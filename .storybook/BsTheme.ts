@@ -1,5 +1,4 @@
 import { create } from '@storybook/theming/create'
-import storybookCss from '../static/css/storybook-built.css?inline'
 
 export default create({
   base: 'light',

@@ -6,43 +6,29 @@ import '../../static/css/storybook.css'
 
 # The DDS Unplugin
 
-The Unplugin provides all necessary code to create a website in the look & feel of www.bs.ch. It's based on
-[Tailwind](https://tailwindcss.com).
+The Unplugin provides all the necessary code to create a website with the look and feel of www.bs.ch. It's based on [Tailwind](https://tailwindcss.com).
 
 ## Purpose and idea
 
-The purpose of this Unplugin is to get developers started quickly with developing frontend components.
+This Unplugin aims to get developers started quickly with developing frontend components.
 
-Since the Unplugin offers all the CSS, the only thing missing is the markup. **This is intentional.** Since
-frameworks, such as Vue, Svelte, React, Twig, or Blade, differ wildly from each other in terms of template syntax,
-providing a standardised way of including components is next to impossible. We, therefore, settled on providing the CSS
-code and all assets necessary to create components, but not the components themselves. The markup for the components
-can be found in Storybook.
+Since the Unplugin only offers all the CSS, the markup needs to be built separately. **This is intentional.** Since frameworks such as Vue, Svelte, React, Twig, or Blade differ wildly in terms of template syntax, providing a standardised way of including components is next to impossible. We, therefore, settled on providing the CSS code and all assets necessary to create components but not the components themselves. The markup for the components can be found in Storybook.
 
 ## Scope
 
-The plugin offers all the CSS code and assets, but no HTML and no JS. Again, this is intentional. Any built-in logic could
-potentially interfere with existing logic from your framework (such as click handlers, looping, etc.), which is best
-handled in your framework.
+The plugin offers all the CSS code and assets but no HTML or JS. Again, this is intentional. Any built-in logic could potentially interfere with existing logic from your framework (such as click handlers, looping, etc.), which is best handled in your framework.
 
-This means that, while you technically do not need any additional CSS, you will need business logic and data. You do not
-need to take care of recreating any components from scratch or install any additional CSS framework.
+Technically, you do not need additional CSS, but you will need business logic and data. You do not need to take care of recreating any components from scratch or installing any additional CSS framework.
 
 ## Technology
 
-The Unplugin is based on the [**Unplugin system offered by unjs**](https://unplugin.unjs.io).  Behind the scenes,
-Unplugin offers a standardised way to build plugins for all kinds of build tools, such as Vite, Webpack, Rollup,
-ESBuild, Rspack and more. **This makes the DDS fully framework agnostic, leaving all the choices up to you.**
+The Unplugin is based on the [**Unplugin system offered by unjs**](https://unplugin.unjs.io). Behind the scenes, Unplugin provides a standardised way to build plugins for various build tools, such as Vite, Webpack, Rollup, ESBuild, Rspack and more. **This makes the DDS fully framework agnostic, leaving all the choices up to you.**
 
-The DDS uses Tailwind to create all styles necessary for the entire DDS. The base config, containing spacings,
-typography settings, colors, etc., is provided by the Unplugin. Tailwind allows you to style individual components
-different, too. For example, if you need to add extra padding and margin to a certain element on the page, you can do
-so by adding `p-*` and `m-*` classes to it.
+The DDS uses Tailwind to create all styles necessary for the entire DDS. The base config, containing spacings, typography settings, colours, etc., is provided by the Unplugin. Tailwind allows you to style individual components differently, too. For example, if you need to add extra padding and margin to a particular element on the page, you can add `p-*` and `m-*` classes to it.
 
-The Unplugin also offers assets in the form of icons. These are provided as components and can be styled, too. Please
-consult the examples provided in the Unplugin Github repository for further details.
+The Unplugin also offers assets in the form of icons. These are provided as components and can be styled, too. Please consult the examples provided in the Unplugin Github repository for further details.
 
-Storybook also offers a way to inspect the entire Tailwind configuration. For this, please open the "Tailwind Config Viewer".
+Storybook also offers a way to inspect the entire Tailwind configuration. To do this, please open the "Tailwind Config Viewer."
 
 ## How to install and set up the Design System Unplugin
 
@@ -343,14 +329,6 @@ And then, in your HTML file:
 Example: Can be found in `examples/nuxt`.
 
 <br /></details>
-
-#### List of compilers
-
-To use icons with your framework of choice, you may need to specify a compiler. The unplugin defaults to web components,
-which work with most non-framework related build tools, such as standalone Webpack or standalone Vite. However, if
-you're using one of the following frameworks, you need to specify the compiler in the unplugin options with the following
-patterns:
-
 
 #### List of compilers
 

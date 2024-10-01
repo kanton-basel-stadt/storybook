@@ -17,10 +17,25 @@ const config = {
   ],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    '@storybook/addon-viewport',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        csfPluginOptions: null,
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [],
+          },
+        },
+      },
+    },
+    '@storybook/addon-controls',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-toolbars',
+    '@storybook/addon-measure',
+    '@storybook/addon-outline',
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
-    '@chromatic-com/storybook',
   ],
   framework: {
     name: '@storybook/web-components-vite',
@@ -32,8 +47,6 @@ const config = {
   },
   async viteFinal(config) {
     const { mergeConfig } = await import('vite')
-
-    console.log('here???')
 
     return mergeConfig(config, {
       plugins: [

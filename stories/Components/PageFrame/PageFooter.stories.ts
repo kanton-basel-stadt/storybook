@@ -1,7 +1,7 @@
 import { PageFooter } from './PageFooter'
 
 export default {
-  title: 'Components/Page Frame/Page Footer',
+  title: '6. Components/Page Frame/Page Footer',
   render: () => PageFooter(),
 }
 

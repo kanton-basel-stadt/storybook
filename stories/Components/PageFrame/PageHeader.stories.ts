@@ -1,7 +1,7 @@
 import { PageHeader } from './PageHeader'
 
 export default {
-  title: 'Components/Page Frame/Page Header',
+  title: '6. Components/Page Frame/Page Header',
   render: () => PageHeader(),
 }
 

@@ -2,7 +2,7 @@ import { ToggleSwitch } from './ToggleSwitch'
 
 export default {
   title: '6. Components/Form elements/Inputs/Toggle switch',
-  render: (args) => ToggleSwitch(args.label, args.name, args.id),
+  render: (args) => ToggleSwitch(args.label, args.name, args.id, args.isReversed),
   argTypes: {
     label: {
       name: 'Label',
@@ -16,6 +16,10 @@ export default {
       name: 'ID',
       control: 'text',
     },
+    isReversed: {
+      name: 'Is reversed?',
+      control: 'boolean',
+    }
   },
 }
 
@@ -25,5 +29,6 @@ export const Default = {
     value: 'yes',
     name: 'my-toggle',
     id: 'toggle-123',
+    isReversed: false,
   },
 }

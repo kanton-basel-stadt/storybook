@@ -9,7 +9,7 @@ export default {
       control: 'text',
     },
     value: {
-      name: 'Target href',
+      name: 'Value',
       control: 'text',
     },
     name: {
@@ -30,10 +30,10 @@ export default {
 
 export const Default = {
   args: {
-    label: 'Click me!',
-    value: 'yes',
-    name: 'my-checkbox',
-    id: 'checkbox-123',
+    label: 'Label',
+    value: '',
+    name: 'my-input',
+    id: 'input-123',
     type: 'text',
   },
 }

@@ -12,10 +12,12 @@ const config = {
     let cleanedHtml = head ? head.replace(/<link\s+rel=["']icon["'][^>]*>/gi, '') : ''
     return `${cleanedHtml}<link rel="icon" href="/favicon.ico">`
   },
+
   stories: [
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-viewport',
@@ -39,14 +41,14 @@ const config = {
     '@storybook/addon-a11y',
     '@storybook/addon-designs',
   ],
+
   framework: {
     name: '@storybook/web-components-vite',
     options: {},
   },
+
   staticDirs: ['../static'],
-  core: {
-    builder: '@storybook/builder-vite',
-  },
+
   async viteFinal(config) {
     const { mergeConfig } = await import('vite')
 
@@ -64,5 +66,7 @@ const config = {
       },
     })
   },
+
+  docs: {}
 }
 export default config

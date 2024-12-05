@@ -23,8 +23,21 @@ body {
     }
   }
 
-  .search-field input {
+  .search-field {
+    @apply !h-auto relative;
 
+    .css-to6o8u {
+      @apply absolute top-[0] left-[8px] pointer-events-none flex items-center h-full text-gray-600;
+    }
+    .css-a7vfwt {
+      @apply hidden;
+    }
+    .css-j2at52 {
+      @apply hidden;
+    }
+  }
+
+  .search-field input {
     /* Manually setting the height ensures consistent look&feel for all browsers. */
     @apply border border-blue-900 bg-white rounded p-10 text-base text-gray-900 transition-all ease-in-out duration-250 h-[46px];
     @apply hover:border-blue-500;

@@ -1,0 +1,94 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import '../../static/css/storybook.css'
+
+<Meta title="2. Tutorials/7. How to use typography" />
+<Unstyled>
+# 2.7. How to use typography
+In web design, there is an essential distinction between *semantics* and *appearance* (or *looks*), especially when it
+comes to typography. *Semantics* refers to the meaning and structural roles that elements play in a document, while
+*looks* refer to the visual presentation of those elements. When it comes to accessibility, it is crucial to prioritize
+the semantic structure of content, such as the correct use of HTML headings and paragraphs, over their visual styling.
+This ensures that the content is comprehensible and usable for all users, including those who rely on screen readers or
+other assistive technologies.
+
+## Semantics: HTML Headings and Paragraphs
+
+The HTML markup provides essential meaning to content through structural elements like headings (`<h1>`, `<h2>`, etc.)
+    and paragraphs (`<p>`). These elements convey the hierarchy of information, making it easier for users to navigate
+        and understand the content.
+
+- **Headings** (`<h1>`, `<h2>`, `<h3>`, etc.): These elements represent the structure of a page. `<h1>` typically marks
+  the main title, while `<h2>`, `<h3>`, etc., define subsections and help users understand the content's hierarchy.
+  This is important for both screen readers, which use these headings to allow users to jump between sections, and for
+  SEO, as search engines also prioritize headings in understanding page structure.
+
+- **Paragraphs** (`<p>`): Paragraphs structure blocks of text, and they are the primary unit for conveying information
+  in a body of text. Using paragraphs appropriately ensures that the content is readable and well-organized.
+
+When we talk about semantics, it’s about ensuring these elements are used correctly according to their intended meaning
+and role. For instance, using a `<p>` for a block of text and an `<h1>` for the main heading helps communicate the
+    correct structure of the content to both human readers and assistive technologies.
+
+## Appearance: Visual Styling with CSS
+
+While semantics ensures that content is well-structured, *looks* determine how that content appears on the page.
+Through CSS, we can adjust visual aspects like font size, weight, and color. However, it’s important to note that the
+visual presentation of headings and paragraphs does not necessarily need to match the semantic structure. A heading might
+visually appear similar to a paragraph in terms of size or style, and that's perfectly acceptable as long as the semantic
+HTML elements are used correctly.
+
+For example, suppose you have the following HTML content:
+
+```html
+<h2>Welcome to Our Website</h2>
+<p>This is an introduction paragraph that explains the purpose of the site.</p>
+```
+
+Even though the `<h2>` and `<p>` elements are semantically different, you might want to control their appearance using
+    CSS classes such as `text-xl`, `text-lg`, `text-2xl`, and `font-bold`. These classes will adjust their size and
+    weight to match the desired visual design without changing the underlying structure.
+
+### Example 1: Heading Styled as Large Text
+
+```html
+<h2 class="text-xl font-bold">Welcome to Our Website</h2>
+```
+
+In this case, the `<h2>` element is styled to appear as large (`text-xl`) and bold (`font-bold`), but it still
+    semantically represents a secondary heading. This helps users and screen readers understand that it is part of the
+    content hierarchy.
+
+### Example 2: Paragraph with Larger Text
+
+```html
+<p class="text-lg">This is an introduction paragraph that explains the purpose of the site.</p>
+```
+
+Here, the `<p>` element, semantically used for a paragraph, is styled to appear larger with `text-lg`, improving
+readability, but it remains a paragraph in terms of content structure.
+
+### Example 3: Heading Styled as Extra Large Text
+
+```html
+<h2 class="text-2xl">Section Heading</h2>
+```
+
+In this example, a heading (`<h2>`) is styled as extra large (`text-2xl`), which visually might resemble the main
+    heading but semantically maintains its role as a subheading. This is a case where looks and semantics differ — the
+    heading visually stands out more, but the correct semantic hierarchy is preserved.
+
+## Key Takeaways
+
+- **Semantics** refers to the meaning of HTML elements (like `<h1>`, `<h2>`, `<p>`), which ensures accessibility, logical
+  structure, and proper document outline.
+- **Appearance (Looks)** refers to the visual presentation of these elements, controlled through CSS classes like
+  `text-xl`, `text-lg`, `text-2xl`, and `font-bold`.
+- It's essential to preserve the semantic structure (headings and paragraphs) for accessibility purposes, while styling
+  can differ for visual appeal.
+- The semantic meaning of headings and paragraphs should never be altered by CSS. A `<p>` should always be used for
+  paragraphs, even if it visually looks like a heading.
+
+By balancing semantics and appearance, we ensure that content is both accessible and visually appealing. Properly
+structured HTML content supports assistive technologies, while CSS allows designers to create a visually engaging
+experience without sacrificing the document's meaning or accessibility.
+</Unstyled>

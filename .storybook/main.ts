@@ -1,6 +1,7 @@
 import KantonBSDesignsystemPlugin from '@kanton-basel-stadt/designsystem/vite'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
+import remarkGfm from 'remark-gfm'
 
 const icons = fs.readdirSync(
   path.resolve(__dirname, '..', 'node_modules', '@kanton-basel-stadt', 'designsystem', 'dist', 'assets', 'symbols')
@@ -24,7 +25,7 @@ const config = {
         csfPluginOptions: null,
         mdxPluginOptions: {
           mdxCompileOptions: {
-            remarkPlugins: [],
+            remarkPlugins: [remarkGfm],
           },
         },
       },
@@ -36,6 +37,7 @@ const config = {
     '@storybook/addon-outline',
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
+    '@storybook/addon-designs',
   ],
   framework: {
     name: '@storybook/web-components-vite',

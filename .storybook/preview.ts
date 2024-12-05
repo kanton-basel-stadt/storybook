@@ -1,8 +1,16 @@
 import '@kanton-basel-stadt/designsystem/assets/css/tailwind.css'
+import CodeBlock from './components/CodeBlock'
+import Table from './components/Table'
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
   parameters: {
+    docs: {
+      components: {
+        code: CodeBlock,
+        table: Table,
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -23,7 +31,7 @@ const preview = {
           transformEl.querySelectorAll(selector).forEach(el => el.innerHTML = '')
         })
 
-        // Remove unnecessary wrapper div
+        // Replace all encoded ampers-ands with actual ones.
         return transformEl.querySelector('#root-inner').innerHTML.replace(/&amp;/g, '&')
       },
     }

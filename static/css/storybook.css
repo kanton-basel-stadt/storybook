@@ -369,15 +369,15 @@ div[role='main'] > div > div > div > div {
   }
 
   h2 {
-    @apply font-bold text-2xl lg:text-3xl xl:text-4xl break-words hyphens-auto print:!text-xl !border-b-0;
+    @apply font-bold text-2xl lg:text-3xl xl:text-4xl break-words hyphens-auto print:!text-xl !border-b-0 mt-30 mb-10;
   }
 
   h3 {
-    @apply text-lg lg:text-xl xl:text-2xl font-bold;
+    @apply text-lg lg:text-xl xl:text-2xl font-bold mt-30 mb-10;
   }
 
   h4 {
-    @apply text-lg lg:text-xl font-bold;
+    @apply text-base lg:text-lg font-bold mt-30 mb-10;
   }
 
   p {
@@ -393,7 +393,7 @@ div[role='main'] > div > div > div > div {
     @apply not-first:mt-20 ml-25;
 
     & li {
-      @apply pb-20 ml-30 pl-[8px];
+      @apply pb-5 ml-30 pl-[8px];
     }
   }
 
@@ -413,4 +413,91 @@ div[role='main'] > div > div > div > div {
   &:has(.sb-fullscreen), .sb-fullscreen .sb-unstyled, .sb-fullscreen {
     @apply !p-0 flex justify-items-stretch items-stretch w-full !max-w-[100%];
   }
+}
+
+.md {
+  br {
+    display: none;
+  }
+
+  pre {
+    @apply mt-20;
+  }
+
+  summary {
+    @apply cursor-pointer;
+  }
+}
+
+.hljs {
+  @apply overflow-x-auto p-10 bg-gray-100 block;
+
+  &.inline {
+    display: inline;
+    @apply p-3;
+  }
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  @apply text-purple-700;
+}
+
+.hljs-code {
+  @apply text-gray-900;
+}
+
+.hljs-class .hljs-title,
+.hljs-subst {
+  @apply text-gray-900;
+}
+
+.hljs-attribute,
+.hljs-attr,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  @apply text-blue-700;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  @apply text-green-600
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  @apply text-purple-700;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  @apply text-gray-600;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  @apply font-bold;
 }

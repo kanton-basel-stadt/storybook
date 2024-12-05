@@ -1,0 +1,68 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import '../../static/css/storybook.css'
+
+<Meta title="2. Tutorials/5. How to use BS.ch to find missing components" />
+<Unstyled>
+# 2.5. How to use BS.ch to find missing components
+
+In some cases, the components you need for your page may not be available in Storybook. However, you can still leverage
+existing components from the live website, such as `bs.ch`, by inspecting the page and copying the necessary HTML markup.
+In this tutorial, you'll learn how to extract and use components from the website by utilizing the browser’s developer
+tools and then integrating them into your project, with the option to enhance them using **Tailwind CSS**.
+
+## Finding and Copying Components from the Website
+
+When you're building a page and can’t find the components you need in Storybook, you can search for them on the live
+website, `bs.ch`. Here’s how:
+
+### Step 1: Open the Website and Inspect the Component
+
+1. **Navigate to the Website**:
+   Go to `bs.ch` in your browser. Browse through the website to find the component you want to use (e.g., a card, button, form, etc.).
+
+2. **Open Developer Tools**:
+   - Right-click on the component you want to use and select **Inspect** (or **Inspect Element** depending on your browser). This will open the **Developer Tools** and highlight the corresponding HTML markup for the component in the **Elements** tab.
+
+### Step 2: Copy the Markup
+
+1. **Locate the HTML Code**:
+   In the **Elements** tab of Developer Tools, you’ll see the HTML code that corresponds to the component. This is usually a block of code wrapped in HTML tags like `<div>`, `<button>`, `<section>`, etc.
+
+2. **Copy the HTML Code**:
+   Right-click on the highlighted code and select **Copy** > **Copy outerHTML** (or **Copy element**, depending on the browser). This will copy the entire HTML structure of the component.
+
+### Step 3: Paste the Markup into Your Project
+
+1. **Paste into Your Project**:
+   Once you've copied the markup, you can paste it directly into your HTML file where you want the component to appear. For example, if you copied a button component, your code may look like this:
+   ```html
+   <button class="button">Click Me</button>
+   ```
+
+2. **Modify or Customize the Markup**:
+   You can make any necessary changes to the pasted markup, such as adjusting class names or content. For instance, you may want to change the text on a button or update the image source in a card.
+
+## Enhancing the Components with Tailwind CSS
+
+Once you've copied the markup, you may want to enhance the components with **Tailwind CSS** to fit your design needs.
+Tailwind's utility classes will allow you to quickly modify the layout, style, and responsiveness of the component.
+
+## Testing and Previewing Your Page
+
+After pasting the markup and customizing the component with Tailwind CSS, it's time to preview your page:
+
+1. **Open Your HTML File in a Browser**:
+   Once you've added the markup and Tailwind classes, open your HTML file in a browser to see the component in action.
+
+2. **Test Responsiveness**:
+   Use your browser’s developer tools to simulate different screen sizes. Ensure that your components are responsive and look good on mobile, tablet, and desktop views.
+
+## Conclusion
+
+In this tutorial, you learned how to:
+- **Find and copy components** from the website `bs.ch` using your browser’s Developer Tools.
+- **Paste and modify** the HTML markup into your project.
+- **Enhance components** using **Tailwind CSS** for customization, including adding responsiveness and styling.
+
+Now you have a fully functional way to integrate any component from a live website into your project, even if it's not available in Storybook.
+</Unstyled>

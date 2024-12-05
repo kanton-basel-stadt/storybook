@@ -1,0 +1,43 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import { useState, useEffect } from 'react'
+import { Marked } from 'marked'
+import { markedHighlight } from "marked-highlight"
+import hljs from 'highlight.js'
+import '../../static/css/storybook.css'
+
+export const ReadmeData = () => {
+  const [readme, setReadme] = useState(null)
+  useEffect(() => {
+    const fetchReadme = () => {
+      fetch('https://raw.githubusercontent.com/kanton-basel-stadt/designsystem/refs/heads/main/README.md')
+        .then((result) => result.text())
+        .then((data) => {
+          const marked = new Marked(
+            markedHighlight({
+              emptyLangClass: 'hljs',
+              langPrefix: 'hljs language-',
+              highlight(code, lang, info) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext'
+                return hljs.highlight(code, { language }).value
+              }
+            })
+          )
+
+          data = marked.parse(data.replace('# @kanton-basel-stadt/designsystem', ''))
+          setReadme(data)
+        })
+    }
+    fetchReadme()
+  })
+  if (!readme) {
+    return 'Loading...'
+  }
+  return <div className="md" dangerouslySetInnerHTML={{ __html: readme }} />
+};
+
+<Meta title="2. Tutorials/1. How to install and configure the DDS Unplugin" />
+<Unstyled>
+# 2.1. How to install and configure the DDS Unplugin
+
+<ReadmeData />
+</Unstyled>

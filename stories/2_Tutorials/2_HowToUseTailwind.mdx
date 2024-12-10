@@ -170,6 +170,15 @@ scalability in their CSS workflows.
 
 Tailwind CSS uses an **on-demand CSS generation approach**, meaning it only generates the utility classes that are actually used in your project. Instead of providing a fully loaded stylesheet with every possible utility class, Tailwind dynamically generates the specific styles you need based on the classes referenced in your HTML, JavaScript, or other templating files. This approach ensures a minimal and optimized CSS bundle tailored to your project.
 
+In the DDS, we use the following list of pattern to match for files that may include Tailwind classes:
+
+```
+"[YOUR PROJECT ROOT]/{components,pages,layouts,helpers,stories,dist,src}/**/*.{html,js,ts,jsx,tsx,vue,astro,svelte,mdx}"
+```
+
+While this covers most popular frameworks and architectures, some options may be missing. In that case, please reach out
+to the devs via GitHub.
+
 ### How the On-Demand Approach Works
 
 Tailwind relies on tools like **PostCSS** and a build process to scan your source code files for utility class usage. During the build, it identifies and compiles only the necessary CSS rules for those classes. Unused utilities are excluded from the final CSS output, keeping your stylesheets lean and efficient.

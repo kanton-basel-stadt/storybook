@@ -8,6 +8,10 @@ const icons = fs.readdirSync(
 ).map(i => i.replace(/\.svg/g, ''))
 
 const config = {
+  core: {
+    disableTelemetry: true,
+  },
+
   managerHead: head => {
     let cleanedHtml = head ? head.replace(/<link\s+rel=["']icon["'][^>]*>/gi, '') : ''
     return `${cleanedHtml}<link rel="icon" href="/favicon.ico">`

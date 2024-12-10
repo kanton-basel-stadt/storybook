@@ -1,0 +1,240 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+import '../../static/css/storybook.css'
+
+<Meta title="2. Tutorials/9. How to use grids with containers and maximum content width" />
+<Unstyled>
+# 2.9. How to use grids with containers and maximum content width
+
+In [2.3 How to use Tailwind](/docs/2-tutorials-3-how-to-use-tailwind--docs), we have learned that Tailwind offers
+utility classes for all kinds of things, including grids. In [2.6 How to create a grid from Figma](/docs/2-tutorials-6-how-to-create-a-grid-from-figma--docs)
+we have learned about Storybook's Grid configurator and the breakpoints used in Tailwind.
+
+For reference, the available breakpoints are listed below:
+
+ * none: `0px` - `479px`
+ * `sm`: `480px` - `767px`
+ * `md`: `768px` - `1023px`
+ * `lg`: `1024px` - `1209px`
+ * `xl`: `1210px` - `1919px`
+ * `xxl`: `1920px` and onwards
+
+## The container class
+
+As shown in the component [4. Components for the web/Page frame/container](/story/4-components-for-the-web-page-frame-container--default),
+Tailwind also offers a so-called `container` class. This class defines the maximum width of the content within it.
+
+The **maximum** width of the content is defined as follows, according to the breakpoints:
+
+ * none: `100% - 15px of padding left and right`
+ * `sm`: `610px - 15px of padding left and right`
+ * `md`: `768px - 20px of padding left and right`
+ * `lg`: `836px - 20px of padding left and right`
+ * `xl`: `1120px - 40px of padding left and right`
+ * `xxl`: `1120px - 40px of padding left and right`
+ * on `print`: `100%`
+
+Additionally, we can also define a **wide** container, as used in the page header. A **wide** container has a maximum
+width of `1920px`, meaning its maximum width will only take effect on `xxl` screens. It is 100% of the screen width on
+all smaller screens, but keeps the padding definitions mentioned above.
+
+We can define a container for the maximum content width by giving the class to any element we like:
+
+```html
+<div class="container">
+    <!-- ... -->
+</div>
+```
+
+To apply the `is-wide` class for wide containers, add it to the same element:
+
+```html
+<div class="container is-wide">
+    <!-- ... -->
+</div>
+```
+
+## Combining grids and the container
+
+To combine grids with the maximum width, we have two possibilities. We can either nest a grid inside a container (For the
+basic principle of nesting Storybook components, please refer to [2.4 How to use Storybook to build a page](/docs/2-tutorials-4-how-to-use-storybook-to-build-a-page--docs))
+or apply the grid classes to the same container.
+
+For example, to have a container width a two column layout, we can add the grid classes to the same element:
+
+```html
+<div class="container grid grid-cols-2">
+    <!-- ... -->
+</div>
+```
+
+We may also use [responsive](/docs/2-tutorials-3-how-to-use-tailwind--docs#responsiveness) grid classes on the same element:
+
+```html
+<div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <!-- ... -->
+</div>
+```
+
+## Example: Creating a teaser list
+
+To create a teaser list, we first need to find the markup for the [teaser component](/story/4-components-for-the-web-teasers-teaser--default).
+
+For simplicity, we'll assume the following markup for the teaser component:
+
+```html
+<a
+  class="group/button group/link hyphens-auto flex flex-col"
+  href="https://www.bs.ch/"
+>
+  <h3 class="text-lg font-bold link order-2">
+    Some title
+  </h3>
+  <!-- ... -->
+</a>
+```
+
+Let's assume we want a teaser list with 6 teasers side by side on very large displays, 4 on average desktops, 2 on
+tablets and 1 on mobile. We also want a maximum width for the content. We start with the container element:
+
+```html
+<div class="container">
+
+</div>
+```
+
+Next, we add as many teasers as we need:
+
+```html
+<div class="container">
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+</div>
+```
+
+And finally, we go to the [Grid configurator](/story/4-components-for-the-web-page-frame-grid--default) and define our needed grid.
+
+We copy the grid classes and apply them onto the container element as well:
+
+```html
+<div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xxl:grid-cols-6 gap-20">
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+
+    <a
+      class="group/button group/link hyphens-auto flex flex-col"
+      href="https://www.bs.ch/"
+    >
+      <h3 class="text-lg font-bold link order-2">
+        Some title
+      </h3>
+      <!-- ... -->
+    </a>
+</div>
+```
+
+We have now successfully created a grid of 6 teasers that is responsive and has a maximum content width.
+</Unstyled>

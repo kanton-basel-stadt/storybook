@@ -1,5 +1,6 @@
 import { html } from 'lit'
 
+// prettier-ignore
 export const HorizontalLine = () => html`
   <p style="border-top:solid 1px #A5A5A5;font-size:1px;margin:0px auto;width:100%;" data-mjml-tag="mj-divider"></p>
   <!--[if mso | IE]>

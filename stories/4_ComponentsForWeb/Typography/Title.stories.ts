@@ -12,10 +12,8 @@ export default {
     kind: {
       name: 'Heading level',
       control: 'select',
-      options: [
-        'h1', 'h2', 'h3',
-      ]
-    }
+      options: ['h1', 'h2', 'h3'],
+    },
   },
 }
 
@@ -28,8 +26,8 @@ export const Heading1 = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
 
 export const Heading2 = {
@@ -41,8 +39,8 @@ export const Heading2 = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
 
 export const Heading3 = {
@@ -54,6 +52,6 @@ export const Heading3 = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

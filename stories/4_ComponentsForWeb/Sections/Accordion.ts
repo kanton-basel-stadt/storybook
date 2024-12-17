@@ -4,22 +4,26 @@ import '@kanton-basel-stadt/designsystem/icons/symbol/caret'
 import { classMap } from 'lit-html/directives/class-map.js'
 
 export type AccordionLink = {
-  label: string,
-  description: string,
-  url: string,
+  label: string
+  description: string
+  url: string
 }
 
 export type Accordion = {
-  label: string,
-  content: string,
-  isOpen: boolean,
-  id: string,
+  label: string
+  content: string
+  isOpen: boolean
+  id: string
   links: AccordionLink[]
 }
 
-export const Accordion = (title: string, accordions: Accordion[], numberOfColumns: '1'|'2') => {
+export const Accordion = (
+  title: string,
+  accordions: Accordion[],
+  numberOfColumns: '1' | '2'
+) => {
   const containerClasses = {
-    'grid': true,
+    grid: true,
     'gap-10': true,
     'md:gap-15': true,
     'grid-cols-1': true,
@@ -35,48 +39,63 @@ export const Accordion = (title: string, accordions: Accordion[], numberOfColumn
         </header>
         <div>
           <div class="${classMap(containerClasses)}">
-            ${accordions.map(accordion => html`
-              <div class="rounded-large ring-gray-700/20 ring-1 hover:ring-gray-700/60 bg-white shadow-lg !ring-gray-700/60">
-                <h3 class="rounded-large cursor-pointer text-blue-900 hover:text-blue-700 md:text-lg lg:text-xl font-bold">
-                  <button
-                    id="accordion-toggle-${accordion.id}"
-                    type="button"
-                    class="flex items-center justify-between marker:hidden p-10 w-full md:px-20 lg:py-15 text-left focus-visible:outline-2"
-                    aria-expanded="true"
-                    aria-controls="accordion-content-${accordion.id}"
+            ${accordions.map(
+              (accordion) => html`
+                <div
+                  class="rounded-large ring-gray-700/20 ring-1 hover:ring-gray-700/60 bg-white shadow-lg !ring-gray-700/60"
+                >
+                  <h3
+                    class="rounded-large cursor-pointer text-blue-900 hover:text-blue-700 md:text-lg lg:text-xl font-bold"
                   >
-                    <span>${accordion.label}</span>
-                    ${Icon('caret', {
-                      '[&>svg]:transition-all': true,
-                      '[&>svg]:duration-250': true,
-                      '[&>svg]:w-15': true,
-                      '[&>svg]:h-10': true,
-                      '[&>svg]:shrink-0': true,
-                      '[&>svg]:-scale-y-100': accordion.isOpen,
-                    })}
-                  </button>
-                </h3>
-                <div id="accordion-content-${accordion.id}" role="region" aria-labelledby="accordion-toggle-${accordion.id}" style="${accordion.isOpen ? '' : 'display: none;'}">
-                  <div class="p-10 md:p-20">
-                    <div class="mb-20">
-                      ${accordion.content}
-                    </div>
-                    <div class="grid gap-5">
-                      ${accordion.links.map(link => html`
-                        <a class="link with-icon" href="${link.url}">
-                          <span class="hyphens-auto font-bold col-start-2 row-start-1">
-                            ${link.label}
-                          </span>
-                          <p class="hyphens-auto col-start-2 row-start-2 font-normal mt-5 text-base">
-                            ${link.description}
-                          </p>
-                        </a>
-                      `)}
+                    <button
+                      id="accordion-toggle-${accordion.id}"
+                      type="button"
+                      class="flex items-center justify-between marker:hidden p-10 w-full md:px-20 lg:py-15 text-left focus-visible:outline-2"
+                      aria-expanded="true"
+                      aria-controls="accordion-content-${accordion.id}"
+                    >
+                      <span>${accordion.label}</span>
+                      ${Icon('caret', {
+                        '[&>svg]:transition-all': true,
+                        '[&>svg]:duration-250': true,
+                        '[&>svg]:w-15': true,
+                        '[&>svg]:h-10': true,
+                        '[&>svg]:shrink-0': true,
+                        '[&>svg]:-scale-y-100': accordion.isOpen,
+                      })}
+                    </button>
+                  </h3>
+                  <div
+                    id="accordion-content-${accordion.id}"
+                    role="region"
+                    aria-labelledby="accordion-toggle-${accordion.id}"
+                    style="${accordion.isOpen ? '' : 'display: none;'}"
+                  >
+                    <div class="p-10 md:p-20">
+                      <div class="mb-20">${accordion.content}</div>
+                      <div class="grid gap-5">
+                        ${accordion.links.map(
+                          (link) => html`
+                            <a class="link with-icon" href="${link.url}">
+                              <span
+                                class="hyphens-auto font-bold col-start-2 row-start-1"
+                              >
+                                ${link.label}
+                              </span>
+                              <p
+                                class="hyphens-auto col-start-2 row-start-2 font-normal mt-5 text-base"
+                              >
+                                ${link.description}
+                              </p>
+                            </a>
+                          `
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            `)}
+              `
+            )}
           </div>
         </div>
       </div>

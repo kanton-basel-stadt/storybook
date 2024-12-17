@@ -3,15 +3,16 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Page Frame/Full screen header',
-  render: (args) => FullScreenHeader(
-    args.title,
-    args.lead,
-    args.imageUrlSm,
-    args.imageUrlMd,
-    args.imageUrlLg,
-    args.imageUrlXl,
-    args.imageCaption,
-  ),
+  render: (args) =>
+    FullScreenHeader(
+      args.title,
+      args.lead,
+      args.imageUrlSm,
+      args.imageUrlMd,
+      args.imageUrlLg,
+      args.imageUrlXl,
+      args.imageCaption
+    ),
   argTypes: {
     title: {
       name: 'Title',
@@ -41,13 +42,13 @@ export default {
       name: 'Image caption',
       control: 'text',
     },
-  }
+  },
 }
 
 export const Default = {
   args: {
     title: loremIpsum(),
-    lead: loremIpsum({ count: 4, }),
+    lead: loremIpsum({ count: 4 }),
     imageUrlSm: 'https://placehold.co/400x800',
     imageUrlMd: 'https://placehold.co/800x800',
     imageUrlLg: 'https://placehold.co/1024x1024',
@@ -58,6 +59,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=6537-93868&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

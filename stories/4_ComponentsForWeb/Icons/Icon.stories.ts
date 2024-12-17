@@ -8,8 +8,8 @@ export default {
     iconName: {
       name: 'Icon name',
       control: 'select',
-      options: IconsIndex.iconNames
-    }
+      options: IconsIndex.iconNames,
+    },
   },
 }
 
@@ -21,6 +21,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24163-12935&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

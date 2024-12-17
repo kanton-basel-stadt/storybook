@@ -3,18 +3,19 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Teasers/Focus Teaser',
-  render: (args) => FocusTeaser(
-    args.title,
-    args.main,
-    args.links,
-    args.imageUrlSm,
-    args.imageUrlMd,
-    args.imageUrlLg,
-    args.imageUrlXl,
-    args.imageCaption,
-    args.imageAlt,
-    args.color,
-  ),
+  render: (args) =>
+    FocusTeaser(
+      args.title,
+      args.main,
+      args.links,
+      args.imageUrlSm,
+      args.imageUrlMd,
+      args.imageUrlLg,
+      args.imageUrlXl,
+      args.imageCaption,
+      args.imageAlt,
+      args.color
+    ),
   argTypes: {
     color: {
       name: 'Color',
@@ -57,7 +58,7 @@ export default {
       name: 'Image alt text',
       control: 'text',
     },
-  }
+  },
 }
 
 export const Default = {
@@ -80,18 +81,12 @@ export const Default = {
     imageUrlXl: 'https://placehold.co/334x188',
     imageCaption: loremIpsum(),
     imageAlt: loremIpsum(),
-    color: 'light'
+    color: 'light',
   },
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22761&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
-
-
-
-
-
-

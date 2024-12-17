@@ -3,17 +3,18 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Sections/Gallery',
-  render: (args) => Gallery(
-    args.title,
-    args.color,
-    args.imageUrlSm,
-    args.imageUrlMd,
-    args.imageUrlLg,
-    args.imageUrlXl,
-    args.imageCaption,
-    args.imageAlt,
-    args.imageCopyRight,
-  ),
+  render: (args) =>
+    Gallery(
+      args.title,
+      args.color,
+      args.imageUrlSm,
+      args.imageUrlMd,
+      args.imageUrlLg,
+      args.imageUrlXl,
+      args.imageCaption,
+      args.imageAlt,
+      args.imageCopyRight
+    ),
   argTypes: {
     title: {
       name: 'Title',
@@ -52,7 +53,7 @@ export default {
       name: 'Image caption',
       control: 'text',
     },
-  }
+  },
 }
 
 export const Default = {
@@ -71,6 +72,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

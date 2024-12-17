@@ -9,12 +9,15 @@ export default {
       name: 'Search results',
       control: 'object',
     },
-  }
+  },
 }
 
 function getEmLoremIpsum() {
   const text = loremIpsum()
-  return text.split(' ').map(w => Math.random() > 0.8 ? `<em>` + w + '</em>' : w).join(' ')
+  return text
+    .split(' ')
+    .map((w) => (Math.random() > 0.8 ? `<em>` + w + '</em>' : w))
+    .join(' ')
 }
 
 function getBreadcrumbs() {
@@ -30,54 +33,39 @@ export const Default = {
       {
         title: loremIpsum(),
         url: '/' + loremIpsum({ count: 1, units: 'words' }),
-        breadcrumbs: [
-          'bs.ch',
-          ...getBreadcrumbs()
-        ],
+        breadcrumbs: ['bs.ch', ...getBreadcrumbs()],
         text: getEmLoremIpsum(),
       },
       {
         title: loremIpsum(),
         url: '/' + loremIpsum({ count: 1, units: 'words' }),
-        breadcrumbs: [
-          'bs.ch',
-          ...getBreadcrumbs()
-        ],
+        breadcrumbs: ['bs.ch', ...getBreadcrumbs()],
         text: getEmLoremIpsum(),
       },
       {
         title: loremIpsum(),
         url: '/' + loremIpsum({ count: 1, units: 'words' }),
-        breadcrumbs: [
-          'bs.ch',
-          ...getBreadcrumbs()
-        ],
+        breadcrumbs: ['bs.ch', ...getBreadcrumbs()],
         text: getEmLoremIpsum(),
       },
       {
         title: loremIpsum(),
         url: '/' + loremIpsum({ count: 1, units: 'words' }),
-        breadcrumbs: [
-          'bs.ch',
-          ...getBreadcrumbs()
-        ],
+        breadcrumbs: ['bs.ch', ...getBreadcrumbs()],
         text: getEmLoremIpsum(),
       },
       {
         title: loremIpsum(),
         url: '/' + loremIpsum({ count: 1, units: 'words' }),
-        breadcrumbs: [
-          'bs.ch',
-          ...getBreadcrumbs()
-        ],
+        breadcrumbs: ['bs.ch', ...getBreadcrumbs()],
         text: getEmLoremIpsum(),
-      }
-    ]
+      },
+    ],
   },
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-13190&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

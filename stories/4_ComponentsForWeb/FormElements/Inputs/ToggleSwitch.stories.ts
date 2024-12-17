@@ -2,7 +2,8 @@ import { ToggleSwitch } from './ToggleSwitch'
 
 export default {
   title: '4. Components for the web/Form elements/Inputs/Toggle switch',
-  render: (args) => ToggleSwitch(args.label, args.name, args.id, args.isReversed),
+  render: (args) =>
+    ToggleSwitch(args.label, args.name, args.id, args.isReversed),
   argTypes: {
     label: {
       name: 'Label',
@@ -19,7 +20,7 @@ export default {
     isReversed: {
       name: 'Is reversed?',
       control: 'boolean',
-    }
+    },
   },
 }
 
@@ -35,6 +36,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

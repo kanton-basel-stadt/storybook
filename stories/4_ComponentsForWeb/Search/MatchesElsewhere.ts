@@ -1,12 +1,15 @@
 import { html } from 'lit'
 
 export type SearchLocation = {
-  name: string,
-  count: number,
-  url: string,
+  name: string
+  count: number
+  url: string
 }
 
-export const MatchesElsewhere = (searchTerm: string, otherSearchLocations: SearchLocation[]) => {
+export const MatchesElsewhere = (
+  searchTerm: string,
+  otherSearchLocations: SearchLocation[]
+) => {
   return html`
     <div class="container my-60">
       <div class="relative rounded-large bg-primary-50 overflow-hidden">
@@ -16,13 +19,17 @@ export const MatchesElsewhere = (searchTerm: string, otherSearchLocations: Searc
             wurde auch hier gefunden:
           </h2>
           <ul>
-            ${otherSearchLocations.map(l => {
+            ${otherSearchLocations.map((l) => {
               return html`
                 <li class="mt-10">
-                  ${
-                    l.count === 0 ? html`<span class="link with-icon pointer-events-none opacity-45">${l.name} (${l.count})</span>`
-                        : html`<a class="link with-icon" href="${l.url}">${l.name} (${l.count})</a>`
-                  }
+                  ${l.count === 0
+                    ? html`<span
+                        class="link with-icon pointer-events-none opacity-45"
+                        >${l.name} (${l.count})</span
+                      >`
+                    : html`<a class="link with-icon" href="${l.url}"
+                        >${l.name} (${l.count})</a
+                      >`}
                 </li>
               `
             })}

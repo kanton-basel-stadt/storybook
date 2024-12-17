@@ -13,6 +13,21 @@ permissions:
   id-token: write
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
   deploy:
     runs-on: ubuntu-latest
     steps:

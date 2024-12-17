@@ -3,34 +3,19 @@ import { ContrastChecker } from './ContrastChecker'
 
 export default {
   title: '3. Tailwind Tools/Contrast Checker',
-  render: (args) => ContrastChecker(colors, args.foregroundColor, args.backgroundColor),
+  render: (args) =>
+    ContrastChecker(colors, args.foregroundColor, args.backgroundColor),
   argTypes: {
     foregroundColor: {
       control: { type: 'select' },
       name: 'Foreground color',
-      options: [
-        'all',
-        'green',
-        'blue',
-        'gray',
-        'purple',
-        'red',
-        'white',
-      ]
+      options: ['all', 'green', 'blue', 'gray', 'purple', 'red', 'white'],
     },
     backgroundColor: {
       control: { type: 'select' },
       name: 'Background color',
-      options: [
-        'all',
-        'green',
-        'blue',
-        'gray',
-        'purple',
-        'red',
-        'white',
-      ]
-    }
+      options: ['all', 'green', 'blue', 'gray', 'purple', 'red', 'white'],
+    },
   },
 }
 

@@ -7,7 +7,22 @@ export const Button = (
   iconName: string,
   iconPlacement: 'No icon' | 'Icon left' | 'Icon right' | 'Icon only',
   size: 'Standard' | 'Small',
-  types: ('Link' | 'Strong' | 'Limited' | 'Super' | 'Action' | 'Feedback' | 'Prev' | 'Next' | 'Close' | 'Add' | 'Reload' | 'Check' | 'Success' | 'Failure')[]
+  types: (
+    | 'Link'
+    | 'Strong'
+    | 'Limited'
+    | 'Super'
+    | 'Action'
+    | 'Feedback'
+    | 'Prev'
+    | 'Next'
+    | 'Close'
+    | 'Add'
+    | 'Reload'
+    | 'Check'
+    | 'Success'
+    | 'Failure'
+  )[]
 ) => {
   const classes = {
     button: true,
@@ -31,7 +46,9 @@ export const Button = (
 
   return html`
     <button class="${classMap(classes)}">
-      ${iconPlacement === 'Icon left' || iconPlacement === 'Icon only' ? Icon(iconName) : ''}
+      ${iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
+        ? Icon(iconName)
+        : ''}
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </button>

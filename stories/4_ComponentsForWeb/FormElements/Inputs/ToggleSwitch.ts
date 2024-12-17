@@ -21,7 +21,7 @@ export const ToggleSwitch = (
       name="${name}"
       value="false"
     />
-    
+
     <label class="${classMap(classes)}" for="${id}" id="${id}_label">
       ${label}
     </label>

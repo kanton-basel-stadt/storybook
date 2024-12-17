@@ -2,11 +2,22 @@ import { html } from 'lit'
 import { classMap } from 'lit-html/directives/class-map.js'
 
 export type Link = {
-  label: string,
-  url: string,
+  label: string
+  url: string
 }
 
-export const FocusTeaser = (title: string, mainUrl: string, links: Link[], imageUrlSm: string, imageUrlMd: string, imageUrlLg: string, imageUrlXl: string, imageCaption: string, imageAlt: string, color: 'light'|'dark') => {
+export const FocusTeaser = (
+  title: string,
+  mainUrl: string,
+  links: Link[],
+  imageUrlSm: string,
+  imageUrlMd: string,
+  imageUrlLg: string,
+  imageUrlXl: string,
+  imageCaption: string,
+  imageAlt: string,
+  color: 'light' | 'dark'
+) => {
   const paragraphClasses = {
     'py-25': true,
     'lg:py-30': true,
@@ -18,7 +29,7 @@ export const FocusTeaser = (title: string, mainUrl: string, links: Link[], image
 
   const headingClasses = {
     'pre-heading': true,
-    'sticky': true,
+    sticky: true,
     'top-sticky-top': true,
     'mobile-only:px-15': true,
     'mobile-only:-mx-15': true,
@@ -50,7 +61,7 @@ export const FocusTeaser = (title: string, mainUrl: string, links: Link[], image
   }
 
   const linkClasses = {
-    'link': true,
+    link: true,
     'with-icon': true,
     'xl:text-lg': true,
     'is-inverted': color === 'dark',
@@ -59,13 +70,9 @@ export const FocusTeaser = (title: string, mainUrl: string, links: Link[], image
   return html`
     <section class="${classMap(paragraphClasses)}">
       <div class="container">
-        <h2 class="${classMap(headingClasses)}">
-          Schwerpunkt
-        </h2>
+        <h2 class="${classMap(headingClasses)}">Schwerpunkt</h2>
         <div>
-          <h3 class="${classMap(titleClasses)}">
-            ${title}
-          </h3>
+          <h3 class="${classMap(titleClasses)}">${title}</h3>
           <section class="gap-20 grid md:grid-cols-3">
             <a class="md:pb-0 md:col-span-2" href="${mainUrl}">
               <figure class="${classMap(figureClass)}">
@@ -74,19 +81,20 @@ export const FocusTeaser = (title: string, mainUrl: string, links: Link[], image
                     alt="${imageAlt}"
                     class="w-full"
                     height="1267"
-                    loading="lazy" sizes="(min-width: 1209px) 687px, (min-width: 1023px) 524px, (min-width: 767px) 480px, (min-width: 479px) 396px"
+                    loading="lazy"
+                    sizes="(min-width: 1209px) 687px, (min-width: 1023px) 524px, (min-width: 767px) 480px, (min-width: 479px) 396px"
                     src="${imageUrlSm}"
                     srcset="
-                      ${imageUrlSm} 396w,
-                      ${imageUrlSm} 594w,
-                      ${imageUrlSm} 792w,
-                      ${imageUrlMd} 480w,
-                      ${imageUrlMd} 720w,
-                      ${imageUrlMd} 960w,
-                      ${imageUrlLg} 524w,
-                      ${imageUrlLg} 786w,
+                      ${imageUrlSm}   396w,
+                      ${imageUrlSm}   594w,
+                      ${imageUrlSm}  792w,
+                      ${imageUrlMd}  480w,
+                      ${imageUrlMd}  720w,
+                      ${imageUrlMd}  960w,
+                      ${imageUrlLg}  524w,
+                      ${imageUrlLg}  786w,
                       ${imageUrlLg} 1048w,
-                      ${imageUrlXl} 687w,
+                      ${imageUrlXl}  687w,
                       ${imageUrlXl} 1031w,
                       ${imageUrlXl} 1374w
                     "
@@ -100,15 +108,19 @@ export const FocusTeaser = (title: string, mainUrl: string, links: Link[], image
             </a>
             <div class="md:pt-0">
               <ul class="grid gap-20 grid-cols-1">
-                ${links.map(link => html`
-                  <li>
-                    <a class="${classMap(linkClasses)}" href="${link.url}">
-                      <span class="hyphens-auto font-bold col-start-2 row-start-1">
-                        ${link.label}
-                      </span>
-                    </a>
-                  </li>
-                `)}
+                ${links.map(
+                  (link) => html`
+                    <li>
+                      <a class="${classMap(linkClasses)}" href="${link.url}">
+                        <span
+                          class="hyphens-auto font-bold col-start-2 row-start-1"
+                        >
+                          ${link.label}
+                        </span>
+                      </a>
+                    </li>
+                  `
+                )}
               </ul>
               <a class="button mt-20 is-link is-inverted" href="${mainUrl}">
                 Mehr erfahren

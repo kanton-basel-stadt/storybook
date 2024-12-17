@@ -7,7 +7,7 @@ export default {
     content: {
       name: 'Links (JSON Object)',
       control: 'object',
-    }
+    },
   },
 }
 
@@ -16,18 +16,18 @@ export const Default = {
     content: [
       {
         label: 'Hello',
-        target: '#hello'
+        target: '#hello',
       },
       {
         label: 'World',
-        target: '#world'
+        target: '#world',
       },
-    ]
+    ],
   },
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-8495&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

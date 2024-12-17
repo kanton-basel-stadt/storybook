@@ -1,5 +1,6 @@
 import { html } from 'lit'
 
+// prettier-ignore
 export const Text = (text: string) => html`
   <div><!--[--><!--[if mso | IE]>
       <table

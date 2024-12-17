@@ -3,7 +3,14 @@ import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-inde
 
 export default {
   title: '4. Components for the web/Buttons/Button',
-  render: (args) => Button(args.label, args.iconName, args.iconPlacement, args.size, args.types),
+  render: (args) =>
+    Button(
+      args.label,
+      args.iconName,
+      args.iconPlacement,
+      args.size,
+      args.types
+    ),
   argTypes: {
     label: {
       name: 'Text label',
@@ -12,7 +19,7 @@ export default {
     iconName: {
       name: 'Icon',
       control: 'select',
-      options: IconsIndex.iconNames
+      options: IconsIndex.iconNames,
     },
     iconPlacement: {
       name: 'Icon placement',
@@ -26,7 +33,22 @@ export default {
     },
     types: {
       name: 'Button types (mix and match)',
-      options: ['Link', 'Limited', 'Strong', 'Super', 'Action', 'Feedback', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check', 'Success', 'Failure'],
+      options: [
+        'Link',
+        'Limited',
+        'Strong',
+        'Super',
+        'Action',
+        'Feedback',
+        'Prev',
+        'Next',
+        'Close',
+        'Add',
+        'Reload',
+        'Check',
+        'Success',
+        'Failure',
+      ],
       control: 'multi-select',
     },
   },
@@ -44,6 +66,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4',
-    }
-  }
+    },
+  },
 }

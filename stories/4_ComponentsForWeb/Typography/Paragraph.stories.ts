@@ -12,10 +12,8 @@ export default {
     kind: {
       name: 'Kind',
       control: 'select',
-      options: [
-        'paragraph', 'small paragraph', 'preheading', 'lead',
-      ]
-    }
+      options: ['paragraph', 'small paragraph', 'preheading', 'lead'],
+    },
   },
 }
 
@@ -28,8 +26,8 @@ export const StandardParagraph = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
 
 export const SmallParagraph = {
@@ -41,8 +39,8 @@ export const SmallParagraph = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
 
 export const Preheading = {
@@ -54,8 +52,8 @@ export const Preheading = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }
 
 export const Lead = {
@@ -67,6 +65,6 @@ export const Lead = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28115&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

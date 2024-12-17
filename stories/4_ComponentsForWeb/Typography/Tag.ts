@@ -8,15 +8,12 @@ export const Tag = (
   iconName: IconName
 ) => {
   const classes = {
-    'tag': true,
+    tag: true,
     'is-light': variant === 'light',
     'is-dark': variant === 'dark',
   }
 
   return html`
-    <div class="${classMap(classes)}">
-      ${Icon(iconName)}
-      ${content}
-    </div>
+    <div class="${classMap(classes)}">${Icon(iconName)} ${content}</div>
   `
 }

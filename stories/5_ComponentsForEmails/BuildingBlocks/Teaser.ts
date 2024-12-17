@@ -1,5 +1,6 @@
 import { html } from 'lit'
 
+// prettier-ignore
 export const Teaser = (titleAboveImage: string, title: string, text: string, imageUrl: string, copyRight: string, url: string) => html`
   <div data-v-inspector="components/Paragraph/Teaser/mjml.vue:2:3"><!--[--><!--[--><table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;" data-mjml-tag="mj-table"><!--[--><tbody><tr><td style="border-top: 1px solid #A5A5A5; padding: 0;"><!--[--><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" data-mjml-tag="mj-wrapper"><tbody><tr><td><!--[if mso | IE]>
       <table

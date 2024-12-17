@@ -1,5 +1,6 @@
 import { html } from 'lit'
 
+// prettier-ignore
 export const HTMLFrame = (content) => html`
   <!DOCTYPE html><html  lang="de" class="" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" data-capo=""><head>
     <!--[if !mso]><!-->
@@ -38,6 +39,24 @@ export const HTMLFrame = (content) => html`
       p {
         display: block;
         margin: 13px 0;
+      }
+
+      ul {
+          list-style-type: disc;
+          padding-left: 20px;
+      }
+      ol {
+          list-style-type: decimal;
+          padding-left: 20px;
+      }
+      h3 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: 13px;
+          margin-bottom: 13px;
+      }
+      p > a {
+          color: #1E4557;
       }
     </style>
     <!–[if mso]>

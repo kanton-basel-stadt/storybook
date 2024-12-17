@@ -2,7 +2,8 @@ import { Input } from './Input'
 
 export default {
   title: '4. Components for the web/Form elements/Inputs/Input',
-  render: (args) => Input(args.label, args.value, args.name, args.id, args.type),
+  render: (args) =>
+    Input(args.label, args.value, args.name, args.id, args.type),
   argTypes: {
     label: {
       name: 'Label',
@@ -23,8 +24,8 @@ export default {
     type: {
       name: 'Type',
       control: 'select',
-      options: ['text', 'date', 'number', 'email', 'password', 'tel', 'week']
-    }
+      options: ['text', 'date', 'number', 'email', 'password', 'tel', 'week'],
+    },
   },
 }
 
@@ -40,6 +41,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

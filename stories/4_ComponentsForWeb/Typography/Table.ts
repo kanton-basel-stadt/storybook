@@ -46,9 +46,6 @@ export const Table = () => {
         </tr>
       </tbody>
     </table>
-    <figcaption>
-      Example table
-    </figcaption>
-  </figure>
-  `
+    <figcaption>Example table</figcaption>
+  </figure> `
 }

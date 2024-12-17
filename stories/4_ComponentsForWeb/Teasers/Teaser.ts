@@ -1,6 +1,15 @@
 import { html } from 'lit'
 
-export const Teaser = (title: string, url: string, description: string, imageUrlSm: string, imageUrlMd: string, imageUrlLg: string, imageUrlXl: string, imageCaption: string) => {
+export const Teaser = (
+  title: string,
+  url: string,
+  description: string,
+  imageUrlSm: string,
+  imageUrlMd: string,
+  imageUrlLg: string,
+  imageUrlXl: string,
+  imageCaption: string
+) => {
   return html`
     <a class="group/button group/link hyphens-auto flex flex-col" href="${url}">
       <h3 class="text-lg font-bold link order-2">${title}</h3>
@@ -10,13 +19,13 @@ export const Teaser = (title: string, url: string, description: string, imageUrl
             <img
               src="${imageUrlSm}"
               srcset="
-                ${imageUrlSm} 382w,
-                ${imageUrlSm} 573w,
-                ${imageUrlSm} 764w,
-                ${imageUrlMd} 224w,
-                ${imageUrlMd} 336w,
-                ${imageUrlMd} 448w,
-                ${imageUrlLg} 252w,
+                ${imageUrlSm}  382w,
+                ${imageUrlSm}  573w,
+                ${imageUrlSm}  764w,
+                ${imageUrlMd}  224w,
+                ${imageUrlMd}  336w,
+                ${imageUrlMd}  448w,
+                ${imageUrlLg}  252w,
                 ${imageUrlLg} 378w,
                 ${imageUrlLg} 504w,
                 ${imageUrlXl} 334w,
@@ -36,7 +45,9 @@ export const Teaser = (title: string, url: string, description: string, imageUrl
       <p class="mt-10 text-blue-900 group-hover/button:text-blue-700 order-3">
         ${description}
       </p>
-      <div class="button is-link mt-15 order-4">Details <span class="sr-only">zu dieser Seite</span></div>
+      <div class="button is-link mt-15 order-4">
+        Details <span class="sr-only">zu dieser Seite</span>
+      </div>
     </a>
   `
 }

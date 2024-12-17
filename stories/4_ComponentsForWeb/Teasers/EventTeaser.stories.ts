@@ -3,18 +3,19 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Teasers/Event teaser',
-  render: (args) => EventTeaser(
-    args.url,
-    args.title,
-    args.date,
-    args.time,
-    args.venue,
-    args.imageUrl,
-    args.imageCaption,
-    args.hasMultiple,
-    args.isRecurring,
-    args.hasSignUp,
-  ),
+  render: (args) =>
+    EventTeaser(
+      args.url,
+      args.title,
+      args.date,
+      args.time,
+      args.venue,
+      args.imageUrl,
+      args.imageCaption,
+      args.hasMultiple,
+      args.isRecurring,
+      args.hasSignUp
+    ),
   argTypes: {
     url: {
       name: 'URL',
@@ -56,7 +57,7 @@ export default {
       name: 'Has a sign-up link?',
       control: 'boolean',
     },
-  }
+  },
 }
 
 export const Default = {
@@ -76,12 +77,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24445-62190&t=FznYmIANb8uB5p92-1s',
-    }
-  }
+    },
+  },
 }
-
-
-
-
-
-

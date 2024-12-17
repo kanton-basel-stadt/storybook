@@ -3,7 +3,7 @@ import { html } from 'lit'
 export const Pagination = () => {
   return html`<div class="my-30 lg:my-50 py-20">
     <div class="flex justify-between items-center">
-      <a 
+      <a
         href="?page=1"
         title="Zur vorherigen Seite gehen"
         class="button is-prev"
@@ -23,9 +23,7 @@ export const Pagination = () => {
         <a class="" href="?page=4" aria-current="date">
           <span class="sr-only">Seite</span> 4
         </a>
-        <div aria-hidden="true">
-          …
-        </div>
+        <div aria-hidden="true">…</div>
         <a class="" href="?page=417">
           <span class="sr-only">Seite</span> 417
         </a>

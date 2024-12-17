@@ -25,16 +25,20 @@ const preview = {
         transformEl.innerHTML = code
 
         // Empty out all the icon tags, so their usage is apparent.
-        // @ts-ignore
-        import.meta.env.STORYBOOK_DDS_ICONS.forEach(iconName => {
+        // @ts-expect-error .env is not defined on the type, but present thanks to Vite.
+        import.meta.env.STORYBOOK_DDS_ICONS.forEach((iconName) => {
           const selector = 'icon-symbol-' + iconName.replace('_', '-')
-          transformEl.querySelectorAll(selector).forEach(el => el.innerHTML = '')
+          transformEl
+            .querySelectorAll(selector)
+            .forEach((el) => (el.innerHTML = ''))
         })
 
         // Replace all encoded ampers-ands with actual ones.
-        return transformEl.querySelector('#root-inner').innerHTML.replace(/&amp;/g, '&')
+        return transformEl
+          .querySelector('#root-inner')
+          .innerHTML.replace(/&amp;/g, '&')
       },
-    }
+    },
   },
 }
 

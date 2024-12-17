@@ -5,7 +5,7 @@ export const Link = (
   withIcon: boolean,
   isInline: boolean,
   label: string,
-  href: string,
+  href: string
 ) => {
   const classes = {
     link: true,
@@ -13,9 +13,5 @@ export const Link = (
     'inline-link': isInline,
   }
 
-  return html`
-    <a href="${href}" class="${classMap(classes)}">
-      ${label}
-    </a>
-  `
+  return html` <a href="${href}" class="${classMap(classes)}"> ${label} </a> `
 }

@@ -3,19 +3,27 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '5. Components for emails/Building blocks/Teaser',
-  render: (args) => Teaser(args.titleAboveImage, args.title, args.text, args.imageUrl, args.copyRight, args.url),
+  render: (args) =>
+    Teaser(
+      args.titleAboveImage,
+      args.title,
+      args.text,
+      args.imageUrl,
+      args.copyRight,
+      args.url
+    ),
   argTypes: {
     titleAboveImage: {
       name: 'Title above image',
-      control: 'text'
+      control: 'text',
     },
     title: {
       name: 'Title',
-      control: 'text'
+      control: 'text',
     },
     text: {
       name: 'Text',
-      control: 'text'
+      control: 'text',
     },
     imageUrl: {
       name: 'Image URL',
@@ -28,8 +36,8 @@ export default {
     url: {
       name: 'URL',
       control: 'text',
-    }
-  }
+    },
+  },
 }
 
 export const Default = {
@@ -45,6 +53,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=21334-1360&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

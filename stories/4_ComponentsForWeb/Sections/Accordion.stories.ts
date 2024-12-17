@@ -3,7 +3,8 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Sections/Accordion',
-  render: (args) => Accordion(args.title, args.accordions, args.numberOfColumns),
+  render: (args) =>
+    Accordion(args.title, args.accordions, args.numberOfColumns),
   argTypes: {
     title: {
       name: 'Section title',
@@ -34,14 +35,14 @@ export const Default = {
           {
             label: loremIpsum(),
             description: loremIpsum({ count: 2 }),
-            url: 'https://www.bs.ch/'
+            url: 'https://www.bs.ch/',
           },
           {
             label: loremIpsum(),
             description: loremIpsum({ count: 2 }),
-            url: 'https://www.bs.ch/'
-          }
-        ]
+            url: 'https://www.bs.ch/',
+          },
+        ],
       },
       {
         label: 'Second accordion',
@@ -52,14 +53,14 @@ export const Default = {
           {
             label: loremIpsum(),
             description: loremIpsum({ count: 2 }),
-            url: 'https://www.bs.ch/'
+            url: 'https://www.bs.ch/',
           },
           {
             label: loremIpsum(),
             description: loremIpsum({ count: 2 }),
-            url: 'https://www.bs.ch/'
-          }
-        ]
+            url: 'https://www.bs.ch/',
+          },
+        ],
       },
     ],
     numberOfColumns: 1,
@@ -68,6 +69,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58027&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

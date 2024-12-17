@@ -10,11 +10,7 @@ interface CustomTableProps {
  * @returns JSX.Element
  */
 const CustomTable: React.FC<CustomTableProps> = ({ children }) => {
-  return (
-    <table className="table">
-      {children}
-    </table>
-  )
+  return <table className="table">{children}</table>
 }
 
 export default CustomTable

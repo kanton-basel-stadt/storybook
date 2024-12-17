@@ -12,14 +12,12 @@ export default {
     variant: {
       name: 'Variant',
       control: 'radio',
-      options: [
-        'light', 'standard', 'dark',
-      ]
+      options: ['light', 'standard', 'dark'],
     },
     iconName: {
       name: 'Icon',
       control: 'select',
-      options: IconsIndex.iconNames
+      options: IconsIndex.iconNames,
     },
   },
 }
@@ -34,8 +32,8 @@ export const Light = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4',
-    }
-  }
+    },
+  },
 }
 
 export const Standard = {
@@ -48,8 +46,8 @@ export const Standard = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4',
-    }
-  }
+    },
+  },
 }
 
 export const Dark = {
@@ -62,6 +60,6 @@ export const Dark = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4',
-    }
-  }
+    },
+  },
 }

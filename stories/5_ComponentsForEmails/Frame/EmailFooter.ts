@@ -1,5 +1,6 @@
 import { html } from 'lit'
 
+// prettier-ignore
 export const EmailFooter = (unsubscribeLink: string) => html`
   <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#E3E3E3;background-color:#E3E3E3;width:100%;" data-mjml-tag="mj-wrapper"><tbody><tr><td><!--[if mso | IE]>
       <table

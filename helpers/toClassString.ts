@@ -1,8 +1,14 @@
 import { ClassInfo } from 'lit-html/directives/class-map'
 
-export default function(classes: ClassInfo) {
+export default function (classes: ClassInfo) {
   return Object.entries(classes)
-    .filter(([_, value]) => value)
-    .map(([key]) => key)
+    .map(([key, value]) => {
+      if (!value) {
+        return null
+      }
+
+      return key
+    })
+    .filter((v) => !!v)
     .join(' ')
 }

@@ -30,18 +30,18 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   const highlightedCode = highlightCode(children.trim(), language)
 
   async function copyCode() {
-    const type = "text/plain"
+    const type = 'text/plain'
     const blob = new Blob([children.trim()], { type })
     const data = [new ClipboardItem({ [type]: blob })]
     await navigator.clipboard.write(data)
   }
 
-  if (children.trim().includes("\n")) {
+  if (children.trim().includes('\n')) {
     // Multi-line child, probably not inline
     return (
       <div className="mb-20">
-        <pre className={ `hljs ${ language } block mb-5` }>
-          <code dangerouslySetInnerHTML={ {__html: highlightedCode} }/>
+        <pre className={`hljs ${language} block mb-5`}>
+          <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
         </pre>
 
         <div className="flex justify-end">
@@ -54,7 +54,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   }
 
   return (
-    <pre className={ `hljs ${ language} inline`}>
+    <pre className={`hljs ${language} inline`}>
       <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </pre>
   )

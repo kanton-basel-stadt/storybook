@@ -12,7 +12,7 @@ export default {
     isWide: {
       name: 'Is wide?',
       control: 'boolean',
-    }
+    },
   },
 }
 

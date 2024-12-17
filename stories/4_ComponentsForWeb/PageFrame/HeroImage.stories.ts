@@ -3,16 +3,17 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Page Frame/Hero image',
-  render: (args) => HeroImage(
-    args.imageUrl3xl,
-    args.imageUrl2xl,
-    args.imageUrlXl,
-    args.imageUrlLg,
-    args.imageUrlMd,
-    args.imageUrlSm,
-    args.imageUrlXs,
-    args.imageCaption,
-  ),
+  render: (args) =>
+    HeroImage(
+      args.imageUrl3xl,
+      args.imageUrl2xl,
+      args.imageUrlXl,
+      args.imageUrlLg,
+      args.imageUrlMd,
+      args.imageUrlSm,
+      args.imageUrlXs,
+      args.imageCaption
+    ),
   argTypes: {
     imageUrlXs: {
       name: 'Image URL for XS',
@@ -46,7 +47,7 @@ export default {
       name: 'Image caption',
       control: 'text',
     },
-  }
+  },
 }
 
 export const Default = {
@@ -64,6 +65,6 @@ export const Default = {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-21126&t=FznYmIANb8uB5p92-1',
-    }
-  }
+    },
+  },
 }

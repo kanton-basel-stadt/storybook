@@ -5,12 +5,16 @@ export const Input = (
   value: string,
   name: string,
   id: string,
-  type: string,
+  type: string
 ) => {
   return html`
-    <label for="${id}" class="label">
-      ${label}
-    </label>
-    <input type="${type}" name="${name}" id="${id}" value="${value}" class="input">
+    <label for="${id}" class="label"> ${label} </label>
+    <input
+      type="${type}"
+      name="${name}"
+      id="${id}"
+      value="${value}"
+      class="input"
+    />
   `
 }

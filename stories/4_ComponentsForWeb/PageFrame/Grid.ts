@@ -1,6 +1,18 @@
 import { html } from 'lit'
 
-export type GridNumberSettings = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+export type GridNumberSettings =
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
 
 // The classes are written out here so Tailwind can pick them up.
 
@@ -126,7 +138,7 @@ function getGridClasses(
   numberOfColsMD: GridNumberSettings,
   numberOfColsLG: GridNumberSettings,
   numberOfColsXL: GridNumberSettings,
-  numberOfColsXXL: GridNumberSettings,
+  numberOfColsXXL: GridNumberSettings
 ) {
   const classes = []
 
@@ -165,19 +177,76 @@ export const Grid = (
   gapSize: number
 ) => {
   return html`
-    <div class="container grid ${getGridClasses(numberOfColsXS, numberOfColsSM, numberOfColsMD, numberOfColsLG, numberOfColsXL, numberOfColsXXL)} ${gapClasses[gapSize]}">
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 1</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 2</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 3</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 4</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 5</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 6</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 7</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 8</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 9</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 10</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 11</div>
-      <div class="bg-green-200 rounded h-[120px] flex items-center justify-center">Grid element 12</div>
+    <div
+      class="container grid ${getGridClasses(
+        numberOfColsXS,
+        numberOfColsSM,
+        numberOfColsMD,
+        numberOfColsLG,
+        numberOfColsXL,
+        numberOfColsXXL
+      )} ${gapClasses[gapSize]}"
+    >
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 1
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 2
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 3
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 4
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 5
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 6
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 7
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 8
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 9
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 10
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 11
+      </div>
+      <div
+        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+      >
+        Grid element 12
+      </div>
     </div>
   `
 }

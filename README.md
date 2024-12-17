@@ -4,7 +4,7 @@ The Storybook instance for the Kanton Basel Stadt Design System (DDS).
 
 ## Getting started
 
-Head to https://github.com/kanton-basel-stadt/storybook and follow the documentation.
+Head to https://kanton-basel-stadt.github.io/storybook/ and follow the documentation.
 
 ## Development
 

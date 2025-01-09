@@ -53,11 +53,16 @@ export default {
       control: {
         type: 'select',
         labels: {
-          'https://www.bs.ch/images/email/button-primary-arrow-right.png': 'Arrow right, primary',
-          'https://www.bs.ch/images/email/button-secondary-arrow-right.png': 'Arrow right, secondary',
-          'https://www.bs.ch/images/email/button-small-arrow-right.png': 'Small arrow right, secondary',
-          'https://www.bs.ch/images/email/button-secondary-email.png': 'Email, secondary',
-          'https://www.bs.ch/images/email/button-secondary-phone.png': 'Phone, secondary',
+          'https://www.bs.ch/images/email/button-primary-arrow-right.png':
+            'Arrow right, primary',
+          'https://www.bs.ch/images/email/button-secondary-arrow-right.png':
+            'Arrow right, secondary',
+          'https://www.bs.ch/images/email/button-small-arrow-right.png':
+            'Small arrow right, secondary',
+          'https://www.bs.ch/images/email/button-secondary-email.png':
+            'Email, secondary',
+          'https://www.bs.ch/images/email/button-secondary-phone.png':
+            'Phone, secondary',
           '': 'No icon',
         },
       },

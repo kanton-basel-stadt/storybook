@@ -162,24 +162,41 @@ export const Button = (
                           [endif]--><!--[--><!--[-->
                           <table>
                             <tbody>
-                            <tr>
-                              ${iconPath && iconPath.length > 0 ? html`
-                                <td valign="middle" style="padding-right:8px;"><!--[-->
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;" data-mjml-tag="mj-image">
-                                    <tbody>
-                                    <tr>
-                                      <td style="width:20px;">
-                                        <img height="20" src="${iconPath}" style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;" width="20">
+                              <tr>
+                                ${iconPath && iconPath.length > 0
+                                  ? html`
+                                      <td
+                                        valign="middle"
+                                        style="padding-right:8px;"
+                                      >
+                                        <!--[-->
+                                        <table
+                                          border="0"
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          role="presentation"
+                                          style="border-collapse:collapse;border-spacing:0px;"
+                                          data-mjml-tag="mj-image"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td style="width:20px;">
+                                                <img
+                                                  height="20"
+                                                  src="${iconPath}"
+                                                  style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;"
+                                                  width="20"
+                                                />
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <!--]-->
                                       </td>
-                                    </tr>
-                                    </tbody>
-                                  </table><!--]-->
-                                </td>
-                              ` : ''}
-                              <td valign="middle">
-                                ${label}
-                              </td>
-                            </tr>
+                                    `
+                                  : ''}
+                                <td valign="middle">${label}</td>
+                              </tr>
                             </tbody>
                           </table>
                           <!--]--><!--]--><!--[if !mso

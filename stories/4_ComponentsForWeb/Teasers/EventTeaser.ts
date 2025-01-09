@@ -18,7 +18,7 @@ export const EventTeaser = (args: EventTeaserParams) => {
   return html`
     <a
       href="${args.url}"
-      class="group/button hyphens-auto block grid grid-rows-subgrid grid-cols-1 row-span-9"
+      class="group/button hyphens-auto grid grid-rows-subgrid grid-cols-1 row-span-9"
     >
       <article
         class="border-green-100 border-2 rounded-large p-10 pb-15 hover:bg-blue-50 transition-all ease-in-out duration-250 h-full grid grid-rows-subgrid grid-cols-1 row-span-9"

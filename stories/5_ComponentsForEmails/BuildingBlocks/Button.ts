@@ -8,7 +8,7 @@ export const Button = (
   if (type === 'primary') {
     // prettier-ignore
     return html`
-      <div data-v-inspector="components/Paragraph/Button/mjml.vue:2:3"><!--[--><!--[if mso | IE]>
+      <div><!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff"
       >
@@ -69,7 +69,7 @@ export const Button = (
   }
 
   return html`
-    <div data-v-inspector="components/Paragraph/Button/mjml.vue:2:3">
+    <div>
       <!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff"

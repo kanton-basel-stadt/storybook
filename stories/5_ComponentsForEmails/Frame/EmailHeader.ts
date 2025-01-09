@@ -2,7 +2,7 @@ import { html } from 'lit'
 
 // prettier-ignore
 export const EmailHeader = (title: string, sender: string, browserUrl: string) => html`
-  <div id="nuxt-root"><div class="bk-main-canvas" data-v-inspector="node_modules/nuxt/dist/app/components/nuxt-root.vue:16:5"><div data-v-inspector="app.vue:3:5"></div><div data-v-inspector="app.vue:4:5"><!--[--><!--[--><div style="" lang="de" dir="ltr" data-mjml-tag="mj-body"><!--[--><!--[--><div data-v-inspector="layers/emails/pages/email/server/newsletter/[id]/index.vue:2:3"><!--[--><!--[--><!--[if mso | IE]>
+  <div id="nuxt-root"><div><div><!--[--><!--[--><div style="" lang="de" dir="ltr" data-mjml-tag="mj-body"><!--[--><!--[--><div><!--[--><!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600"
       >

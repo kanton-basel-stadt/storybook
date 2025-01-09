@@ -20,16 +20,19 @@ export const Default = {
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
         isRecurring: Math.random() > 0.5,
@@ -38,16 +41,19 @@ export const Default = {
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
         isRecurring: Math.random() > 0.5,
@@ -56,16 +62,19 @@ export const Default = {
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
         isRecurring: Math.random() > 0.5,
@@ -74,16 +83,19 @@ export const Default = {
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
         isRecurring: Math.random() > 0.5,
@@ -92,16 +104,19 @@ export const Default = {
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
         isRecurring: Math.random() > 0.5,

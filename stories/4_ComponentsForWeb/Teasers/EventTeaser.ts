@@ -32,11 +32,11 @@ export const EventTeaser = (args: EventTeaserParams) => {
           loading="lazy"
           class="w-full mb-15 rounded row-start-1"
         />
-        <div class="text-4xl font-bold text-green-500 mb-10 row-start-2">
-          ${args.date}
-        </div>
-        <div class="text-2xl font-bold text-blue-900 mb-10 row-start-3">
+        <h3 class="text-4xl font-bold text-blue-900 mb-10 row-start-3">
           ${args.title}
+        </h3>
+        <div class="text-2xl font-bold text-green-500 mb-10 row-start-2">
+          ${args.date}
         </div>
         <time class="block font-bold text-blue-900 mb-15 row-start-4"
           >${args.time}</time

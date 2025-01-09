@@ -3,3 +3,4 @@ static/tailwind_config_viewer
 .cache
 storybook-static
 static/css/storybook-built.css
+node_modules

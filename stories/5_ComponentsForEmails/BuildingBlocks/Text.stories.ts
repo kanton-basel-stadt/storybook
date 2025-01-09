@@ -3,11 +3,19 @@ import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '5. Components for emails/Building blocks/Text',
-  render: (args) => Text(args.text),
+  render: (args) => Text(args.text, args.isBold, args.isGreen),
   argTypes: {
     text: {
       name: 'Text',
       control: 'text',
+    },
+    isBold: {
+      name: 'Bold?',
+      control: 'boolean',
+    },
+    isGreen: {
+      name: 'Green?',
+      control: 'boolean',
     },
   },
 }
@@ -15,6 +23,8 @@ export default {
 export const Default = {
   args: {
     text: loremIpsum(),
+    isBold: false,
+    isGreen: false,
   },
   parameters: {
     design: {

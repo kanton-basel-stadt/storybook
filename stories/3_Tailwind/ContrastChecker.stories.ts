@@ -7,12 +7,12 @@ export default {
     ContrastChecker(colors, args.foregroundColor, args.backgroundColor),
   argTypes: {
     foregroundColor: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Foreground color',
       options: ['all', 'green', 'blue', 'gray', 'purple', 'red', 'white'],
     },
     backgroundColor: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Background color',
       options: ['all', 'green', 'blue', 'gray', 'purple', 'red', 'white'],
     },

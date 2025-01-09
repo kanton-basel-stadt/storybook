@@ -1,7 +1,7 @@
 import { html } from 'lit'
 
 // prettier-ignore
-export const Text = (text: string) => html`
+export const Text = (text: string, isBold: boolean, isGreen: boolean) => html`
   <div><!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff"
@@ -16,7 +16,7 @@ export const Text = (text: string) => html`
             <td
                class="" style="vertical-align:top;width:600px;"
             >
-          <![endif]--><div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;" data-mjml-tag="mj-column"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody><tr><td style="vertical-align:top;padding:0;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"><tbody><!--[--><!--[--><tr data-mjml-tag="mj-text"><td align="left" style="font-size:0px;padding:0;word-break:break-word;"><div style="font-family:'Inter', Helvetica, Arial, sans-serif !important;;font-size:16px;font-weight:400;line-height:22px;text-align:left;color:#000000;"><!--[--><!--[if mso | IE]><span style="font-family: Helvetica, Arial, sans-serif, 'Inter' !important"><![endif]--><!--[--><span><p>${text}</p></span><!--]--><!--[if mso | IE]></span><![endif]--><!--]--></div></td></tr><!--]--><!--]--></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>
+          <![endif]--><div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;" data-mjml-tag="mj-column"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody><tr><td style="vertical-align:top;padding:0;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"><tbody><!--[--><!--[--><tr data-mjml-tag="mj-text"><td align="left" style="font-size:0px;padding:0;word-break:break-word;"><div style="font-family:'Inter', Helvetica, Arial, sans-serif !important;;font-size:16px;font-weight:${isBold ? 700 : 400};line-height:22px;text-align:left;color:${isGreen ? '#2A9749' : '#000000'};"><!--[--><!--[if mso | IE]><span style="font-family: Helvetica, Arial, sans-serif, 'Inter' !important"><![endif]--><!--[--><span><p>${text}</p></span><!--]--><!--[if mso | IE]></span><![endif]--><!--]--></div></td></tr><!--]--><!--]--></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>
             </td>
           <![endif]--><!--]--><!--]--><!--]--><!--[if mso | IE]>
         </tr>

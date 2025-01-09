@@ -10,12 +10,23 @@ export default {
       args.text,
       args.imageUrl,
       args.copyRight,
-      args.url
+      args.url,
+      args.isButtonPrimary,
+      args.isTitleGreen,
+      args.iconUrl
     ),
   argTypes: {
     titleAboveImage: {
       name: 'Title above image',
       control: 'text',
+    },
+    isTitleGreen: {
+      name: 'Title in green?',
+      control: 'boolean',
+    },
+    isButtonPrimary: {
+      name: 'Is button primary?',
+      control: 'boolean',
     },
     title: {
       name: 'Title',
@@ -37,17 +48,42 @@ export default {
       name: 'URL',
       control: 'text',
     },
+    iconUrl: {
+      name: 'Icon',
+      control: {
+        type: 'select',
+        labels: {
+          'https://www.bs.ch/images/email/button-primary-arrow-right.png': 'Arrow right, primary',
+          'https://www.bs.ch/images/email/button-secondary-arrow-right.png': 'Arrow right, secondary',
+          'https://www.bs.ch/images/email/button-small-arrow-right.png': 'Small arrow right, secondary',
+          'https://www.bs.ch/images/email/button-secondary-email.png': 'Email, secondary',
+          'https://www.bs.ch/images/email/button-secondary-phone.png': 'Phone, secondary',
+          '': 'No icon',
+        },
+      },
+      options: [
+        'https://www.bs.ch/images/email/button-primary-arrow-right.png',
+        'https://www.bs.ch/images/email/button-secondary-arrow-right.png',
+        'https://www.bs.ch/images/email/button-small-arrow-right.png',
+        'https://www.bs.ch/images/email/button-secondary-email.png',
+        'https://www.bs.ch/images/email/button-secondary-phone.png',
+        '',
+      ],
+    },
   },
 }
 
 export const Default = {
   args: {
-    titleAbove: loremIpsum(),
+    titleAboveImage: loremIpsum(),
+    isTitleGreen: false,
+    isButtonPrimary: true,
     title: loremIpsum(),
     text: loremIpsum(),
     imageUrl: 'https://placehold.co/1040x585',
     copyRight: 'Copyright 2024 bs.ch',
     url: 'https://www.bs.ch',
+    iconUrl: 'https://www.bs.ch/images/email/button-primary-arrow-right.png',
   },
   parameters: {
     design: {

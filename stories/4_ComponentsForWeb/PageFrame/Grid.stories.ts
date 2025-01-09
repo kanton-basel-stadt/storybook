@@ -16,37 +16,37 @@ export default {
     ),
   argTypes: {
     numberOfColsXS: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on XS',
       options: numbersOneToTwelve,
     },
     numberOfColsSM: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on SM',
       options: numbersOneToTwelve,
     },
     numberOfColsMD: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on MD',
       options: numbersOneToTwelve,
     },
     numberOfColsLG: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on LG',
       options: numbersOneToTwelve,
     },
     numberOfColsXL: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on XL',
       options: numbersOneToTwelve,
     },
     numberOfColsXXL: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Number of grid columns on XXL',
       options: numbersOneToTwelve,
     },
     gapSize: {
-      control: { type: 'select' },
+      control: 'select',
       name: 'Gap size in px',
       options: [
         0, 1, 2, 3, 5, 6, 8, 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 80, 90,

@@ -1,21 +1,9 @@
-import { EventTeaser } from './EventTeaser'
+import { EventTeaser, EventTeaserParams } from './EventTeaser'
 import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '4. Components for the web/Teasers/Event teaser',
-  render: (args) =>
-    EventTeaser(
-      args.url,
-      args.title,
-      args.date,
-      args.time,
-      args.venue,
-      args.imageUrl,
-      args.imageCaption,
-      args.hasMultiple,
-      args.isRecurring,
-      args.hasSignUp
-    ),
+  render: (args: EventTeaserParams) => EventTeaser(args),
   argTypes: {
     url: {
       name: 'URL',

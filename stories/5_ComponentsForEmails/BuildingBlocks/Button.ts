@@ -4,7 +4,12 @@ export const Button = (
   type: 'primary' | 'secondary',
   label: string,
   url: string,
-  iconPath: string
+  iconPath: string,
+  padding: string = '20px',
+  paddingLeft: string = '16px',
+  paddingRight: string = '16px',
+  paddingTop: string = '30px',
+  paddingBottom: string = '20px'
 ) => {
   if (type === 'primary') {
     // prettier-ignore
@@ -22,7 +27,7 @@ export const Button = (
                  style="background:#ffffff;background-color:#ffffff;width:100%;">
             <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-left:16px;padding-right:16px;padding-top:30px;text-align:left;"><!--[if mso | IE]>
+              <td style="direction:ltr;font-size:0px;padding:${padding} 0;padding-bottom:${paddingBottom};padding-left:${paddingLeft};padding-right:${paddingRight};padding-top:${paddingTop};text-align:left;"><!--[if mso | IE]>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <![endif]--><!--[if mso | IE]>
         <tr>
@@ -117,7 +122,7 @@ export const Button = (
           <tbody>
             <tr>
               <td
-                style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-left:16px;padding-right:16px;padding-top:30px;text-align:left;"
+                style="direction:ltr;font-size:0px;padding:${padding} 0;padding-bottom:${paddingBottom};padding-left:${paddingLeft};padding-right:${paddingRight};padding-top:${paddingTop};text-align:left;"
               >
                 <!--[if mso | IE]>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">

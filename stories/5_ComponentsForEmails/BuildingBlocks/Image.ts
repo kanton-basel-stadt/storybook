@@ -1,14 +1,22 @@
 import { html } from 'lit'
 
 // prettier-ignore
-export const Image = (imageUrl: string, copyRight: string) => html`
+export const Image = (
+  imageUrl: string,
+  copyRight: string,
+  padding: string = '20px',
+  paddingLeft: string = '16px',
+  paddingRight: string = '16px',
+  paddingTop: string = '30px',
+  paddingBottom: string = '20px'
+) => html`
   <div><!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff"
       >
         <tr>
           <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-      <![endif]--><div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;" data-mjml-tag="mj-section"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;"><tbody><tr><td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:10px;padding-left:16px;padding-right:16px;padding-top:40px;text-align:left;"><!--[if mso | IE]>
+      <![endif]--><div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;" data-mjml-tag="mj-section"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;"><tbody><tr><td style="direction:ltr;font-size:0px;padding:${padding} 0;padding-bottom:${paddingBottom};padding-left:${paddingLeft};padding-right:${paddingRight};padding-top:${paddingTop};text-align:left;"><!--[if mso | IE]>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <![endif]--><!--[if mso | IE]>
         <tr>
@@ -26,7 +34,9 @@ export const Image = (imageUrl: string, copyRight: string) => html`
           </td>
         </tr>
       </table>
-      <![endif]--><!--]--><!--[--><!--[if mso | IE]>
+      <![endif]--><!--]-->
+    ${copyRight && copyRight.length > 0 ? html`
+    <!--[--><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff"
       >
@@ -70,5 +80,7 @@ export const Image = (imageUrl: string, copyRight: string) => html`
           </td>
         </tr>
       </table>
-      <![endif]--><!--]--></div>
+      <![endif]--><!--]-->
+    ` : ''}
+  </div>
 `

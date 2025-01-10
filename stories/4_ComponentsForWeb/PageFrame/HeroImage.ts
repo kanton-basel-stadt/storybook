@@ -12,7 +12,7 @@ export const HeroImage = (
 ) => {
   return html`
     <div
-      class="h-[calc(100vh-180px)] minx[340px] maxx[550px] md:maxx[650px] xxl:maxx[750px] relative flex items-end"
+      class="minx[340px] maxx[550px] md:maxx[650px] xxl:maxx[750px] relative flex h-[calc(100vh-180px)] items-end"
     >
       <picture class="block" aria-hidden="true">
         <source
@@ -61,7 +61,7 @@ export const HeroImage = (
           alt="${imageCaption}"
           src="${imageUrlXs}"
           loading="eager"
-          class="absolute inset-0 object-cover object-center w-full h-full"
+          class="absolute inset-0 h-full w-full object-cover object-center"
         />
       </picture>
     </div>

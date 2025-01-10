@@ -10,7 +10,7 @@ export const FullScreenHeader = (
   lead: string
 ) => {
   return html`
-    <header class="relative z-0 content-fullscreen-header overflow-hidden">
+    <header class="content-fullscreen-header relative z-0 overflow-hidden">
       <figure
         class="h-full will-change-transform"
         style="transform: translateY(6.92464%);"
@@ -42,22 +42,22 @@ export const FullScreenHeader = (
         </picture>
       </figure>
       <div
-        class="absolute top-0 left-0 size-full z-10 bg-body will-change-[opacity] pointer-events-none"
+        class="pointer-events-none absolute left-0 top-0 z-10 size-full bg-body will-change-[opacity]"
         style="opacity: 0;"
       ></div>
       <div
-        class="bg-white py-30 md:py-50 lg:py-70 xxl:py-100 absolute z-20 left-0 bottom-0 w-full mix-blend-lighten"
+        class="absolute bottom-0 left-0 z-20 w-full bg-white py-30 mix-blend-lighten md:py-50 lg:py-70 xxl:py-100"
       >
         <div class="container">
           <div style="transform: translateY(3.46232%);">
             <h1
-              class="font-bold text-5xl md:text-5xl lg:text-6xl xl:text-8xl xxl:text-9xl will-change-transform"
+              class="text-5xl font-bold will-change-transform md:text-5xl lg:text-6xl xl:text-8xl xxl:text-9xl"
             >
               ${title}
             </h1>
             <div>
               <p
-                class="font-bold text-lg md:text-xl xl:text-2xl mt-30 hyphens-auto lg:hyphens-none"
+                class="mt-30 hyphens-auto text-lg font-bold md:text-xl lg:hyphens-none xl:text-2xl"
               >
                 ${lead}
               </p>

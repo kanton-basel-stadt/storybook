@@ -14,24 +14,24 @@ export type LinkGroup = Link & {
 export const TopicLinkList = (title: string, linkGroups: LinkGroup[]) => {
   return html`
     <section
-      class="border-t border-t-gray-200 py-25 lg:py-30 xl:py-40 bg-white"
+      class="border-t border-t-gray-200 bg-white py-25 lg:py-30 xl:py-40"
     >
       <div class="container">
         <h2
-          class="pre-heading sticky top-sticky-top mobile-only:px-15 mobile-only:-mx-15 z-40 py-15 transition-all duration-250 ease-in-out -mt-15 backdrop-blur-md mb-20 text-primary-700 bg-white/80"
+          class="pre-heading sticky top-sticky-top z-40 -mt-15 mb-20 bg-white/80 py-15 text-primary-700 backdrop-blur-md transition-all duration-250 ease-in-out mobile-only:-mx-15 mobile-only:px-15"
         >
           ${title}
         </h2>
         <div>
           <ul
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-y-40 xl:gap-y-50"
+            class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-40 xl:gap-y-50"
           >
             ${linkGroups.map((linkGroup) => {
               return html`
                 <li class="min-h-40">
                   <h3>
                     <a
-                      class="link text-lg lg:text-xl flex -mb-10"
+                      class="link -mb-10 flex text-lg lg:text-xl"
                       href="${linkGroup.url}"
                     >
                       ${Icon(linkGroup.iconName, {
@@ -42,12 +42,12 @@ export const TopicLinkList = (title: string, linkGroups: LinkGroup[]) => {
                       <span class="mb-10">${linkGroup.label}</span>
                     </a>
                   </h3>
-                  <ul class="mt-5 grid gap-8 xl:mt-10 pl-[50px]">
+                  <ul class="mt-5 grid gap-8 pl-[50px] xl:mt-10">
                     ${linkGroup.links.map((link) => {
                       return html`
                         <li>
                           <a
-                            class="link font-normal text-base lg:text-lg inline-block"
+                            class="link inline-block text-base font-normal lg:text-lg"
                             href="${link.url}"
                           >
                             ${link.label}

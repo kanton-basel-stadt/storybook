@@ -19,8 +19,7 @@ export default {
   argTypes: {
     color: {
       name: 'Color',
-      options: ['light', 'dark'],
-      control: 'radio',
+      control: 'hidden',
     },
     title: {
       name: 'Title',
@@ -61,7 +60,7 @@ export default {
   },
 }
 
-export const Default = {
+export const Light = {
   args: {
     title: loremIpsum(),
     mainUrl: 'https://www.bs.ch/',
@@ -82,6 +81,36 @@ export const Default = {
     imageCaption: loremIpsum(),
     imageAlt: loremIpsum(),
     color: 'light',
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22761&t=FznYmIANb8uB5p92-1',
+    },
+  },
+}
+
+export const Dartk = {
+  args: {
+    title: loremIpsum(),
+    mainUrl: 'https://www.bs.ch/',
+    links: [
+      {
+        label: loremIpsum(),
+        url: 'https://www.bs.ch/',
+      },
+      {
+        label: loremIpsum(),
+        url: 'https://www.bs.ch/',
+      },
+    ],
+    imageUrlSm: 'https://placehold.co/382x215',
+    imageUrlMd: 'https://placehold.co/224x126',
+    imageUrlLg: 'https://placehold.co/252x142',
+    imageUrlXl: 'https://placehold.co/334x188',
+    imageCaption: loremIpsum(),
+    imageAlt: loremIpsum(),
+    color: 'dark',
   },
   parameters: {
     design: {

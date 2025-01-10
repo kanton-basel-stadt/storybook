@@ -3,12 +3,18 @@ import { Icon } from '../../Icons/Icon'
 
 export const SystemError = (title: string, content: string) => {
   return html`
-    <div class="bg-red-800 rounded-large">
-      <div class="container mx-auto pt-10 pb-20">
+    <div class="rounded-large bg-red-800">
+      <div class="container mx-auto pb-20 pt-10">
         <div class="flex items-center justify-between pb-15">
-          <h1 class="text-xl text-white font-bold">${title}</h1>
+          <h1 class="text-xl font-bold text-white">${title}</h1>
 
-          <button class="button is-icon-only">${Icon('close')}</button>
+          <button
+            type="button"
+            class="button is-icon-only"
+            aria-label="Schliessen"
+          >
+            ${Icon('close')}
+          </button>
         </div>
 
         <div class="text-white">${content}</div>

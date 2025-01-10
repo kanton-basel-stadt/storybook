@@ -22,8 +22,7 @@ export default {
     },
     color: {
       name: 'Color',
-      options: ['white', 'green', 'blue'],
-      control: 'radio',
+      control: 'hidden',
     },
     imageUrlSm: {
       name: 'Image URL for SM',
@@ -56,10 +55,50 @@ export default {
   },
 }
 
-export const Default = {
+export const White = {
+  args: {
+    title: loremIpsum(),
+    color: 'white',
+    imageUrlSm: 'https://placehold.co/400x225',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlXl: 'https://placehold.co/1680x945',
+    imageCaption: loremIpsum(),
+    imageAlt: loremIpsum(),
+    imageCopyRight: loremIpsum(),
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
+    },
+  },
+}
+
+export const Green = {
   args: {
     title: loremIpsum(),
     color: 'green',
+    imageUrlSm: 'https://placehold.co/400x225',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlXl: 'https://placehold.co/1680x945',
+    imageCaption: loremIpsum(),
+    imageAlt: loremIpsum(),
+    imageCopyRight: loremIpsum(),
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
+    },
+  },
+}
+
+export const Blue = {
+  args: {
+    title: loremIpsum(),
+    color: 'blue',
     imageUrlSm: 'https://placehold.co/400x225',
     imageUrlMd: 'https://placehold.co/800x450',
     imageUrlLg: 'https://placehold.co/1024x576',

@@ -8,22 +8,22 @@ export const Quote = (
   role: string
 ) => {
   return html`
-    <div class="mb-20 mt-30 container paragraph--margin">
-      <div class="bg-primary-50 rounded">
-        <h3 class="text-primary-700 text-xs font-bold p-20 mb-20">${title}</h3>
-        <div class="px-20 lg:px-30 xl:px-50 pb-30">
+    <div class="container paragraph--margin mb-20 mt-30">
+      <div class="rounded bg-primary-50">
+        <h3 class="mb-20 p-20 text-xs font-bold text-primary-700">${title}</h3>
+        <div class="px-20 pb-30 lg:px-30 xl:px-50">
           <figure
-            class="flex flex-col md:flex-row mb-20 md:gap-20 items-center"
+            class="mb-20 flex flex-col items-center md:flex-row md:gap-20"
           >
             <blockquote>
               <p
-                class="italic after:text-primary-700 before:text-primary-700 font-medium md:text-2xl md:mb-0 mb-20 text-xl before:content-['«'] after:content-['»'] mobile-only:hyphens-auto text-pretty"
+                class="mb-20 text-pretty text-xl font-medium italic before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] mobile-only:hyphens-auto md:mb-0 md:text-2xl"
               >
                 ${quote}
               </p>
             </blockquote>
             <div
-              class="size-140 rounded-full overflow-hidden shrink-0 ml-auto mt-10 md:mt-0"
+              class="ml-auto mt-10 size-140 shrink-0 overflow-hidden rounded-full md:mt-0"
             >
               <img
                 src="${imageUrl}"
@@ -36,8 +36,8 @@ export const Quote = (
               />
             </div>
           </figure>
-          <figcaption class="sm:flex sm:gap-10 sm:justify-end text-end text-xs">
-            <strong class="block sm:inline text-nowrap">${name}</strong>
+          <figcaption class="text-end text-xs sm:flex sm:justify-end sm:gap-10">
+            <strong class="block text-nowrap sm:inline">${name}</strong>
             <span class="text-gray-700">${role}</span>
           </figcaption>
         </div>

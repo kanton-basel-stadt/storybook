@@ -11,9 +11,9 @@ export const Teaser = (
   imageCaption: string
 ) => {
   return html`
-    <a class="group/button group/link hyphens-auto flex flex-col" href="${url}">
-      <h3 class="text-lg font-bold link order-2">${title}</h3>
-      <div class="mb-20 bg-gray-50 order-1">
+    <a class="group/button group/link flex flex-col hyphens-auto" href="${url}">
+      <h3 class="link order-2 text-lg font-bold">${title}</h3>
+      <div class="order-1 mb-20 bg-gray-50">
         <figure>
           <div class="overflow-hidden rounded bg-gray-100">
             <img
@@ -42,10 +42,10 @@ export const Teaser = (
           </div>
         </figure>
       </div>
-      <p class="mt-10 text-blue-900 group-hover/button:text-blue-700 order-3">
+      <p class="order-3 mt-10 text-blue-900 group-hover/button:text-blue-700">
         ${description}
       </p>
-      <div class="button is-link mt-15 order-4">
+      <div class="button is-link order-4 mt-15">
         Details <span class="sr-only">zu dieser Seite</span>
       </div>
     </a>

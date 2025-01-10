@@ -60,7 +60,7 @@ export const Button = (
                                 <tbody>
                                 <tr>
                                   <td style="width:20px;">
-                                    <img height="20" src="${iconPath}" style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;" width="20">
+                                    <img height="20" src="${iconPath}" style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;" width="20" alt="Icon">
                                   </td>
                                 </tr>
                                 </tbody>
@@ -191,6 +191,7 @@ export const Button = (
                                                   src="${iconPath}"
                                                   style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;"
                                                   width="20"
+                                                  alt="Icon"
                                                 />
                                               </td>
                                             </tr>

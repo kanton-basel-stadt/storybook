@@ -8,16 +8,16 @@ export type BreadcrumbLink = {
 export const Breadcrumbs = (links: BreadcrumbLink[]) => {
   return html`
     <nav
-      class="bg-gray-20 border-b border-b-gray-400 -mt-1 relative print:hidden"
+      class="relative -mt-1 border-b border-b-gray-400 bg-gray-20 print:hidden"
       style="--breadcrumb-item-height: 54px;"
       aria-label="Breadcrumb"
     >
       <div class="container relative">
-        <div class="relative breadcrumb-caret before:top-full">
+        <div class="breadcrumb-caret relative before:top-full">
           <ol
             itemscope=""
             itemtype="http://schema.org/BreadcrumbList"
-            class="relative transition-all overflow-hidden"
+            class="relative overflow-hidden transition-all"
             style="height: calc(var(--breadcrumb-item-height) * ${links.length});"
           >
             <li
@@ -29,7 +29,7 @@ export const Breadcrumbs = (links: BreadcrumbLink[]) => {
             >
               <a
                 href="/"
-                class="breadcrumb-link block py-15 font-medium breadcrumb-caret before:top-0 border-t border-t-gray-400 text-blue-900 hover:text-blue-700 overflow-hidden text-ellipsis"
+                class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700"
                 itemprop="item"
               >
                 <span itemprop="name" class="whitespace-nowrap"
@@ -49,7 +49,7 @@ export const Breadcrumbs = (links: BreadcrumbLink[]) => {
                 >
                   <a
                     href="${link.href}"
-                    class="breadcrumb-link block py-15 font-medium breadcrumb-caret before:top-0 border-t border-t-gray-400 text-blue-900 hover:text-blue-700 overflow-hidden text-ellipsis"
+                    class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700"
                     itemprop="item"
                   >
                     <span itemprop="name" class="whitespace-nowrap"

@@ -18,6 +18,12 @@ export default [
   ...compat.extends(
     'plugin:storybook/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:lit/recommended'
   ),
+  {
+    rules: {
+      'lit/binding-positions': 'off', // We need bindings in comments for email templates
+    },
+  },
 ]

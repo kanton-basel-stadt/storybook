@@ -8,20 +8,20 @@ import { Icon } from '../Icons/Icon'
 export const PageHeader = () => {
   return html`
     <div
-      class="border-b border-b-gray-400 bg-white transition ease-in-out duration-250 z-app-top will-change-transform top-0 sticky"
+      class="sticky top-0 z-app-top border-b border-b-gray-400 bg-white transition duration-250 ease-in-out will-change-transform"
     >
       <div>
         <header
-          class="page-header grid items-center relative container is-wide"
+          class="page-header container is-wide relative grid items-center"
         >
           <h1 class="sr-only">Hauptnavigation</h1>
-          <div class="flex items-center grid-area-l relative z-30">
+          <div class="grid-area-l relative z-30 flex items-center">
             <a
               class="nuxt-link-exact-active inline-block hover:opacity-80"
               href="/"
             >
               <div
-                class="flex whitespace-nowrap leading-none relative text-base lg:text-lg xl:text-2xl"
+                class="relative flex whitespace-nowrap text-base leading-none lg:text-lg xl:text-2xl"
               >
                 ${Icon('baselstab', {
                   '[&_svg]:translate-y-1': true,
@@ -31,16 +31,16 @@ export const PageHeader = () => {
                   '[&_svg]:h-[1.7em]': true,
                 })}
                 <span
-                  class="h-[1.2083em] ml-[0.3em] pl-[0.25em] leading-[1.2em] border-l border-gray-900 font-bold"
+                  class="ml-[0.3em] h-[1.2083em] border-l border-gray-900 pl-[0.25em] font-bold leading-[1.2em]"
                   ><span class="sr-only">Herausgeber: </span> Kanton Basel-Stadt
                 </span>
               </div>
               <span class="sr-only"> (Dieser Link führt zur Startseite) </span>
             </a>
           </div>
-          <div class="grid-area-m flex gap-10 justify-end">
+          <div class="grid-area-m flex justify-end gap-10">
             <div
-              class="flex flex-row gap-10 justify-end items-center absolute top-0 bg-white pt-60 pb-[14px] inset-x-0 md:!flex w-auto px-15 z-20 md:static md:size-auto md:p-0 md:overflow-visible"
+              class="absolute inset-x-0 top-0 z-20 flex w-auto flex-row items-center justify-end gap-10 bg-white px-15 pb-[14px] pt-60 md:static md:!flex md:size-auto md:overflow-visible md:p-0"
               style="display: none;"
             >
               <div class="md:relative">
@@ -53,7 +53,7 @@ export const PageHeader = () => {
                   type="button"
                 >
                   <span
-                    class="uppercase inline-block min-w-20 text-left"
+                    class="inline-block min-w-20 text-left uppercase"
                     title="Deutsch"
                     >de</span
                   >
@@ -80,15 +80,15 @@ export const PageHeader = () => {
               ${Icon('search', { '[&_svg]:translate-y-1': true })}
             </a>
             <button
-              class="button is-icon-only is-sm md:!hidden relative z-20 !px-5 py-0 !items-center flex justify-center !gap-0"
+              class="button is-icon-only is-sm relative z-20 flex !items-center justify-center !gap-0 !px-5 py-0 md:!hidden"
             >
               <span class="sr-only">Menü aufklappen</span>
               ${Icon('dots', { '[&_svg]:translate-y-1': true })}
             </button>
           </div>
-          <div class="grid-area-n flex justify-center relative z-10">
+          <div class="grid-area-n relative z-10 flex justify-center">
             <div
-              class="text-toggle-switch text-lg lg:text-sm xl:text-xl transition md:transition-none duration-300 ease-swing will-change-transform"
+              class="text-toggle-switch text-lg transition duration-300 ease-swing will-change-transform md:transition-none lg:text-sm xl:text-xl"
             >
               <nav
                 aria-label="Hauptnavigation"

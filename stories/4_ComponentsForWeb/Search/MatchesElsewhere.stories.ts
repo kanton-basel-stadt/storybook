@@ -22,27 +22,27 @@ export const Default = {
     searchLocations: [
       {
         name: loremIpsum(),
-        count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+        count: 0,
         url: 'https://www.bs.ch',
       },
       {
         name: loremIpsum(),
-        count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+        count: 1,
         url: 'https://www.bs.ch',
       },
       {
         name: loremIpsum(),
-        count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+        count: 2,
         url: 'https://www.bs.ch',
       },
       {
         name: loremIpsum(),
-        count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+        count: 3,
         url: 'https://www.bs.ch',
       },
       {
         name: loremIpsum(),
-        count: Math.floor(Math.random() * (3 - 0 + 1) + 0),
+        count: 4,
         url: 'https://www.bs.ch',
       },
     ],

@@ -9,6 +9,7 @@ export default {
       args.title,
       args.text,
       args.imageUrl,
+      args.imageAlt,
       args.copyRight,
       args.url,
       args.isButtonPrimary,
@@ -38,6 +39,10 @@ export default {
     },
     imageUrl: {
       name: 'Image URL',
+      control: 'text',
+    },
+    imageAlt: {
+      name: 'Image alternative text',
       control: 'text',
     },
     copyRight: {
@@ -86,6 +91,7 @@ export const Default = {
     title: loremIpsum(),
     text: loremIpsum(),
     imageUrl: 'https://placehold.co/1040x585',
+    imageAlt: loremIpsum(),
     copyRight: 'Copyright 2024 bs.ch',
     url: 'https://www.bs.ch',
     iconUrl: 'https://www.bs.ch/images/email/button-primary-arrow-right.png',

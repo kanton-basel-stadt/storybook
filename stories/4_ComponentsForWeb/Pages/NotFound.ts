@@ -5,17 +5,17 @@ import { PageFooter } from '../PageFrame/PageFooter'
 export const NotFound = () => html`
   ${PageHeader()}
   <div
-    class="relative flex items-end justify-center overflow-hidden h-[calc(100vh-var(--page-header-height))]"
+    class="relative flex h-[calc(100vh-var(--page-header-height))] items-end justify-center overflow-hidden"
   >
     <h1
-      class="container relative z-30 w-full text-white text-5xl font-bold mb-40"
+      class="container relative z-30 mb-40 w-full text-5xl font-bold text-white"
     >
       Seite nicht gefunden
     </h1>
     <video
       aria-hidden="true"
       autoplay=""
-      class="motion-reduce:hidden absolute z-10 w-auto min-w-full min-h-full object-cover"
+      class="absolute z-10 min-h-full w-auto min-w-full object-cover motion-reduce:hidden"
       loop=""
       muted=""
     >

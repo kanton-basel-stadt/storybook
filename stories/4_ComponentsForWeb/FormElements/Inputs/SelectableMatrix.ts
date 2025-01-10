@@ -20,16 +20,18 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
     >
       <thead class="contents">
         <tr class="contents">
-          <th class="min-w-[125px]"></th>
+          <th class="min-w-[125px]">
+            <span class="sr-only">Rows</span>
+          </th>
           ${cols.map(
             (c) => html`
               <th
-                class="flex items-center justify-center gap-10 py-5 min-w-[125px] font-normal"
+                class="flex min-w-[125px] items-center justify-center gap-10 py-5 font-normal"
               >
                 ${c.label}
 
                 <button
-                  class="rounded-full transition-all ease-in-out duration-250 bg-white hover:bg-blue-400 text-blue-900 hover:text-white border border-blue-900 hover:border-blue-400"
+                  class="rounded-full border border-blue-900 bg-white text-blue-900 transition-all duration-250 ease-in-out hover:border-blue-400 hover:bg-blue-400 hover:text-white"
                 >
                   ${Icon('add', {
                     '[&_svg]:size-20': true,
@@ -45,11 +47,11 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
         ${rows.map(
           (r) => html`
             <tr class="contents">
-              <td class="py-5 flex items-center justify-end gap-10">
+              <td class="flex items-center justify-end gap-10 py-5">
                 ${r.label}
 
                 <button
-                  class="rounded-full transition-all ease-in-out duration-250 bg-white hover:bg-blue-400 text-blue-900 hover:text-white border border-blue-900 hover:border-blue-400"
+                  class="rounded-full border border-blue-900 bg-white text-blue-900 transition-all duration-250 ease-in-out hover:border-blue-400 hover:bg-blue-400 hover:text-white"
                 >
                   ${Icon('add', {
                     '[&_svg]:size-20': true,

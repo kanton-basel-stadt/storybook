@@ -15,9 +15,9 @@ export const ContentHeader = (
 ) => {
   return html`
     <div class="container my-20 md:my-30 lg:my-40 xl:my-50">
-      <h1 class="h1 text-green-600 hyphens-auto text-balance">${title}</h1>
+      <h1 class="h1 hyphens-auto text-balance text-green-600">${title}</h1>
       ${easyToReadUrl.length > 0 ? EasyToReadButton(easyToReadUrl) : ''}
-      <p class="lead mt-30 hyphens-auto lg:hyphens-none text-pretty">${lead}</p>
+      <p class="lead mt-30 hyphens-auto text-pretty lg:hyphens-none">${lead}</p>
       ${hasImage
         ? html`
             <figure class="mt-20 md:mt-30 lg:mt-40 xl:mt-50">
@@ -46,9 +46,9 @@ export const ContentHeader = (
                   class="w-full"
                 />
               </div>
-              <figcaption class="text-xs md:flex justify-between mt-10">
+              <figcaption class="mt-10 justify-between text-xs md:flex">
                 <div>${imageCaption}</div>
-                <div class="text-gray-300 mt-5 md:mt-0">${imageCopyRight}</div>
+                <div class="mt-5 text-gray-700 md:mt-0">${imageCopyRight}</div>
               </figcaption>
             </figure>
           `

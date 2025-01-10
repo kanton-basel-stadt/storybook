@@ -40,12 +40,12 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
     // Multi-line child, probably not inline
     return (
       <div className="mb-20">
-        <pre className={`hljs ${language} block mb-5`}>
+        <pre className={`hljs ${language} mb-5 block`}>
           <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
         </pre>
 
         <div className="flex justify-end">
-          <button className="font-sans button is-sm" onClick={copyCode}>
+          <button className="button is-sm font-sans" onClick={copyCode}>
             Copy code
           </button>
         </div>

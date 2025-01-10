@@ -6,26 +6,25 @@ export const SearchHeader = () => {
     <section class="bg-primary-100 py-30 lg:py-50">
       <div class="container">
         <h2
-          class="md:text-5xl text-2xl font-bold mb-30 text-primary-700 lg:mb-40"
+          class="mb-30 text-2xl font-bold text-primary-700 md:text-5xl lg:mb-40"
         >
           Suche
         </h2>
         <form>
           <div class="relative h-50">
             <div
-              class="grid grid-cols-[1fr_auto] w-full overflow-hidden bg-white text-gray-600 border rounded-[24px] focus-within:border-purple-500 focus-within:shadow-purple-600"
+              class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 focus-within:border-purple-500 focus-within:shadow-purple-600"
               role="search"
             >
               <label
-                class="block col-span-1 row-start-1 relative"
+                class="relative col-span-1 row-start-1 block"
                 for="searchinput"
               >
                 <span class="sr-only">Suchbegriff</span>
                 <input
                   aria-label="Suchbegriff eingeben"
-                  aria-owns="searchterm-suggestions"
                   autocomplete="off"
-                  class="bg-white text-gray-900 focus:outline-none h-[48px] pl-20 search-input w-full relative placeholder:text-gray-700"
+                  class="search-input relative h-[48px] w-full bg-white pl-20 text-gray-900 placeholder:text-gray-700 focus:outline-none"
                   id="searchinput"
                   name="searchterm"
                   placeholder="Suchbegriff eingeben"
@@ -34,11 +33,11 @@ export const SearchHeader = () => {
                 />
               </label>
               <button
-                class="button m-[4px] is-strong row-start-1 mobile-only:is-icon-only"
+                class="button is-strong mobile-only:is-icon-only row-start-1 m-[4px]"
                 type="submit"
               >
                 ${Icon('search')}
-                <span class="md:not-sr-only sr-only">Suchen</span>
+                <span class="sr-only md:not-sr-only">Suchen</span>
               </button>
             </div>
           </div>

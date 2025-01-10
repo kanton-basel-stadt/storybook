@@ -18,10 +18,10 @@ export const EventTeaser = (args: EventTeaserParams) => {
   return html`
     <a
       href="${args.url}"
-      class="group/button hyphens-auto grid grid-rows-subgrid grid-cols-1 row-span-9"
+      class="group/button row-span-9 grid grid-cols-1 grid-rows-subgrid hyphens-auto"
     >
       <article
-        class="border-green-100 border-2 rounded-large p-10 pb-15 hover:bg-blue-50 transition-all ease-in-out duration-250 h-full grid grid-rows-subgrid grid-cols-1 row-span-9"
+        class="row-span-9 grid h-full grid-cols-1 grid-rows-subgrid rounded-large border-2 border-green-100 p-10 pb-15 transition-all duration-250 ease-in-out hover:bg-blue-50"
       >
         <img
           src="${args.imageUrl}"
@@ -30,19 +30,19 @@ export const EventTeaser = (args: EventTeaserParams) => {
           height="2990"
           alt="${args.imageCaption}"
           loading="lazy"
-          class="w-full mb-15 rounded row-start-1"
+          class="row-start-1 mb-15 w-full rounded"
         />
-        <h3 class="text-4xl font-bold text-blue-900 mb-10 row-start-3">
+        <h3 class="row-start-3 mb-10 text-4xl font-bold text-blue-900">
           ${args.title}
         </h3>
-        <div class="text-2xl font-bold text-green-500 mb-10 row-start-2">
+        <div class="row-start-2 mb-10 text-2xl font-bold text-green-500">
           ${args.date}
         </div>
-        <time class="block font-bold text-blue-900 mb-15 row-start-4"
+        <time class="row-start-4 mb-15 block font-bold text-blue-900"
           >${args.time}</time
         >
         <address
-          class="block not-italic font-bold text-green-700 mb-40 row-start-5"
+          class="row-start-5 mb-40 block font-bold not-italic text-green-700"
         >
           ${args.venue}
         </address>

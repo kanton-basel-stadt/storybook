@@ -14,10 +14,10 @@ export const InformationLinkAttachment = (
 ) => {
   return html`
     <div
-      class="info-box w-full md:col-span-7 p-15 lg:p-20 rounded-large lg:max-w-box lg:pr-30 relative bg-primary-50"
+      class="info-box relative w-full rounded-large bg-primary-50 p-15 md:col-span-7 lg:max-w-box lg:p-20 lg:pr-30"
     >
       <div
-        class="border-2 rounded-full size-50 flex items-center justify-between p-10 border-current absolute top-15 right-15 text-primary-600"
+        class="absolute right-15 top-15 flex size-50 items-center justify-between rounded-full border-2 border-current p-10 text-primary-600"
       >
         ${Icon('hinweise_no_rounded', {
           '[&_svg]:size-30': true,
@@ -26,21 +26,21 @@ export const InformationLinkAttachment = (
       </div>
       <h3 class="h4 text-balance pr-50 text-primary-600">${title}</h3>
       <div
-        class="text-base ck-content hyphens-auto is-small mt-15 info-box-floater"
+        class="ck-content is-small info-box-floater mt-15 hyphens-auto text-base"
       >
         <p>${content}</p>
       </div>
       ${links.map((link) => {
         return html`
           <a
-            class="link with-icon text-balance w-full mt-15 clear-both"
+            class="link with-icon clear-both mt-15 w-full text-balance"
             href="${link.url}"
           >
-            <span class="hyphens-auto font-bold col-start-2 row-start-1">
+            <span class="col-start-2 row-start-1 hyphens-auto font-bold">
               ${link.label}
             </span>
             <p
-              class="hyphens-auto col-start-2 row-start-2 font-normal mt-5 text-base"
+              class="col-start-2 row-start-2 mt-5 hyphens-auto text-base font-normal"
             >
               ${link.description}
             </p>

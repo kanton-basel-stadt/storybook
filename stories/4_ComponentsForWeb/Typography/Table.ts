@@ -5,10 +5,12 @@ export const Table = () => {
     <table class="has-mobile-style is-wide table">
       <thead>
         <tr>
-          <th>&nbsp;</th>
-          <th>First column</th>
-          <th>Second column</th>
-          <th>Third column</th>
+          <th>
+            <span class="sr-only">Groups</span>
+          </th>
+          <th class="!text-primary-600">First column</th>
+          <th class="!text-primary-600">Second column</th>
+          <th class="!text-primary-600">Third column</th>
         </tr>
       </thead>
       <tbody>

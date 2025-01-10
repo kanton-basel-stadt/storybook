@@ -1,11 +1,16 @@
 import { Image } from './Image'
+import { loremIpsum } from 'lorem-ipsum'
 
 export default {
   title: '5. Components for emails/Building blocks/Image',
-  render: (args) => Image(args.imageUrl, args.copyRight),
+  render: (args) => Image(args.imageUrl, args.imageAlt, args.copyRight),
   argTypes: {
     imageUrl: {
-      name: 'Image URL for',
+      name: 'Image URL',
+      control: 'text',
+    },
+    imageAlt: {
+      name: 'Image alternative text',
       control: 'text',
     },
     copyRight: {
@@ -19,6 +24,7 @@ export const Default = {
   args: {
     imageUrl: 'https://placehold.co/1040x585',
     copyRight: 'Copyright 2024 bs.ch',
+    imageAlt: loremIpsum(),
   },
   parameters: {
     design: {

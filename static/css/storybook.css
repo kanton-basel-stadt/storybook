@@ -1,11 +1,6 @@
 @import '../../node_modules/@kanton-basel-stadt/designsystem/dist/assets/css/tailwind.css';
 
 /* Root prefix is necessary to have higher specificity than the Storybook theme itself. */
-
-body {
-  @apply !bg-gray-50;
-}
-
 #root {
   * {
     @apply ring-green-500;

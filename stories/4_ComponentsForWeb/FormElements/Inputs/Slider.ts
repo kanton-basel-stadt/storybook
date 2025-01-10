@@ -3,7 +3,9 @@ import { html } from 'lit'
 export const Slider = (label: string, name: string, id: string) => {
   return html`
     <div>
-      <label class="label font-bold" id="${id}_label"> ${label} </label>
+      <label class="label font-bold" id="${id}_label" for="${id}_number">
+        ${label}
+      </label>
       <div class="flex gap-10" data-has-mark-labels="true">
         <div class="w-full" id="track-input_18">
           <div class="slider-track-wrapper">
@@ -79,7 +81,7 @@ export const Slider = (label: string, name: string, id: string) => {
               </div>
               <ul>
                 <li class="slider-handle" tabindex="0" style="left: 40%;">
-                  <div />
+                  <div></div>
                 </li>
               </ul>
             </div>
@@ -91,7 +93,7 @@ export const Slider = (label: string, name: string, id: string) => {
               min="0"
               max="100"
               step="5"
-              class="input w-full my-10"
+              class="input my-10 w-full"
               type="number"
               name="${name}_number"
               id="${id}_number"

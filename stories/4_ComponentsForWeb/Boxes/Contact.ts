@@ -13,7 +13,7 @@ export const Contact = (
       <div>${description}</div>
       ${phoneNumber.length > 0 || emailAddress.length > 0
         ? html`
-            <div class="flex gap-10 mt-15">
+            <div class="mt-15 flex gap-10">
               <a
                 href="tel:${phoneNumber.replace(/\s+/g, '-')}"
                 class="button is-action is-link"

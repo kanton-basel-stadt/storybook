@@ -7,7 +7,7 @@ export const Repeater = (legend: string, content: string) => {
       <div class="flex items-start justify-between">
         <h3 class="fieldset-legend">${legend}</h3>
 
-        <button>
+        <button aria-label="Entfernen">
           ${Icon('trash', {
             '[&_svg]:size-20': true,
           })}

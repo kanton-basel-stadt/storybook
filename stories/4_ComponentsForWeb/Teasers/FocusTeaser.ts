@@ -39,11 +39,11 @@ export const FocusTeaser = (
     'duration-250': true,
     'ease-in-out': true,
     '-mt-15 b': true,
-    'ackdrop-blur-md': true,
+    'backdrop-blur-md': true,
     'mb-20': true,
     'text-white': color === 'dark',
     'bg-blue-900/80': color === 'dark',
-    'text-primary-600': color === 'light',
+    'text-primary-700': color === 'light',
     'bg-primary-100/80': color === 'light',
   }
 
@@ -73,8 +73,8 @@ export const FocusTeaser = (
         <h2 class="${classMap(headingClasses)}">Schwerpunkt</h2>
         <div>
           <h3 class="${classMap(titleClasses)}">${title}</h3>
-          <section class="gap-20 grid md:grid-cols-3">
-            <a class="md:pb-0 md:col-span-2" href="${mainUrl}">
+          <section class="grid gap-20 md:grid-cols-3">
+            <a class="md:col-span-2 md:pb-0" href="${mainUrl}">
               <figure class="${classMap(figureClass)}">
                 <div class="overflow-hidden rounded bg-gray-100">
                   <img
@@ -101,19 +101,19 @@ export const FocusTeaser = (
                     width="1689"
                   />
                 </div>
-                <figcaption class="text-xs md:flex justify-between mt-10">
+                <figcaption class="mt-10 justify-between text-xs md:flex">
                   <div>${imageCaption}</div>
                 </figcaption>
               </figure>
             </a>
             <div class="md:pt-0">
-              <ul class="grid gap-20 grid-cols-1">
+              <ul class="grid grid-cols-1 gap-20">
                 ${links.map(
                   (link) => html`
                     <li>
                       <a class="${classMap(linkClasses)}" href="${link.url}">
                         <span
-                          class="hyphens-auto font-bold col-start-2 row-start-1"
+                          class="col-start-2 row-start-1 hyphens-auto font-bold"
                         >
                           ${link.label}
                         </span>
@@ -122,7 +122,7 @@ export const FocusTeaser = (
                   `
                 )}
               </ul>
-              <a class="button mt-20 is-link is-inverted" href="${mainUrl}">
+              <a class="button is-link is-inverted mt-20" href="${mainUrl}">
                 Mehr erfahren
               </a>
             </div>

@@ -59,9 +59,9 @@ export const HTMLFrame = (content) => html`
           color: #1E4557;
       }
     </style>
-    <!–[if mso]>
+    <!--[if mso]>
     <style type="text/css"> body, table, td, tr, p, a, h1, h2, h3, {font-family: Helvetica, Arial, sans-serif !important;} </style>
-    <![endif]–>
+    <![endif]-->
     <!--[if mso]>
           <noscript>
           <xml>

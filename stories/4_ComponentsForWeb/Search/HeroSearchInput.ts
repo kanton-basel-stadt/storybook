@@ -4,23 +4,23 @@ import { html } from 'lit'
 export const HeroSearchInput = () => {
   return html`
     <div
-      class="bg-gradient-to-t from-body/45 from-30% to-body/0 flex-1 relative pt-30 md:pt-50 lg:pt-90 xl:pt-100 pb-15 md:pb-20 xxl:pb-25"
+      class="relative flex-1 bg-gradient-to-t from-body/45 from-30% to-body/0 pb-15 pt-30 md:pb-20 md:pt-50 lg:pt-90 xl:pt-100 xxl:pb-25"
     >
       <div class="container lg:max-w-[750px]">
         <h2
-          class="md:mb-20 mb-10 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold drop-shadow-[0_0_3px_rgba(0,0,0,0.5)]"
+          class="mb-10 font-sans text-2xl font-bold text-white drop-shadow-[0_0_3px_rgba(0,0,0,0.5)] md:mb-20 md:text-3xl lg:text-4xl xl:text-5xl"
         >
           Stichwortsuche
         </h2>
         <form>
           <div class="relative h-50">
             <div
-              class="grid grid-cols-[1fr_auto] w-full overflow-hidden bg-white text-gray-600 border rounded-[24px] focus-within:border-purple-500 focus-within:shadow-purple-600"
+              class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 focus-within:border-purple-500 focus-within:shadow-purple-600"
               role="search"
             >
               <label
                 for="searchinput"
-                class="block col-span-1 row-start-1 relative"
+                class="relative col-span-1 row-start-1 block"
               >
                 <span class="sr-only">Suchbegriff</span>
                 <input
@@ -28,19 +28,18 @@ export const HeroSearchInput = () => {
                   type="search"
                   autocomplete="off"
                   name="searchterm"
-                  class="bg-white text-gray-900 focus:outline-none h-[48px] pl-20 search-input w-full relative placeholder-gray-700"
+                  class="search-input relative h-[48px] w-full bg-white pl-20 text-gray-900 placeholder-gray-700 focus:outline-none"
                   spellcheck="false"
-                  aria-owns="searchterm-suggestions"
                   aria-label="Suchbegriff eingeben"
                   placeholder="Suchbegriff eingeben"
                 />
               </label>
               <button
                 type="submit"
-                class="button m-[4px] is-strong row-start-1 mobile-only:is-icon-only"
+                class="button is-strong mobile-only:is-icon-only row-start-1 m-[4px]"
               >
                 ${Icon('search')}
-                <span class="md:not-sr-only sr-only">Suchen</span>
+                <span class="sr-only md:not-sr-only">Suchen</span>
               </button>
             </div>
           </div>

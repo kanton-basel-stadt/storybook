@@ -8,7 +8,7 @@ import '@kanton-basel-stadt/designsystem/icons/symbol/linkedin'
 
 export const PageFooter = () => {
   return html`
-    <hr class="bg-green-500 h-100 border-none" />
+    <hr class="h-100 border-none bg-green-500" />
     <footer class="bg-gray-200 py-20 lg:py-40 print:hidden">
       <h1 class="sr-only">Fusszeile</h1>
       <div class="container flex flex-col gap-25">
@@ -111,9 +111,12 @@ export const PageFooter = () => {
               <a
                 class="button is-sm is-icon-only"
                 href="https://twitter.com/baselstadt"
+                aria-label="Twitter"
                 target="_blank"
               >
-                <icon-symbol-x-formerly-twitter aria-hidden="true" />
+                <icon-symbol-x-formerly-twitter
+                  aria-hidden="true"
+                ></icon-symbol-x-formerly-twitter>
                 <span class="sr-only"
                   >Twitter
                   <span class="sr-only"
@@ -127,9 +130,10 @@ export const PageFooter = () => {
               <a
                 class="button is-sm is-icon-only"
                 href="https://www.facebook.com/Rathaus.Basel"
+                aria-label="Facebook"
                 target="_blank"
               >
-                <icon-symbol-facebook aria-hidden="true" />
+                <icon-symbol-facebook aria-hidden="true"></icon-symbol-facebook>
                 <span class="sr-only"
                   >Facebook
                   <span class="sr-only"
@@ -143,9 +147,12 @@ export const PageFooter = () => {
               <a
                 class="button is-sm is-icon-only"
                 href="https://www.instagram.com/kantonbaselstadt/"
+                aria-label="Instagram"
                 target="_blank"
               >
-                <icon-symbol-instagram aria-hidden="true" />
+                <icon-symbol-instagram
+                  aria-hidden="true"
+                ></icon-symbol-instagram>
                 <span class="sr-only"
                   >Instagram
                   <span class="sr-only"
@@ -159,9 +166,10 @@ export const PageFooter = () => {
               <a
                 class="button is-sm is-icon-only"
                 href="https://www.youtube.com/user/kantonbaselstadt/videos"
+                aria-label="Youtube"
                 target="_blank"
               >
-                <icon-symbol-youtube aria-hidden="true" />
+                <icon-symbol-youtube aria-hidden="true"></icon-symbol-youtube>
                 <span class="sr-only"
                   >Youtube
                   <span class="sr-only"
@@ -175,9 +183,10 @@ export const PageFooter = () => {
               <a
                 class="button is-sm is-icon-only"
                 href="https://www.linkedin.com/company/kanton-basel-stadt/"
+                aria-label="Linkedin"
                 target="_blank"
               >
-                <icon-symbol-linkedin aria-hidden="true" />
+                <icon-symbol-linkedin aria-hidden="true"></icon-symbol-linkedin>
                 <span class="sr-only"
                   >Linkedin
                   <span class="sr-only"
@@ -190,7 +199,7 @@ export const PageFooter = () => {
           </ul>
         </nav>
         <nav aria-label="Metadatenmenü">
-          <ul class="flex flex-wrap font-medium gap-x-15 gap-y-10">
+          <ul class="flex flex-wrap gap-x-15 gap-y-10 font-medium">
             <li>
               <a
                 class="nuxt-link-exact-active link text-sm underline decoration-white underline-offset-4 hover:decoration-blue-700"
@@ -221,7 +230,7 @@ export const PageFooter = () => {
             </li>
           </ul>
         </nav>
-        <div class="font-bold text-blue-900 text-sm">© 2024 Basel-Stadt</div>
+        <div class="text-sm font-bold text-blue-900">© 2024 Basel-Stadt</div>
       </div>
     </footer>
   `

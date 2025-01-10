@@ -50,9 +50,9 @@ export const Gallery = (
 
   const copyrightClasses = {
     'text-xs': true,
-    'text-gray-300': color === 'white',
-    'text-primary-900/40': color === 'green',
-    'text-white/50': color === 'blue',
+    'text-gray-700': color === 'white',
+    'text-primary-900/75': color === 'green',
+    'text-white/75': color === 'blue',
   }
 
   return html`
@@ -63,22 +63,18 @@ export const Gallery = (
       <div class="container mobile-only:px-0">
         <section
           aria-label="Gallery"
-          class="carousel relative text-center touch-pan-y overscroll-none"
+          class="carousel relative touch-pan-y overscroll-none text-center"
           dir="ltr"
           tabindex="0"
         >
           <div class="carousel__viewport">
             <ol class="carousel__track">
-              <li
-                aria-hidden="true"
-                class="carousel__slide carousel__slide"
-                style="width: 100%;"
-              >
+              <li aria-hidden="true" class="carousel__slide w-full">
                 <figure
-                  class="flex flex-col items-center justify-center w-full"
+                  class="flex w-full flex-col items-center justify-center"
                 >
                   <div
-                    class="carousel__image-slide flex items-center justify-center w-full aspect-video"
+                    class="carousel__image-slide flex aspect-video w-full items-center justify-center"
                   >
                     <img
                       alt="${imageAlt}"
@@ -105,10 +101,10 @@ export const Gallery = (
                     />
                   </div>
                   <figcaption
-                    class="w-full grid grid-cols-[auto_1fr] gap-10 md:gap-20 text-left mt-15 md:mt-25 print:p-20"
+                    class="mt-15 grid w-full grid-cols-[auto_1fr] gap-10 text-left md:mt-25 md:gap-20 print:p-20"
                   >
                     <div
-                      class="border border-gray-300 px-10 rounded-full text-xs font-medium text-blue-900 self-start bg-white"
+                      class="self-start rounded-full border border-gray-300 bg-white px-10 text-xs font-medium text-blue-900"
                     >
                       1/2
                     </div>
@@ -126,23 +122,25 @@ export const Gallery = (
             </ol>
           </div>
           <div
-            class="absolute top-0 inset-x-0 flex pointer-events-none aspect-video justify-between"
+            class="pointer-events-none absolute inset-x-0 top-0 flex aspect-video justify-between"
           >
             <button
+              type="button"
               aria-label="Vorheriges Bild"
               class="group/button carousel-button"
             >
-              <div class="button is-prev mobile-only:is-sm is-icon-only">
+              <span class="button is-prev mobile-only:is-sm is-icon-only">
                 <span class="sr-only">Vorheriges</span>
-              </div>
+              </span>
             </button>
             <button
+              type="button"
               aria-label="Nächstes Bild"
               class="group/button carousel-button"
             >
-              <div class="button is-next mobile-only:is-sm is-icon-only">
+              <span class="button is-next mobile-only:is-sm is-icon-only">
                 <span class="sr-only">Nächstes</span>
-              </div>
+              </span>
             </button>
           </div>
           <div aria-atomic="true" aria-live="polite" class="sr-only">

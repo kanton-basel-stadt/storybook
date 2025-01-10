@@ -32,25 +32,25 @@ export const Accordion = (
   }
 
   return html`
-    <div class="py-25 lg:py-30 xl:py-40 bg-green-100 mt-30">
+    <div class="mt-30 bg-green-100 py-25 lg:py-30 xl:py-40">
       <div class="container">
         <header class="mb-10 lg:mb-20 xl:mb-30">
-          <h2 class="h2 break-words hyphens-auto text-green-600">${title}</h2>
+          <h2 class="h2 hyphens-auto break-words text-green-600">${title}</h2>
         </header>
         <div>
           <div class="${classMap(containerClasses)}">
             ${accordions.map(
               (accordion) => html`
                 <div
-                  class="rounded-large ring-gray-700/20 ring-1 hover:ring-gray-700/60 bg-white shadow-lg !ring-gray-700/60"
+                  class="rounded-large bg-white shadow-lg ring-1 !ring-gray-700/60 ring-gray-700/20 hover:ring-gray-700/60"
                 >
                   <h3
-                    class="rounded-large cursor-pointer text-blue-900 hover:text-blue-700 md:text-lg lg:text-xl font-bold"
+                    class="cursor-pointer rounded-large font-bold text-blue-900 hover:text-blue-700 md:text-lg lg:text-xl"
                   >
                     <button
                       id="accordion-toggle-${accordion.id}"
                       type="button"
-                      class="flex items-center justify-between marker:hidden p-10 w-full md:px-20 lg:py-15 text-left focus-visible:outline-2"
+                      class="flex w-full items-center justify-between p-10 text-left marker:hidden focus-visible:outline-2 md:px-20 lg:py-15"
                       aria-expanded="true"
                       aria-controls="accordion-content-${accordion.id}"
                     >
@@ -78,12 +78,12 @@ export const Accordion = (
                           (link) => html`
                             <a class="link with-icon" href="${link.url}">
                               <span
-                                class="hyphens-auto font-bold col-start-2 row-start-1"
+                                class="col-start-2 row-start-1 hyphens-auto font-bold"
                               >
                                 ${link.label}
                               </span>
                               <p
-                                class="hyphens-auto col-start-2 row-start-2 font-normal mt-5 text-base"
+                                class="col-start-2 row-start-2 mt-5 hyphens-auto text-base font-normal"
                               >
                                 ${link.description}
                               </p>

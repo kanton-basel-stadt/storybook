@@ -4,7 +4,7 @@ import { EventTeaser, type EventTeaserParams } from './EventTeaser'
 export const EventTeaserList = (teasers: EventTeaserParams[]) => {
   return html`
     <ol
-      class="grid md:grid-cols-2 xl:grid-cols-3 gap-x-20 [&>li]:pb-20 [&>li]:row-span-9 [&>li]:grid [&>li]:grid-rows-subgrid [&>li]:grid-cols-1"
+      class="[&amp;&gt;li]:pb-20 [&amp;&gt;li]:row-span-9 [&amp;&gt;li]:grid [&amp;&gt;li]:grid-rows-subgrid [&amp;&gt;li]:grid-cols-1 grid gap-x-20 md:grid-cols-2 xl:grid-cols-3"
     >
       ${teasers.map((t) => html` <li>${EventTeaser(t)}</li> `)}
     </ol>

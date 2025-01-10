@@ -7,8 +7,8 @@ export const NoResults = (
   removeFiltersUrl: string
 ) => {
   return html`
-    <div class="container mb-25 scroll-m-10 relative">
-      <div class="text-xl mt-20">
+    <div class="container relative mb-25 scroll-m-10">
+      <div class="mt-20 text-xl">
         Meinten Sie:
         <a
           aria-current="page"
@@ -20,9 +20,9 @@ export const NoResults = (
       </div>
       <div
         aria-live="polite"
-        class="flex justify-between items-center mt-30 mb-40 text-lg min-h-30 flex-wrap gap-10"
+        class="mb-40 mt-30 flex min-h-30 flex-wrap items-center justify-between gap-10 text-lg"
       >
-        <h3 class="font-bold flex gap-5 items-center min-h-[32px]">
+        <h3 class="flex min-h-[32px] items-center gap-5 font-bold">
           ${Icon('circle-warning', {
             '[&_svg]:size-20': true,
             '[&_svg]:text-red-800': true,

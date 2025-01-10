@@ -90,7 +90,7 @@ export const ContrastChecker = (
       <tr>
         <td colspan="3" rowspan="3">&nbsp;</td>
         <td
-          class="border border-gray-300 h-50"
+          class="h-50 border border-gray-300"
           colspan="${numberOfForegroundColors}"
         >
           Foreground colors
@@ -99,7 +99,7 @@ export const ContrastChecker = (
       <tr>
         ${Object.keys(selectedForegroundShades).map(
           (key) =>
-            html`<td class="rotated-text border border-gray-600 h-[120px]">
+            html`<td class="rotated-text h-[120px] border border-gray-600">
               ${selectedForgroundColor !== 'all' &&
               selectedForgroundColor !== 'white'
                 ? selectedForgroundColor + '-'
@@ -122,7 +122,7 @@ export const ContrastChecker = (
         const backgroundLabel = !hasPrintedBackgroundLabel
           ? html`
               <td
-                class="border border-gray-300 w-50"
+                class="w-50 border border-gray-300"
                 rowspan="${numberOfBackgroundColors}"
               >
                 <div class="rotated-text">Background colors</div>
@@ -135,7 +135,7 @@ export const ContrastChecker = (
         return html`
           <tr>
             ${backgroundLabel}
-            <td class="size-50 border border-gray-600 w-[120px]">
+            <td class="size-50 w-[120px] border border-gray-600">
               ${selectedBackgroundColor !== 'all' &&
               selectedBackgroundColor !== 'white'
                 ? selectedBackgroundColor + '-'
@@ -156,7 +156,7 @@ export const ContrastChecker = (
 
               return html`
                 <td
-                  class="text-center size-[50px] border border-gray-600"
+                  class="size-[50px] border border-gray-600 text-center"
                   style="background-color: ${contrast > 4.5
                     ? '#B8D6BE'
                     : '#FF6854'};"

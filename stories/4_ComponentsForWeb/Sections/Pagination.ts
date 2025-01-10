@@ -1,8 +1,8 @@
 import { html } from 'lit'
 
 export const Pagination = () => {
-  return html`<div class="my-30 lg:my-50 py-20">
-    <div class="flex justify-between items-center">
+  return html`<div class="my-30 py-20 lg:my-50">
+    <div class="flex items-center justify-between">
       <a
         href="?page=1"
         title="Zur vorherigen Seite gehen"
@@ -10,7 +10,7 @@ export const Pagination = () => {
       >
         <span class="mobile-only:sr-only">Zurück</span>
       </a>
-      <div class="flex pagination-buttons gap-3 items-center">
+      <div class="pagination-buttons flex items-center gap-3">
         <a href="?page=1" class="">
           <span class="sr-only">Weiter zur Seite</span> 1
         </a>

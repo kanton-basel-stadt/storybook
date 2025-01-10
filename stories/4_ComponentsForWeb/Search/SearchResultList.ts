@@ -16,15 +16,15 @@ export const SearchResultList = (searchResults: SearchResult[]) => {
         return html`
           <li class="w-full min-w-0">
             <a
-              class="search-result block group/link w-full py-10 lg:py-15"
+              class="search-result group/link block w-full py-10 lg:py-15"
               href="${r.url}"
             >
-              <div class="link lg:text-lg with-icon">
-                <div class="font-bold line-clamp-2">${r.title}</div>
+              <div class="link with-icon lg:text-lg">
+                <div class="line-clamp-2 font-bold">${r.title}</div>
               </div>
               <div class="pl-25">
                 <ul
-                  class="col-start-2 text-blue-700 text-xs flex overflow-hidden w-full"
+                  class="col-start-2 flex w-full overflow-hidden text-xs text-blue-700"
                 >
                   ${r.breadcrumbs.map((b, i) => {
                     const classes = {
@@ -44,7 +44,7 @@ export const SearchResultList = (searchResults: SearchResult[]) => {
                   })}
                 </ul>
                 <div
-                  class="col-start-2 line-clamp-3 mt-10 text-blue-900 text-sm md:text-base"
+                  class="col-start-2 mt-10 line-clamp-3 text-sm text-blue-900 md:text-base"
                 >
                   ${unsafeHTML(r.text)}
                 </div>

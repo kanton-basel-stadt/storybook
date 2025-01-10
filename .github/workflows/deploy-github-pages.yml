@@ -1,6 +1,4 @@
-# .github/workflows/deploy-github-pages.yaml
-
-name: Build and Publish Storybook to GitHub Pages
+name: Build, test and publish Storybook to GitHub Pages
 
 on:
   push:
@@ -16,17 +14,39 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version-file: '.nvmrc'
 
       - name: Install
         run: npm ci
 
       - name: Lint
         run: npm run lint
+
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    if: github.event.deployment_status.state == 'success'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Run Storybook tests
+        run: npm run test
+        env:
+          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
   deploy:
     runs-on: ubuntu-latest
@@ -35,7 +55,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version-file: '.nvmrc'
 
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:

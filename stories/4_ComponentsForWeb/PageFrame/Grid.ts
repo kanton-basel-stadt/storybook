@@ -178,72 +178,72 @@ export const Grid = (
 ) => {
   return html`
     <div
-      class="container grid ${getGridClasses(
+      class="container ${getGridClasses(
         numberOfColsXS,
         numberOfColsSM,
         numberOfColsMD,
         numberOfColsLG,
         numberOfColsXL,
         numberOfColsXXL
-      )} ${gapClasses[gapSize]}"
+      )} ${gapClasses[gapSize]} grid"
     >
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 1
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 2
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 3
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 4
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 5
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 6
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 7
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 8
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 9
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 10
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 11
       </div>
       <div
-        class="bg-green-200 rounded h-[120px] flex items-center justify-center"
+        class="flex h-[120px] items-center justify-center rounded bg-green-200"
       >
         Grid element 12
       </div>

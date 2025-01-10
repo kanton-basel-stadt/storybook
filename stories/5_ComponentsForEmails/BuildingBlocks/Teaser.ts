@@ -2,7 +2,7 @@ import { html } from 'lit'
 import { Button } from './Button'
 
 // prettier-ignore
-export const Teaser = (titleAboveImage: string, title: string, text: string, imageUrl: string, copyRight: string, url: string, isButtonPrimary: boolean, isTitleGreen: boolean, iconUrl: string) => html`
+export const Teaser = (titleAboveImage: string, title: string, text: string, imageUrl: string, imageAlt: string, copyRight: string, url: string, isButtonPrimary: boolean, isTitleGreen: boolean, iconUrl: string) => html`
   <div><!--[--><!--[--><table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;" data-mjml-tag="mj-table"><!--[--><tbody><tr><td style="border-top: 1px solid #A5A5A5; padding: 0;"><!--[--><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" data-mjml-tag="mj-wrapper"><tbody><tr><td><!--[if mso | IE]>
       <table
          align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600"
@@ -55,7 +55,7 @@ export const Teaser = (titleAboveImage: string, title: string, text: string, ima
             <td
                align="center" class="" style=""
             >
-          <![endif]--><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;" data-mjml-tag="mj-image"><tbody><tr><td style="width:600px;"><img height="auto" src="${imageUrl}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600"></td></tr></tbody></table><!--[if mso | IE]>
+          <![endif]--><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;" data-mjml-tag="mj-image"><tbody><tr><td style="width:600px;"><img height="auto" src="${imageUrl}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600" alt="${imageAlt}"></td></tr></tbody></table><!--[if mso | IE]>
             </td>
           <![endif]--><!--]--><!--]--><!--]--><!--[if mso | IE]>
         </tr>
@@ -94,7 +94,7 @@ export const Teaser = (titleAboveImage: string, title: string, text: string, ima
               <td
                  style="vertical-align:top;width:120px;"
               >
-              <![endif]--><div class="mj-column-per-20 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;" data-mjml-tag="mj-column"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tbody><!--[--><!--[--><tr data-mjml-tag="mj-text"><td align="right" style="font-size:0px;padding:0;word-break:break-word;"><div style="font-family:'Inter', Helvetica, Arial, sans-serif !important;;font-size:12px;font-weight:400;line-height:18px;text-align:right;color:#BABABA;"><!--[--><!--[if mso | IE]><span style="font-family: Helvetica, Arial, sans-serif, 'Inter' !important"><![endif]--><!--[--> ${copyRight}<!--]--><!--[if mso | IE]></span><![endif]--><!--]--></div></td></tr><!--]--><!--]--></tbody></table></div><!--[if mso | IE]>
+              <![endif]--><div class="mj-column-per-20 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;" data-mjml-tag="mj-column"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tbody><!--[--><!--[--><tr data-mjml-tag="mj-text"><td align="right" style="font-size:0px;padding:0;word-break:break-word;"><div style="font-family:'Inter', Helvetica, Arial, sans-serif !important;;font-size:12px;font-weight:400;line-height:18px;text-align:right;color:#535353;"><!--[--><!--[if mso | IE]><span style="font-family: Helvetica, Arial, sans-serif, 'Inter' !important"><![endif]--><!--[--> ${copyRight}<!--]--><!--[if mso | IE]></span><![endif]--><!--]--></div></td></tr><!--]--><!--]--></tbody></table></div><!--[if mso | IE]>
               </td>
               <![endif]--><!--]--><!--]--><!--[if mso | IE]>
           </tr>

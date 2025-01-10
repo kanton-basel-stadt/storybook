@@ -9,7 +9,7 @@ export const DropdownSelect = (
   const optionsTemplate = isOpen
     ? html`
         <div
-          class="!static absolute top-[100%] overflow-auto min-w-[100%] max-h-[400px] z-[999] pointer-events-auto bottom-[auto]"
+          class="pointer-events-auto !static absolute bottom-[auto] top-[100%] z-[999] max-h-[400px] min-w-[100%] overflow-auto"
           id="${id}_popover"
         >
           <ul id="${id}_listbox" role="listbox">

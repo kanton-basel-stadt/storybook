@@ -56,12 +56,12 @@ export const Accordion = (
                     >
                       <span>${accordion.label}</span>
                       ${Icon('caret', {
-                        '[&>svg]:transition-all': true,
-                        '[&>svg]:duration-250': true,
-                        '[&>svg]:w-15': true,
-                        '[&>svg]:h-10': true,
-                        '[&>svg]:shrink-0': true,
-                        '[&>svg]:-scale-y-100': accordion.isOpen,
+                        '[&_svg]:transition-all': true,
+                        '[&_svg]:duration-250': true,
+                        '[&_svg]:w-15': true,
+                        '[&_svg]:h-10': true,
+                        '[&_svg]:shrink-0': true,
+                        '[&_svg]:-scale-y-100': accordion.isOpen,
                       })}
                     </button>
                   </h3>

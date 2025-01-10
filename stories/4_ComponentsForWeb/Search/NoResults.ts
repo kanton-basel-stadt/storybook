@@ -24,8 +24,8 @@ export const NoResults = (
       >
         <h3 class="font-bold flex gap-5 items-center min-h-[32px]">
           ${Icon('circle-warning', {
-            '[&>svg]:size-20': true,
-            '[&>svg]:text-red-800': true,
+            '[&_svg]:size-20': true,
+            '[&_svg]:text-red-800': true,
           })}
           <span>Keine Resultate gefunden</span>
         </h3>

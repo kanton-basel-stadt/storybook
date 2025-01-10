@@ -9,7 +9,7 @@ export const Repeater = (legend: string, content: string) => {
 
         <button>
           ${Icon('trash', {
-            '[&>svg]:size-20': true,
+            '[&_svg]:size-20': true,
           })}
         </button>
       </div>
@@ -18,7 +18,7 @@ export const Repeater = (legend: string, content: string) => {
 
     <button class="button has-icon-add">
       ${Icon('add', {
-        '[&>svg]:size-20': true,
+        '[&_svg]:size-20': true,
       })}
       Hinzufügen
     </button>

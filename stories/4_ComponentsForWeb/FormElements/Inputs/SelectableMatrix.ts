@@ -32,7 +32,7 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
                   class="rounded-full transition-all ease-in-out duration-250 bg-white hover:bg-blue-400 text-blue-900 hover:text-white border border-blue-900 hover:border-blue-400"
                 >
                   ${Icon('add', {
-                    '[&>svg]:size-20': true,
+                    '[&_svg]:size-20': true,
                   })}
                   <span class="sr-only"> Ganze Spalte anwählen </span>
                 </button>
@@ -52,7 +52,7 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
                   class="rounded-full transition-all ease-in-out duration-250 bg-white hover:bg-blue-400 text-blue-900 hover:text-white border border-blue-900 hover:border-blue-400"
                 >
                   ${Icon('add', {
-                    '[&>svg]:size-20': true,
+                    '[&_svg]:size-20': true,
                   })}
                   <span class="sr-only"> Ganze Zeile anwählen </span>
                 </button>
@@ -98,11 +98,11 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
                       <span class="sr-only"> ${c.label} ${r.label} </span>
 
                       ${Icon('add', {
-                        '[&>svg]:size-20': true,
+                        '[&_svg]:size-20': true,
                         '[:checked~label>&]:hidden': true,
                       })}
                       ${Icon('remove', {
-                        '[&>svg]:size-20': true,
+                        '[&_svg]:size-20': true,
                         hidden: true,
                         '[:checked~label>&]:block': true,
                       })}

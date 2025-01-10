@@ -24,11 +24,11 @@ export const PageHeader = () => {
                 class="flex whitespace-nowrap leading-none relative text-base lg:text-lg xl:text-2xl"
               >
                 ${Icon('baselstab', {
-                  '[&>svg]:translate-y-1': true,
-                  '[&>svg]:mt-[0.18em]': true,
-                  '[&>svg]:text-[0.59em]': true,
-                  '[&>svg]:w-[1em]': true,
-                  '[&>svg]:h-[1.7em]': true,
+                  '[&_svg]:translate-y-1': true,
+                  '[&_svg]:mt-[0.18em]': true,
+                  '[&_svg]:text-[0.59em]': true,
+                  '[&_svg]:w-[1em]': true,
+                  '[&_svg]:h-[1.7em]': true,
                 })}
                 <span
                   class="h-[1.2083em] ml-[0.3em] pl-[0.25em] leading-[1.2em] border-l border-gray-900 font-bold"
@@ -77,13 +77,13 @@ export const PageHeader = () => {
                 >Öffnet die Suchseite und fokussiert automatisch das
                 Suchfeld</span
               >
-              ${Icon('search', { '[&>svg]:translate-y-1': true })}
+              ${Icon('search', { '[&_svg]:translate-y-1': true })}
             </a>
             <button
               class="button is-icon-only is-sm md:!hidden relative z-20 !px-5 py-0 !items-center flex justify-center !gap-0"
             >
               <span class="sr-only">Menü aufklappen</span>
-              ${Icon('dots', { '[&>svg]:translate-y-1': true })}
+              ${Icon('dots', { '[&_svg]:translate-y-1': true })}
             </button>
           </div>
           <div class="grid-area-n flex justify-center relative z-10">

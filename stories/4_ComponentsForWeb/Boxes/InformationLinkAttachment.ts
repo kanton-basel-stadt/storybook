@@ -20,7 +20,7 @@ export const InformationLinkAttachment = (
         class="border-2 rounded-full size-50 flex items-center justify-between p-10 border-current absolute top-15 right-15 text-primary-600"
       >
         ${Icon('hinweise_no_rounded', {
-          '[&>svg]:size-30': true,
+          '[&_svg]:size-30': true,
           '-ml-2': true,
         })}
       </div>

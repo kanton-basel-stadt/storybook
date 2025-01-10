@@ -35,9 +35,9 @@ export const TopicLinkList = (title: string, linkGroups: LinkGroup[]) => {
                       href="${linkGroup.url}"
                     >
                       ${Icon(linkGroup.iconName, {
-                        '[&>svg]:!w-40': true,
-                        '[&>svg]:!h-40': true,
-                        '[&>svg]:shrink-0': true,
+                        '[&_svg]:!w-40': true,
+                        '[&_svg]:!h-40': true,
+                        '[&_svg]:shrink-0': true,
                       })}
                       <span class="mb-10">${linkGroup.label}</span>
                     </a>

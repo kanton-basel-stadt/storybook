@@ -14,6 +14,20 @@ Follow these steps:
 2. Install dependencies: `npm ci`
 3. Start the local development environment: `npm run storybook`
 
+### Tests and linting
+
+To execute tests (HTML validation and A11y tests using Axe), run:
+
+```
+npm run test
+```
+
+To execute linting, run:
+
+```
+npm run lint
+```
+
 ## Contribution
 
 Please feel free to open issues, contact the maintainers or send pull requests.

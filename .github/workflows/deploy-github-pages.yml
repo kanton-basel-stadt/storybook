@@ -27,6 +27,7 @@ jobs:
         run: npm run lint
 
   deploy:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +44,7 @@ jobs:
           checkout: false
 
   test:
+    needs: deploy
     timeout-minutes: 60
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
@@ -62,4 +64,4 @@ jobs:
       - name: Run Storybook tests
         run: npm run test
         env:
-          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
+          TARGET_URL: 'https://kanton-basel-stadt.github.io/storybook'

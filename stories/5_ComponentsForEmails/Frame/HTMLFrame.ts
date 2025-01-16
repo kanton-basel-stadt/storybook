@@ -159,7 +159,6 @@ export const HTMLFrame = (content) => html`
         max-width: 100%;
       }
     </style>
-    <link rel="stylesheet" href="https://www.bs.ch/_nuxt/assets/css/tailwind.css">
   </head>
   <body  style="word-spacing:normal;font-size:12px">
     ${content}

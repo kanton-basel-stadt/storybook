@@ -1,17 +1,10 @@
 import { Button } from './Button'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Buttons/Button',
-  render: (args) =>
-    Button(
-      args.label,
-      args.iconName,
-      args.iconPlacement,
-      args.size,
-      args.types
-    ),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  Button,
+  {
     label: {
       name: 'Text label',
       control: 'text',
@@ -52,20 +45,19 @@ export default {
       control: 'multi-select',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     label: 'Click me!',
     iconName: 'baselstab',
     iconPlacement: 'Icon left',
     size: 'Standard',
     types: [],
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4'
+)
+
+export default {
+  title: '4. Components for the web/Buttons/Button',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

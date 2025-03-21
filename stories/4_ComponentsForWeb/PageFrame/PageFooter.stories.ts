@@ -1,15 +1,16 @@
 import { PageFooter } from './PageFooter'
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  PageFooter,
+  {},
+  {},
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24266-22407&t=FznYmIANb8uB5p92-1'
+)
 
 export default {
   title: '4. Components for the web/Page Frame/Page Footer',
-  render: () => PageFooter(),
+  ...StoryDefinition,
 }
 
-export const Default = {
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24266-22407&t=FznYmIANb8uB5p92-1',
-    },
-  },
-}
+export const Default = DefaultStory

@@ -1,21 +1,17 @@
-import { EventTeaserParams } from './EventTeaser'
 import { loremIpsum } from 'lorem-ipsum'
 import { EventTeaserList } from './EventTeaserList'
 
-export default {
-  title: '4. Components for the web/Teasers/Event teaser list',
-  render: (args: { teasers: EventTeaserParams[] }) =>
-    EventTeaserList(args.teasers),
-  argTypes: {
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  EventTeaserList,
+  {
     teasers: {
       name: 'Teasers',
       control: 'object',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     teasers: [
       {
         url: 'https://www.bs.ch/',
@@ -124,10 +120,12 @@ export const Default = {
       },
     ],
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24445-62190&t=FznYmIANb8uB5p92-1s',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24445-62190&t=FznYmIANb8uB5p92-1s'
+)
+
+export default {
+  title: '4. Components for the web/Teasers/Event teaser list',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

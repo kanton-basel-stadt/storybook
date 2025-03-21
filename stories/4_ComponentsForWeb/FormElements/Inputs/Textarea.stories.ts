@@ -1,9 +1,9 @@
 import { Textarea } from './Textarea'
+import defineStory from '../../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Form elements/Inputs/Textarea',
-  render: (args) => Textarea(args.label, args.value, args.name, args.id),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  Textarea,
+  {
     label: {
       name: 'Label',
       control: 'text',
@@ -21,19 +21,18 @@ export default {
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     label: 'Label',
     value: '',
     name: 'my-textarea',
     id: 'textarea-123',
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Form elements/Inputs/Textarea',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

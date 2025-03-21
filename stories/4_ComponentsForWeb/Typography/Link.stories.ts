@@ -1,9 +1,10 @@
 import { Link } from './Link'
 
-export default {
-  title: '4. Components for the web/Typography/Link',
-  render: (args) => Link(args.withIcon, args.isInline, args.label, args.href),
-  argTypes: {
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  Link,
+  {
     withIcon: {
       name: 'With link icon (files, arrows, etc., changes itself based on URL)',
       control: 'boolean',
@@ -21,19 +22,18 @@ export default {
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     withIcon: false,
     isInline: false,
     label: 'Click me!',
     href: '#',
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24245-15335&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24245-15335&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Typography/Link',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

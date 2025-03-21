@@ -1,20 +1,11 @@
 import { Grid } from './Grid'
+import defineStory from '../../../helpers/defineStory'
 
 const numbersOneToTwelve = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]
 
-export default {
-  title: '4. Components for the web/Page Frame/Grid',
-  render: (args) =>
-    Grid(
-      args.numberOfColsXS,
-      args.numberOfColsSM,
-      args.numberOfColsMD,
-      args.numberOfColsLG,
-      args.numberOfColsXL,
-      args.numberOfColsXXL,
-      args.gapSize
-    ),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  Grid,
+  {
     numberOfColsXS: {
       control: 'select',
       name: 'Number of grid columns on XS',
@@ -54,10 +45,7 @@ export default {
       ],
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     numberOfColsXS: 6,
     numberOfColsSM: 6,
     numberOfColsMD: 6,
@@ -66,4 +54,12 @@ export const Default = {
     numberOfColsXXL: 6,
     gapSize: 20,
   },
+  null
+)
+
+export default {
+  title: '4. Components for the web/Page Frame/Grid',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

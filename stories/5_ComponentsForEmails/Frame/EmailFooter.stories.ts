@@ -1,24 +1,24 @@
 import { EmailFooter } from './EmailFooter'
 
-export default {
-  title: '5. Components for emails/Frame/Email footer',
-  render: (args) => EmailFooter(args.unsubscribeLink),
-  argTypes: {
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  EmailFooter,
+  {
     unsubscribeLink: {
       name: 'Unsubscribe link',
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     unsubscribeLink: 'https://www.bs.ch/',
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=21334-1360&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=21334-1360&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '5. Components for emails/Frame/Email footer',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

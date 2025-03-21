@@ -1,4 +1,4 @@
-import colors from '@kanton-basel-stadt/designsystem/dist/configs/colors.ts'
+import colors from '@kanton-basel-stadt/designsystem/dist/configs/colors'
 import { ContrastChecker } from './ContrastChecker'
 
 export default {

@@ -1,10 +1,11 @@
 import { Image } from './Image'
 import { loremIpsum } from 'lorem-ipsum'
 
-export default {
-  title: '5. Components for emails/Building blocks/Image',
-  render: (args) => Image(args.imageUrl, args.imageAlt, args.copyRight),
-  argTypes: {
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  Image,
+  {
     imageUrl: {
       name: 'Image URL',
       control: 'text',
@@ -18,18 +19,17 @@ export default {
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     imageUrl: 'https://placehold.co/1040x585',
     copyRight: 'Copyright 2024 bs.ch',
     imageAlt: loremIpsum(),
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=21334-1360&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=21334-1360&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '5. Components for emails/Building blocks/Image',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

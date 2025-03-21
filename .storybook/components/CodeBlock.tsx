@@ -1,5 +1,5 @@
-import React from 'react'
-import hljs from 'highlight.js'
+import * as React from 'react'
+import * as hljs from 'highlight.js'
 
 interface CodeBlockProps {
   children: string
@@ -40,9 +40,9 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
     // Multi-line child, probably not inline
     return (
       <div className="mb-20">
-        <pre className={`hljs ${language} mb-5 block`}>
+        <code className={`hljs ${language} font-mono mb-5 block`}>
           <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-        </pre>
+        </code>
 
         <div className="flex justify-end">
           <button className="button is-sm font-sans" onClick={copyCode}>
@@ -54,9 +54,9 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   }
 
   return (
-    <pre className={`hljs ${language} inline`}>
+    <code className={`hljs ${language} inline`}>
       <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-    </pre>
+    </code>
   )
 }
 

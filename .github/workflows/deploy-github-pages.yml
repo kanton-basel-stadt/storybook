@@ -26,26 +26,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
-  deploy:
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          install_command: npm ci
-          build_command: npm run build-storybook
-          path: storybook-static
-          checkout: false
-
   test:
-    needs: deploy
     timeout-minutes: 60
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -60,7 +43,29 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
 
-      - name: Run Storybook tests
-        run: npm run test
-        env:
-          TARGET_URL: 'https://kanton-basel-stadt.github.io/storybook'
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Serve Storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:127.0.0.1:6006 && npm run test"
+
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          install_command: npm ci
+          build_command: npm run build-storybook
+          path: storybook-static
+          checkout: false

@@ -1,15 +1,22 @@
 import { List } from './List'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Typography/List',
-  render: (args) => List(args.kind),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  List,
+  {
     kind: {
       name: 'Kind',
       control: 'select',
       options: ['ordered', 'unordered'],
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Typography/List',
+  ...StoryDefinition,
 }
 
 export const OrderedList = {

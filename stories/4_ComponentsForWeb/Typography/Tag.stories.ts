@@ -1,10 +1,10 @@
 import { Tag } from './Tag'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Typography/Tag',
-  render: (args) => Tag(args.content, args.variant, args.iconName),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  Tag,
+  {
     content: {
       name: 'Sample content',
       control: 'text',
@@ -20,6 +20,13 @@ export default {
       options: IconsIndex.iconNames,
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Typography/Tag',
+  ...StoryDefinition,
 }
 
 export const Light = {

@@ -1,10 +1,10 @@
 import { Title } from './Title'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Typography/Title',
-  render: (args) => Title(args.content, args.kind),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  Title,
+  {
     content: {
       name: 'Sample content',
       control: 'text',
@@ -15,6 +15,13 @@ export default {
       options: ['h1', 'h2', 'h3'],
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Typography/Title',
+  ...StoryDefinition,
 }
 
 export const Heading1 = {

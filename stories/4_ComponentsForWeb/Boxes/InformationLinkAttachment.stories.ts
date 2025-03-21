@@ -1,11 +1,10 @@
 import { InformationLinkAttachment } from './InformationLinkAttachment'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Boxes/Box (info, links, downloads)',
-  render: (args) =>
-    InformationLinkAttachment(args.title, args.content, args.links),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  InformationLinkAttachment,
+  {
     title: {
       name: 'Section title',
       control: 'text',
@@ -19,10 +18,7 @@ export default {
       control: 'object',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     title: 'An info box',
     content: loremIpsum({ count: 2 }),
     links: [
@@ -38,10 +34,12 @@ export const Default = {
       },
     ],
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-23213&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-23213&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Boxes/Box (info, links, downloads)',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

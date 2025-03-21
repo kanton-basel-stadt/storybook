@@ -1,10 +1,5 @@
 import { html } from 'lit'
-
-import '@kanton-basel-stadt/designsystem/icons/symbol/x-formerly-twitter'
-import '@kanton-basel-stadt/designsystem/icons/symbol/facebook'
-import '@kanton-basel-stadt/designsystem/icons/symbol/instagram'
-import '@kanton-basel-stadt/designsystem/icons/symbol/youtube'
-import '@kanton-basel-stadt/designsystem/icons/symbol/linkedin'
+import { Icon } from '../Icons/Icon'
 
 export const PageFooter = () => {
   return html`
@@ -114,9 +109,7 @@ export const PageFooter = () => {
                 aria-label="Twitter"
                 target="_blank"
               >
-                <icon-symbol-x-formerly-twitter
-                  aria-hidden="true"
-                ></icon-symbol-x-formerly-twitter>
+                ${Icon('x_formerly_twitter')}
                 <span class="sr-only"
                   >Twitter
                   <span class="sr-only"
@@ -133,7 +126,7 @@ export const PageFooter = () => {
                 aria-label="Facebook"
                 target="_blank"
               >
-                <icon-symbol-facebook aria-hidden="true"></icon-symbol-facebook>
+                ${Icon('facebook')}
                 <span class="sr-only"
                   >Facebook
                   <span class="sr-only"
@@ -150,9 +143,7 @@ export const PageFooter = () => {
                 aria-label="Instagram"
                 target="_blank"
               >
-                <icon-symbol-instagram
-                  aria-hidden="true"
-                ></icon-symbol-instagram>
+                ${Icon('instagram')}
                 <span class="sr-only"
                   >Instagram
                   <span class="sr-only"
@@ -169,7 +160,7 @@ export const PageFooter = () => {
                 aria-label="Youtube"
                 target="_blank"
               >
-                <icon-symbol-youtube aria-hidden="true"></icon-symbol-youtube>
+                ${Icon('youtube')}
                 <span class="sr-only"
                   >Youtube
                   <span class="sr-only"
@@ -186,7 +177,7 @@ export const PageFooter = () => {
                 aria-label="Linkedin"
                 target="_blank"
               >
-                <icon-symbol-linkedin aria-hidden="true"></icon-symbol-linkedin>
+                ${Icon('linkedin')}
                 <span class="sr-only"
                   >Linkedin
                   <span class="sr-only"

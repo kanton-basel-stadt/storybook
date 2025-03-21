@@ -46,8 +46,6 @@ const config: TestRunnerConfig = {
         html: true,
       },
     })
-
-    // validateHtml(await page.locator('#storybook-root').innerHTML(), context.id)
   },
 }
 

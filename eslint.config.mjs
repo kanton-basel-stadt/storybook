@@ -24,6 +24,8 @@ export default [
   {
     rules: {
       'lit/binding-positions': 'off', // We need bindings in comments for email templates
+      'lit/attribute-value-entities': 'off', // Otherwise it complains about legitimate Tailwind class selectors, such as `[&>p]:...`
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
 ]

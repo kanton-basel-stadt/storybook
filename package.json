@@ -8,13 +8,13 @@
   "main": "index.js",
   "scripts": {
     "test": "test-storybook",
-    "storybook": "npm run tw-build && npm run twc-build && storybook dev -p 6006",
-    "build-storybook": "npm run tw-build && npm run twc-build && storybook build",
+    "storybook": "npm run build-css && npm run twc-build && storybook dev -p 6006",
+    "build-storybook": "npm run build-css && npm run twc-build && storybook build",
     "start": "npm run storybook",
     "twc-build": "./node_modules/.bin/tailwind-config-viewer -c ./node_modules/@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js export ./static/tailwind_config_viewer",
-    "tw-build": "./node_modules/.bin/tailwindcss -i ./static/css/storybook.css -o ./static/css/storybook-built.css -c ./node_modules/\\@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js",
     "lint": "./node_modules/.bin/eslint .",
-    "lint:fix": "./node_modules/.bin/eslint . --fix"
+    "lint:fix": "./node_modules/.bin/eslint . --fix",
+    "build-css": "./node_modules/.bin/vite build"
   },
   "keywords": [
     "storybook",
@@ -61,10 +61,11 @@
     "@storybook/addon-outline": "^8.4.7",
     "@storybook/addon-toolbars": "^8.4.7",
     "@storybook/addon-viewport": "^8.4.7",
+    "@storybook/types": "^8.5.7",
     "lorem-ipsum": "^2.0.8",
     "marked": "^15.0.3",
     "marked-highlight": "^2.2.1",
-    "react": "^18.0.0",
+    "react": "^19.0.0",
     "remark-gfm": "^4.0.0",
     "slugify": "^1.6.6",
     "tailwindcss": "^3.4.13"

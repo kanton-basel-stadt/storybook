@@ -1,10 +1,10 @@
 import { Paragraph } from './Paragraph'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Typography/Paragraph',
-  render: (args) => Paragraph(args.content, args.kind),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  Paragraph,
+  {
     content: {
       name: 'Sample content',
       control: 'text',
@@ -15,6 +15,13 @@ export default {
       options: ['paragraph', 'small paragraph', 'preheading', 'lead'],
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Typography/Paragraph',
+  ...StoryDefinition,
 }
 
 export const StandardParagraph = {

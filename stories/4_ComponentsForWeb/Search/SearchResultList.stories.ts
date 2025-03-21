@@ -1,16 +1,6 @@
 import { SearchResultList } from './SearchResultList'
 import { loremIpsum } from 'lorem-ipsum'
-
-export default {
-  title: '4. Components for the web/Search/Search result list',
-  render: (args) => SearchResultList(args.searchResults),
-  argTypes: {
-    searchResults: {
-      name: 'Search results',
-      control: 'object',
-    },
-  },
-}
+import defineStory from '../../../helpers/defineStory'
 
 function getEmLoremIpsum() {
   const text = loremIpsum()
@@ -27,8 +17,15 @@ function getBreadcrumbs() {
   }).split(' ')
 }
 
-export const Default = {
-  args: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  SearchResultList,
+  {
+    searchResults: {
+      name: 'Search results',
+      control: 'object',
+    },
+  },
+  {
     searchResults: [
       {
         title: loremIpsum(),
@@ -62,10 +59,12 @@ export const Default = {
       },
     ],
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-13190&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-13190&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Search/Search result list',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

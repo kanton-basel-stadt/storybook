@@ -1,19 +1,11 @@
 import { FullScreenHeader } from './FullScreenHeader'
 import { loremIpsum } from 'lorem-ipsum'
 
-export default {
-  title: '4. Components for the web/Page Frame/Full screen header',
-  render: (args) =>
-    FullScreenHeader(
-      args.title,
-      args.lead,
-      args.imageUrlSm,
-      args.imageUrlMd,
-      args.imageUrlLg,
-      args.imageUrlXl,
-      args.imageCaption
-    ),
-  argTypes: {
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  FullScreenHeader,
+  {
     title: {
       name: 'Title',
       control: 'text',
@@ -43,10 +35,7 @@ export default {
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     title: loremIpsum(),
     lead: loremIpsum({ count: 4 }),
     imageUrlSm: 'https://placehold.co/400x800',
@@ -55,10 +44,12 @@ export const Default = {
     imageUrlXl: 'https://placehold.co/1680x1680',
     imageCaption: loremIpsum(),
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=6537-93868&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=6537-93868&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Page Frame/Full screen header',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

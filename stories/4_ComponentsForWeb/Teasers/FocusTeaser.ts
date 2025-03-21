@@ -38,7 +38,6 @@ export const FocusTeaser = (
     'transition-all': true,
     'duration-250': true,
     'ease-in-out': true,
-    '-mt-15 b': true,
     'backdrop-blur-md': true,
     'mb-20': true,
     'text-white': color === 'dark',

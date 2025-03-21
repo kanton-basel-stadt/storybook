@@ -1,5 +1,5 @@
 import { html } from 'lit'
-import colors from '@kanton-basel-stadt/designsystem/dist/configs/colors.ts'
+import colors from '@kanton-basel-stadt/designsystem/dist/configs/colors'
 import './ContrastChecker.css'
 
 type COLORS = typeof colors

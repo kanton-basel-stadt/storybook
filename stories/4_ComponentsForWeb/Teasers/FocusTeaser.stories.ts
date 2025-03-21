@@ -1,22 +1,10 @@
 import { FocusTeaser } from './FocusTeaser'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Teasers/Focus Teaser',
-  render: (args) =>
-    FocusTeaser(
-      args.title,
-      args.main,
-      args.links,
-      args.imageUrlSm,
-      args.imageUrlMd,
-      args.imageUrlLg,
-      args.imageUrlXl,
-      args.imageCaption,
-      args.imageAlt,
-      args.color
-    ),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  FocusTeaser,
+  {
     color: {
       name: 'Color',
       control: 'hidden',
@@ -58,6 +46,13 @@ export default {
       control: 'text',
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Teasers/Focus Teaser',
+  ...StoryDefinition,
 }
 
 export const Light = {
@@ -90,7 +85,7 @@ export const Light = {
   },
 }
 
-export const Dartk = {
+export const Dark = {
   args: {
     title: loremIpsum(),
     mainUrl: 'https://www.bs.ch/',

@@ -1,19 +1,16 @@
 import { Breadcrumbs } from './Breadcrumbs'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Page Frame/Breadcrumbs',
-  render: (args) => Breadcrumbs(args.links),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  Breadcrumbs,
+  {
     links: {
       name: 'Links',
       control: 'object',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     links: [
       {
         label: loremIpsum(),
@@ -29,10 +26,12 @@ export const Default = {
       },
     ],
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-18856&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-18856&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Page Frame/Breadcrumbs',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

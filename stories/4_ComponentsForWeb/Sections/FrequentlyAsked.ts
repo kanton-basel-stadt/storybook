@@ -12,7 +12,7 @@ export const FrequentlyAsked = (links: Link[]) => {
     >
       <div class="container">
         <h2
-          class="pre-heading sticky top-sticky-top z-40 -mt-15 mb-20 bg-white/80 py-15 text-primary-700 backdrop-blur-md transition-all duration-250 ease-in-out mobile-only:-mx-15 mobile-only:px-15"
+          class="pre-heading sticky top-sticky-top z-40 mb-20 bg-white/80 py-15 text-primary-700 backdrop-blur-md transition-all duration-250 ease-in-out mobile-only:-mx-15 mobile-only:px-15"
         >
           Häufig nachgefragt
         </h2>

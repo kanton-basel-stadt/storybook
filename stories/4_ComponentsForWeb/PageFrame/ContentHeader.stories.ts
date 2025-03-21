@@ -1,22 +1,10 @@
 import { ContentHeader } from './ContentHeader'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Page Frame/Content header',
-  render: (args) =>
-    ContentHeader(
-      args.title,
-      args.lead,
-      args.easyToReadUrl,
-      args.hasImage,
-      args.imageUrlSm,
-      args.imageUrlMd,
-      args.imageUrlLg,
-      args.imageUrlXl,
-      args.imageCaption,
-      args.imageCopyRight
-    ),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  ContentHeader,
+  {
     title: {
       name: 'Title',
       control: 'text',
@@ -58,10 +46,7 @@ export default {
       control: 'text',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     title: loremIpsum(),
     lead: loremIpsum({ count: 4 }),
     easyToReadUrl: 'https://www.bs.ch/',
@@ -73,10 +58,12 @@ export const Default = {
     imageCaption: loremIpsum(),
     imageCopyRight: 'Copyright 2024 bs.ch',
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24266-111886&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24266-111886&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Page Frame/Content header',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

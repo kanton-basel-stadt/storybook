@@ -1,4 +1,4 @@
-@import '../../node_modules/@kanton-basel-stadt/designsystem/dist/assets/css/tailwind.css';
+@import '@kanton-basel-stadt/designsystem/assets/css/tailwind.css';
 
 /* Root prefix is necessary to have higher specificity than the Storybook theme itself. */
 #root {
@@ -484,7 +484,7 @@ div[role='main'] > div > div > div > div {
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  @apply text-green-600
+  @apply text-green-600;
 }
 
 .hljs-built_in,
@@ -508,4 +508,8 @@ div[role='main'] > div > div > div > div {
 .hljs-type,
 .hljs-selector-id {
   @apply font-bold;
+}
+
+.css-ajfpqr {
+  @apply !font-sans;
 }

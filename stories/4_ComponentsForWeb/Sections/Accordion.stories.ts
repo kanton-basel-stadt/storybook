@@ -1,11 +1,10 @@
 import { Accordion } from './Accordion'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Sections/Accordion',
-  render: (args) =>
-    Accordion(args.title, args.accordions, args.numberOfColumns),
-  argTypes: {
+const { StoryDefinition, DefaultStory } = defineStory(
+  Accordion,
+  {
     title: {
       name: 'Section title',
       control: 'text',
@@ -20,10 +19,7 @@ export default {
       control: 'radio',
     },
   },
-}
-
-export const Default = {
-  args: {
+  {
     title: 'An accordion section',
     accordions: [
       {
@@ -65,10 +61,12 @@ export const Default = {
     ],
     numberOfColumns: 1,
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58027&t=FznYmIANb8uB5p92-1',
-    },
-  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58027&t=FznYmIANb8uB5p92-1'
+)
+
+export default {
+  title: '4. Components for the web/Sections/Accordion',
+  ...StoryDefinition,
 }
+
+export const Default = DefaultStory

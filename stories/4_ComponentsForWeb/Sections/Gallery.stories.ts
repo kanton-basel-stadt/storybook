@@ -1,21 +1,10 @@
 import { Gallery } from './Gallery'
 import { loremIpsum } from 'lorem-ipsum'
+import defineStory from '../../../helpers/defineStory'
 
-export default {
-  title: '4. Components for the web/Sections/Gallery',
-  render: (args) =>
-    Gallery(
-      args.title,
-      args.color,
-      args.imageUrlSm,
-      args.imageUrlMd,
-      args.imageUrlLg,
-      args.imageUrlXl,
-      args.imageCaption,
-      args.imageAlt,
-      args.imageCopyRight
-    ),
-  argTypes: {
+const { StoryDefinition } = defineStory(
+  Gallery,
+  {
     title: {
       name: 'Title',
       control: 'text',
@@ -53,6 +42,13 @@ export default {
       control: 'text',
     },
   },
+  {},
+  null
+)
+
+export default {
+  title: '4. Components for the web/Sections/Gallery',
+  ...StoryDefinition,
 }
 
 export const White = {

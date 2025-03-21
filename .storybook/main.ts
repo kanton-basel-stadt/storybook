@@ -1,3 +1,4 @@
+// import '../static/css/storybook.css'
 import KantonBSDesignsystemPlugin from '@kanton-basel-stadt/designsystem/vite'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
@@ -57,31 +58,19 @@ const config = {
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
     '@storybook/addon-designs',
+    './src/iconSymbolAddon/register.tsx',
   ],
 
   framework: {
     name: '@storybook/web-components-vite',
-    options: {},
+    options: {
+      builder: {
+        viteConfigPath: './vite.config.ts',
+      },
+    },
   },
 
-  staticDirs: ['../static'],
-
-  async viteFinal(config) {
-    const { mergeConfig } = await import('vite')
-
-    return mergeConfig(config, {
-      plugins: [KantonBSDesignsystemPlugin({})],
-      define: {
-        'import.meta.env.STORYBOOK_DDS_ICONS': JSON.stringify(icons),
-      },
-      server: {
-        fs: {
-          strict: false,
-        },
-      },
-    })
-  },
-
+  staticDirs: ['../static', '../built-css'],
   docs: {},
 }
 export default config

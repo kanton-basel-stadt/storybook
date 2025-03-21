@@ -2,8 +2,13 @@
 import KantonBSDesignsystemPlugin from '@kanton-basel-stadt/designsystem/vite'
 import { defineConfig } from 'vite'
 
+const baseDir =
+  process.env.FONT_BASE_DIR !== undefined
+    ? process.env.FONT_BASE_DIR
+    : '/storybook/'
+
 export default defineConfig({
-  base: process.env.FONT_BASE_DIR || '/storybook/',
+  base: baseDir,
   plugins: [KantonBSDesignsystemPlugin({})],
   server: {
     fs: {

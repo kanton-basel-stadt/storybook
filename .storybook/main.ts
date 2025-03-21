@@ -51,7 +51,7 @@ const config = {
     },
   },
 
-  staticDirs: ['../static', '../built-css'],
+  staticDirs: ['../static', { from: '../built-css', to: '/built-css' }],
   docs: {},
 }
 export default config

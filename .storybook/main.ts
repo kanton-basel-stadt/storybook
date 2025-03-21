@@ -1,23 +1,4 @@
-// import '../static/css/storybook.css'
-import KantonBSDesignsystemPlugin from '@kanton-basel-stadt/designsystem/vite'
-import * as fs from 'node:fs'
-import * as path from 'node:path'
 import remarkGfm from 'remark-gfm'
-
-const icons = fs
-  .readdirSync(
-    path.resolve(
-      __dirname,
-      '..',
-      'node_modules',
-      '@kanton-basel-stadt',
-      'designsystem',
-      'dist',
-      'assets',
-      'symbols'
-    )
-  )
-  .map((i) => i.replace(/\.svg/g, ''))
 
 const config = {
   core: {

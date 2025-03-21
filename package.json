@@ -8,9 +8,11 @@
   "main": "index.js",
   "scripts": {
     "test": "test-storybook",
-    "storybook": "npm run build-css && npm run twc-build && storybook dev -p 6006",
+    "storybook": "FONT_BASE_DIR=. npm run build-css && npm run twc-build && storybook dev -p 6006",
     "build-storybook": "npm run build-css && npm run twc-build && storybook build",
+    "build": "npm run build-storybook",
     "start": "npm run storybook",
+    "dev": "npm run storybook",
     "twc-build": "./node_modules/.bin/tailwind-config-viewer -c ./node_modules/@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.js export ./static/tailwind_config_viewer",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix",

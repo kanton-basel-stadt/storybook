@@ -3,6 +3,7 @@ import KantonBSDesignsystemPlugin from '@kanton-basel-stadt/designsystem/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: process.env.FONT_BASE_DIR || '/storybook/',
   plugins: [KantonBSDesignsystemPlugin({})],
   server: {
     fs: {
@@ -11,11 +12,11 @@ export default defineConfig({
   },
   build: {
     emptyOutDir: false,
-    outDir: '.',
+    outDir: 'built-css',
     rollupOptions: {
       input: './.storybook/storybook.css',
       output: {
-        assetFileNames: `built-css/[name].[ext]`,
+        assetFileNames: `[name].[ext]`,
       },
     },
   },

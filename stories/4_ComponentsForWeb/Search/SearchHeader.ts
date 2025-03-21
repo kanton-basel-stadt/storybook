@@ -13,7 +13,7 @@ export const SearchHeader = () => {
         <form>
           <div class="relative h-50">
             <div
-              class="hover:shadow-purple-600-small grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 transition-all duration-150 ease-in-out focus-within:!border-purple-500 focus-within:!shadow-purple-600"
+              class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 transition-all duration-150 ease-in-out focus-within:!border-purple-500 focus-within:!shadow-purple-600 hover:shadow-purple-600-small"
               role="search"
             >
               <label

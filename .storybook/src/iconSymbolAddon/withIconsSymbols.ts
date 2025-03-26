@@ -19,11 +19,7 @@ export const withIconsSymbols: DecoratorFunction<WebComponentsRenderer> = (
   }
 
   function getIcons(o: NestedValues) {
-    if (!o.values) {
-      return []
-    }
-
-    if (o.values.length === 0) {
+    if (!o || !o.values || o.values.length === 0) {
       return []
     }
 

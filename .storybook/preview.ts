@@ -22,18 +22,17 @@ const preview: Preview = {
     html: {
       removeEmptyComments: true,
       removeComments: true,
-      transform: (code) => {
+      transform: (code: string) => {
         const transformEl = document.createElement('div')
         transformEl.innerHTML = code
 
         // Empty out all the icon tags, so their usage is apparent.
         // @ts-expect-error .env is not defined on the type, but present thanks to Vite.
-        import.meta.env.STORYBOOK_DDS_ICONS.forEach((iconName) => {
-          const selector = 'icon-symbol-' + iconName.replace('_', '-')
+        import.meta.env.STORYBOOK_DDS_ICONS.forEach((iconName: string) => {
+          const selector = 'icon-symbol-' + iconName
+          const icons = Array.from(transformEl.querySelectorAll(selector))
 
-          transformEl
-            .querySelectorAll(selector)
-            .forEach((el) => (el.innerHTML = ''))
+          icons.forEach((el) => (el.innerHTML = ''))
         })
 
         // Replace all encoded ampers-ands with actual ones.

@@ -9,7 +9,7 @@
   "scripts": {
     "test": "test-storybook",
     "storybook": "FONT_BASE_DIR=\"\" npm run build-css && npm run twc-build && storybook dev -p 6006",
-    "build-storybook": "npm run build-css && npm run twc-build && storybook build",
+    "build-storybook": "FONT_BASE_DIR=\"/storybook/built-css\" npm run build-css && npm run twc-build && storybook build",
     "build": "npm run build-storybook",
     "start": "npm run storybook",
     "dev": "npm run storybook",

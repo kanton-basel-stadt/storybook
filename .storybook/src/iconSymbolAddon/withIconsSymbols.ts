@@ -23,16 +23,14 @@ export const withIconsSymbols: DecoratorFunction<WebComponentsRenderer> = (
       return []
     }
 
-    if (typeof o.values[0] === 'string') {
-      return o.values
-        .filter((e) => typeof e === 'string' && e.startsWith('<icon-symbol-'))
-        .map((i: string) =>
-          i.replace(/<icon-symbol-([a-z0-9\-_]+)\s?.*\/>/g, '$1')
-        )
-    }
-
     return o.values
-      .map((e) => getIcons(e))
+      .map((e: NestedValues | string) => {
+        if (typeof e === 'string' && e.startsWith('<icon-symbol-')) {
+          return e.replace(/<icon-symbol-([a-z0-9\-_]+)\s?.*\/>/g, '$1')
+        }
+
+        return getIcons(e as NestedValues)
+      })
       .flat()
       .filter(onlyUnique<string>)
   }

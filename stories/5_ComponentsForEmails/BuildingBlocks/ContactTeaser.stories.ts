@@ -53,7 +53,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '5. Components for emails/Building blocks/Contact teaser',
+  title: '6. Components for emails/Building blocks/Contact teaser',
   ...StoryDefinition,
 }
 

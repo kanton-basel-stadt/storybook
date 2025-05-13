@@ -28,7 +28,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Search/No results section',
+  title: '5. Components for the web/Search/No results section',
   ...StoryDefinition,
 }
 

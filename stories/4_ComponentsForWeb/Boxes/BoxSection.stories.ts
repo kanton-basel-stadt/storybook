@@ -26,7 +26,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Boxes/Box section',
+  title: '5. Components for the web/Boxes/Box section',
   ...StoryDefinition,
 }
 

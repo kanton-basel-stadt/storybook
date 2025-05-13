@@ -28,7 +28,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '5. Components for emails/Building blocks/Image',
+  title: '6. Components for emails/Building blocks/Image',
   ...StoryDefinition,
 }
 

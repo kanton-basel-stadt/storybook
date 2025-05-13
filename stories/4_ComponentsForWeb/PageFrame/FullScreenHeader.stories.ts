@@ -48,7 +48,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Page Frame/Full screen header',
+  title: '5. Components for the web/Page Frame/Full screen header',
   ...StoryDefinition,
 }
 

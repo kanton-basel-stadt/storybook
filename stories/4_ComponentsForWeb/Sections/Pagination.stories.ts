@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Sections/Pagination',
+  title: '5. Components for the web/Sections/Pagination',
   ...StoryDefinition,
 }
 

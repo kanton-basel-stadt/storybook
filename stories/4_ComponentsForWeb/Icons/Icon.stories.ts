@@ -18,7 +18,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Icons/Icon',
+  title: '5. Components for the web/Icons/Icon',
   ...StoryDefinition,
 }
 

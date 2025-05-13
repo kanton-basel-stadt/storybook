@@ -23,7 +23,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Sections/Layout section',
+  title: '5. Components for the web/Sections/Layout section',
   ...StoryDefinition,
 }
 

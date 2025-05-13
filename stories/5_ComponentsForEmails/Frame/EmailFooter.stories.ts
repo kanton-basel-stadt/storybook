@@ -17,7 +17,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '5. Components for emails/Frame/Email footer',
+  title: '6. Components for emails/Frame/Email footer',
   ...StoryDefinition,
 }
 

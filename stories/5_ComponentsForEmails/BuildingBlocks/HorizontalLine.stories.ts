@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '5. Components for emails/Building blocks/Horizontal line',
+  title: '6. Components for emails/Building blocks/Horizontal line',
   ...StoryDefinition,
 }
 

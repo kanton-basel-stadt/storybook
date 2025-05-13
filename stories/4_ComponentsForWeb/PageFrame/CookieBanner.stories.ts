@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Page Frame/Cookie Banner',
+  title: '5. Components for the web/Page Frame/Cookie Banner',
   ...StoryDefinition,
 }
 

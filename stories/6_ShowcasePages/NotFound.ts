@@ -1,6 +1,6 @@
 import { html } from 'lit'
-import { PageHeader } from '../PageFrame/PageHeader'
-import { PageFooter } from '../PageFrame/PageFooter'
+import { PageHeader } from '../4_ComponentsForWeb/PageFrame/PageHeader'
+import { PageFooter } from '../4_ComponentsForWeb/PageFrame/PageFooter'
 
 export const NotFound = () => html`
   ${PageHeader()}

@@ -1,5 +1,5 @@
 import { NotFound } from './NotFound'
-import defineStory from '../../../helpers/defineStory'
+import defineStory from '../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   NotFound,
@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Pages/Not Found',
+  title: '5. Showcase Pages/Not Found Page',
   ...StoryDefinition,
 }
 

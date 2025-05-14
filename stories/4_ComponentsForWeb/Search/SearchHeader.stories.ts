@@ -3,8 +3,15 @@ import defineStory from '../../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   SearchHeader,
-  {},
-  {},
+  {
+    isSearchButtonDisabled: {
+      name: 'Is search button disabled?',
+      control: 'boolean',
+    },
+  },
+  {
+    isSearchButtonDisabled: false,
+  },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-13187&t=FznYmIANb8uB5p92-1'
 )
 

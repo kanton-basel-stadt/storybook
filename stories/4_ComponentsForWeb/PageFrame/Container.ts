@@ -7,5 +7,5 @@ export const Container = (content: string, isWide: boolean) => {
     'is-wide': isWide,
   }
 
-  return html` <div class="${classMap(classes)}">${content}</div> `
+  return html`<div class="${classMap(classes)}">${content}</div>`
 }

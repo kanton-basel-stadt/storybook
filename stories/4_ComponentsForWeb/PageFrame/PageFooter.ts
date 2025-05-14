@@ -193,7 +193,7 @@ export const PageFooter = () => {
           <ul class="flex flex-wrap gap-x-15 gap-y-10 font-medium">
             <li>
               <a
-                class="nuxt-link-exact-active link text-sm underline decoration-white underline-offset-4 hover:decoration-blue-700"
+                class="link text-sm underline decoration-white underline-offset-4 hover:decoration-blue-700"
                 href="/"
                 >Startseite</a
               >

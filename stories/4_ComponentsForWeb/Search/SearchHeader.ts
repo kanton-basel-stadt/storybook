@@ -1,16 +1,16 @@
 import { Icon } from '../Icons/Icon'
 import { html } from 'lit'
 
-export const SearchHeader = () => {
+export const SearchHeader = (isSearchButtonDisabled: boolean) => {
   return html`
-    <section class="bg-primary-100 py-30 lg:py-50">
+    <section>
       <div class="container">
-        <h2
-          class="mb-30 text-2xl font-bold text-primary-700 md:text-5xl lg:mb-40"
-        >
+        <h2 class="my-20 text-2xl font-bold text-primary-600 md:text-5xl">
           Suche
         </h2>
-        <form>
+      </div>
+      <div class="border-t-2 border-gray-300 bg-green-100 pb-20 pt-30">
+        <form class="container">
           <div class="relative h-50">
             <div
               class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 transition-all duration-150 ease-in-out focus-within:!border-purple-500 focus-within:!shadow-purple-600 hover:shadow-purple-600-small"
@@ -20,24 +20,30 @@ export const SearchHeader = () => {
                 class="relative col-span-1 row-start-1 block"
                 for="searchinput"
               >
-                <span class="sr-only">Suchbegriff</span>
+                <span class="sr-only"
+                  >Fragen Sie mich etwas über Basel-Stadt.</span
+                >
                 <input
                   aria-label="Suchbegriff eingeben"
                   autocomplete="off"
-                  class="search-input relative h-[48px] w-full bg-white pl-20 text-gray-900 placeholder:text-gray-700 focus:outline-none"
+                  class="search-input relative h-[48px] w-full bg-white pl-20 text-gray-900 placeholder:absolute placeholder:top-[50%] placeholder:translate-y-[-50%] placeholder:whitespace-pre-line placeholder:text-gray-700 focus:outline-none"
                   id="searchinput"
                   name="searchterm"
-                  placeholder="Suchbegriff eingeben"
+                  placeholder="Fragen Sie mich etwas über Basel-Stadt."
                   spellcheck="false"
                   type="search"
                 />
               </label>
               <button
-                class="button is-strong mobile-only:is-icon-only row-start-1 m-[4px]"
+                class="button is-strong is-icon-only row-start-1 m-[4px]"
                 type="submit"
+                ?disabled="${isSearchButtonDisabled}"
               >
-                ${Icon('search')}
-                <span class="sr-only md:not-sr-only">Suchen</span>
+                ${Icon('arrow-east-thin', {
+                  '[&_svg]:size-30': true,
+                  'rotate-[-90deg]': true,
+                })}
+                <span class="sr-only">Suchen</span>
               </button>
             </div>
           </div>

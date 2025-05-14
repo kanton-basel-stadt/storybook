@@ -16,10 +16,7 @@ export const PageHeader = () => {
         >
           <h1 class="sr-only">Hauptnavigation</h1>
           <div class="grid-area-l relative z-30 flex items-center">
-            <a
-              class="nuxt-link-exact-active inline-block hover:opacity-80"
-              href="/"
-            >
+            <a class="inline-block hover:opacity-80" href="/">
               <div
                 class="relative flex whitespace-nowrap text-base leading-none lg:text-lg xl:text-2xl"
               >

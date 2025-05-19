@@ -3,7 +3,7 @@ import { Icon } from '../Icons/Icon'
 
 export const PageFooter = () => {
   return html`
-    <hr class="h-100 border-none bg-green-500" />
+    <hr class="h-[4px] border-none bg-green-600" />
     <footer class="bg-gray-200 py-20 lg:py-40 print:hidden">
       <h1 class="sr-only">Fusszeile</h1>
       <div class="container flex flex-col gap-25">

@@ -1,9 +1,0 @@
-import { Meta, Unstyled } from '@storybook/blocks'
-
-<Meta title="2. Contribution Tutorials/3. How the Unplugin and Storybook play together" />
-
-<Unstyled>
-# 2.3. How the Unplugin and Storybook play together
-
-TODO.
-</Unstyled>

@@ -35,7 +35,7 @@ const config: TestRunnerConfig = {
     validateHtml(innerHtml, context.id)
   },
   async postVisit(page, context) {
-    if (context.id === '4-tailwind-tools-contrast-checker--default') {
+    if (context.id === '3-tailwind-tools-contrast-checker--default') {
       return // Do not check the contrast checker for a11y, that's what it's for.
     }
 

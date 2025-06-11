@@ -1,0 +1,87 @@
+import { Meta, Unstyled, Story } from '@storybook/blocks'
+import { IconLitWrapper } from '../4_ComponentsForWeb/Icons/IconLitWrapper.tsx'
+
+<Meta title="2. Tutorials/2. Usage Tutorials/12. How to identify icons" />
+<Unstyled>
+# 2.2.11. How to identify icons
+
+Icons are used in many components. The DDS offers more than 50 icons as SVGs that should cater to most use cases. However,
+finding out what code is necessary to render a specific item may be tedious.
+
+Some icons are also attached via `:before` and `:after` with font characters from the Inter font, specially link arrows.
+
+## Finding out which icon to import
+
+There are three ways to identify which icons need to be imported for a specific component:
+
+### The "Used icons from DDS" panel
+
+Each component offers a set of panels for you to either change its data ("Controls"), copy its DOM ("HTML"),
+check its accessibility ("Accessibility"), look at its design ("Design") or check, which icons need importing
+("Used icons from DDS").
+
+The "Used icons from DDS" panel offers a piece of code that needs to be included either in your framework's component or
+some entry JS/TS file.
+
+Beware, though, that the list depends on the state of the component. For example, if you configure the **Button**
+component to have a calendar icon, only the calendar icon will be shown as a necessary import. The rule of thumb is,
+that only icons are included that are currently visible on the screen.
+
+### Named imports
+
+Some frameworks, like Svelte, require you to use named imports. So, importing them standalone, like `import `'@@kanton-basel-stadt/designsystem/icons/symbol/baselstab'`
+won't work. Instead, you need to import them as **named imports** and use their imported name, like so:
+
+```html
+<script lang="ts">
+import IconSymbolBaselstab from '@@kanton-basel-stadt/designsystem/icons/symbol/baselstab'
+</script>
+
+<IconSymbolBaselstab />
+```
+
+You can toggle the mode you want (standalone vs named imports) **in the "Used icons from DDS panel"**. The import code and the HTML code will be adjusted automatically.
+
+### Going through the "Icons" component
+
+Under "4. Components For The Web/Icons", there is a component called "Icon". This component offers a dropdown under the
+"Controls" panel to modify which icon is rendered. The "HTML" panel will then offer the DOM necessary to render the icon
+and the "Used icons from DDS" panel will show how it is imported.
+
+### Going through the list below
+
+Below is a list of all icons from the DDS, including the rendered version and its DOM. To get the import code, head to
+the "4. Components For The Web/Icons" component, select the icon and open the "Used icons from DDS" panel.
+
+## Full icon list
+
+Please keep in mind that most icons have a possibility to steer their colour using the font colour. However, some have
+predefined colours and might not render correctly, such as `hinweise_rounded`, which is an `i` with a circle around it,
+both in white.
+
+<table className="table">
+    <thead>
+        <tr>
+            <td>Icon</td>
+            <td>Icon name</td>
+            <td>Rendering code</td>
+            <td>Import code</td>
+        </tr>
+    </thead>
+    <tbody>
+        {import.meta.env.STORYBOOK_DDS_ICONS.map(i => (
+            <tr key={i}>
+                <td><IconLitWrapper value={i} /></td>
+                <td><pre className="font-mono mb-5 block">{i}</pre></td>
+                <td>
+                    <pre className="font-mono mb-5 block">&lt;icon-symbol-{i} aria-hidden="true" /&gt;</pre>
+                </td>
+                <td>
+                    <pre className="font-mono mb-5 block">import '@@kanton-basel-stadt/designsystem/icons/symbol/{i}'</pre>
+                </td>
+            </tr>
+        ))}
+    </tbody>
+</table>
+
+</Unstyled>

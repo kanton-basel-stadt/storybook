@@ -1,0 +1,143 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+
+<Meta title="2. Tutorials/2. Usage Tutorials/6. How to create a grid from Figma" />
+<Unstyled>
+# 2.2.6. How to create a grid from Figma
+
+Some components, such as forms, are arranged in grids. Those grids can vary in number of columns and rows. This tutorial
+teaches you how to figure out which code to use in order to recreate a grid you see in Figma.
+
+## The grid configurator
+
+The [Grid component](/story/4-components-for-the-web-page-frame-grid--default) (found under "Page frame") offers a grid
+configurator. There you can specify the number of grid columns per breakpoint as well as the gap size over all breakpoints.
+
+In case you want to have different gaps per breakpoint, please refer to the [Tailwind tutorial on responsiveness](/docs/2-tutorials-2-usage-tutorials-3-how-to-use-tailwind--docs#responsiveness).
+
+## Breakpoints
+
+The following breakpoints are available:
+
+ * none: `0px` - `479px`
+ * `sm`: `480px` - `767px`
+ * `md`: `768px` - `1023px`
+ * `lg`: `1024px` - `1209px`
+ * `xl`: `1210px` - `1919px`
+ * `xxl`: `1920px` and onwards
+
+Since device widths vary widely, there are no dedicated "mobile", "tablet" or "desktop" breakpoints. However, some groups
+of breakpoints can be considered specific to devices:
+
+ * none, `sm` and `md` can be considered "mobile"
+ * `md` and `lg` can be considered "tablet"
+ * `xl` and `xxl` can be considered "desktop"
+
+We can use these breakpoints to fine-tune experiences across all screen sizes.
+
+## How to handle breakpoints with the same grid columns
+
+When we define our grid, we might end up with a structure like this:
+
+```html
+<div class="
+  grid
+  grid-cols-1
+  sm:grid-cols-1
+  md:grid-cols-2
+  lg:grid-cols-3
+  xl:grid-cols-3
+  xxl:grid-cols-3
+">
+ <!-- ... -->
+</div>
+```
+
+We notice that the number of columns for some breakpoints is the same as the number of columns for other breakpoints.
+
+Namely, we have the following grid column specifications:
+
+ * `1` column for none and `sm`
+ * `2` columns for `md`
+ * `3` columns for `lg`, `xl`, `xxl` and onwards
+
+Right now, we defined classes for every breakpoint, but since we have the same column count for different breakpoints, we
+may combine these.
+
+For that, we need to understand that the **smallest breakpoint is applied unless a larger one overwrites it.** So, for
+example, if we define a value for no breakpoint, it applies for all breakpoints. If we define a value for no breakpoint
+and a different one for the `xl` breakpoint (so, for example `grid-cols-1 xl:grid-cols-2`), the value for no breakpoint is
+applied until the `xl` breakpoint kicks in. So, for the breakpoints `sm`, `md` and `lg`, the grid hase a single column.
+
+To combine the breakpoints from the above example, we need to go through all breakpoints and check where we can simplify.
+First, we know that from `0px` to `479px` and from `480px` to `767px` we have the same number of columns. Since the value
+does not change at the `sm` breakpoint, we do not need to explicitly define it. It is, therefore, enough to specify no
+breakpoint for a single grid column:
+
+```html
+<div class="
+  grid
+  grid-cols-1
+```
+
+The next breakpoint that has a **different** value, is `md` with a value of `2`. Since the next breakpoint overwrites it
+again, we specify the `md` breakpoint:
+
+```html
+<div class="
+  grid
+  grid-cols-1
+  md:grid-cols-2
+```
+
+The `lg`, `xl` and `xxl` breakpoint all specify the same number of columns. Since we know that the smallest
+not-overwritten breakpoint applies for all larger screens, we also know that we only need to specify the largest of the
+three, namely `lg`. Our finished simplified grid structure now looks like the following:
+
+```html
+<div class="
+  grid
+  grid-cols-1
+  md:grid-cols-2
+  lg:grid-cols-3
+">
+  <!-- ... -->
+</div>
+```
+
+The grid configurator does this automatically. There is, technically, no need for us to simplifiy these grids by hand
+any further.
+
+## How to handle missing breakpoints in Figma
+
+Figma often provides less screen sizes than we have breakpoints. Most components offer responsiveness, but if you need
+to specify your own grid, you might ask yourself how many columns the in-between sizes should have.
+
+A good rule of thumb is to try out different options and see what works best. For example: Let's assume a Figma design with
+three different screens:
+
+ * `500px` wide
+ * `1024px` wide
+ * `1920px` wide
+
+From our breakpoint definitions above, we know which breakpoints these screens fall into:
+
+ * `500px` is within `sm` range
+ * `1024px` is within `lg` range
+ * `1920px` is within `xxl` range
+
+The three different screens have `1`, `2` and `3` columns. We do notice, however, that we don't have a definition for no
+breakpoint (smaller than `sm`), no definition for `md` and no definition for `xl`. So, which column count do we use?
+
+We might go with the definitions given. The simplest approach is to use the definitions as classes, i.e.
+`grid-cols-1 lg:grid-cols-2 xxl:grid-cols-3`. This works most of the time, but might not be ideal on edge cases, such as
+shortly before the `lg` screen.
+
+To mitigate these UX shortcomings, we can introduce extra breakpoints or move existing ones. For example, we might decide
+to already use `3` columns on `xl` screens. To achieve that, we replace the `xxl` breakpoint with the `xl` breakpoint,
+leading us to the following class list: `grid-cols-1 lg:grid-cols-2 xl:grid-cols-3`.
+
+## Conclusion
+
+In this tutorial, we have learned about the grid configurator and how to use it to create responsive grids with Tailwind.
+We have also learned about the different breakpoints Tailwind offers and how to use them to fine-tune grids provided by Figma.
+</Unstyled>

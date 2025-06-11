@@ -1,0 +1,23 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+
+<Meta title="2. Tutorials/2. Usage Tutorials/14. A word about widths and component contexts" />
+
+<Unstyled>
+# 2.2.14. A word about widths and component contexts
+
+Components within Storybook are standalone. This means, that they are not served inside of a wider context,
+such as a container (`<div class="container">`), a grid (see (3.6. How to create a grid from Figma)[/docs/3-usage-tutorials-6-how-to-create-a-grid-from-figma--docs]),
+a teaser list, tables, boxes, or similar.
+
+**It is important to understand, that little to no component defines its own width.**
+
+Rather, the **context around a component** defines the width of its content and, therefore, the width of the
+components used **within** that context.
+
+For example, let's look at the Event teaser (see (Event teaser)[/story/4-components-for-the-web-teasers-event-teaser--default]).
+You might notice that it goes over the width of the entire screen. **This is intentional.** Depending on the context of the component,
+it may be rendered in a 2 column, 3 column or even 4 column grid.
+
+The context can also be responsiveness: Depending on the screen size, multiple event teasers fit next to each other, on
+smaller devices, only one could fit.
+</Unstyled>

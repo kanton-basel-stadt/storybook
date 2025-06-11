@@ -1,0 +1,113 @@
+import { Meta, Unstyled } from '@storybook/blocks'
+
+<Meta title="2. Tutorials/1. Contribution Tutorials/3. How to contribute to the Unplugin" />
+
+<Unstyled>
+# 2.1.3. How to contribute to the Unplugin
+
+## When to adjust the Unplugin
+
+In some cases, working with Tailwind can become tedious. Especially in very often used components, such as buttons, form
+inputs, links or typography cases, not using Tailwind and instead creating custom CSS classes can be beneficial.
+
+As a rule of thumb, we try to keep the amount of custom non-Tailwind related classes to an absolute minimum necessary and
+only add new CSS if really necessary.
+
+However, in some cases, existing CSS needs adjustment. In that case, you can identify which CSS needs adjustment by
+looking at the Storybook component. If a component, for example, a button, needs adjustment, you can identify the custom
+class in the DOM by looking for non-Tailwind classes. These are provided by the Unplugin.
+
+Other cases where the Unplugin might need adjustment is in case of bugs (icons not loading, fonts not loading, builds
+crashing, etc.) or in case of maintenance, such as updates of the underlying tools, Tailwind, etc.
+
+## Setup
+
+To get the DDS Unplugin running locally, you first need to clone the repository and follow the steps in its README.
+
+You can find a detailed guide [on GitHub](https://github.com/kanton-basel-stadt/designsystem).
+
+## Understanding Unplugins
+
+To understand Unplugins, we **highly recommend** reading trough the [official Unplugin documentation](https://unplugin.unjs.io).
+
+To summarize it, though, Unplugins are Unified Plugins for various build tools in a "build once, use everywhere" fashion.
+The Unplugin system takes generalized code written in the form of various different hooks and generates configurations and code
+for all supported build tools, such as Webpack, Vite, Rollup, etc.
+
+We decided to use this approach to allow for any framework and build tool to be used, to not artificially limit the
+ecosystem more than necessary to a limited number of frameworks and tools.
+
+## Logical structure
+
+The Unplugin consist of three different Unplugins, all bundled together:
+
+ 1. Transforming IDs within the code
+ 2. Setting up [unplugin-icons](https://github.com/unplugin/unplugin-icons) to work in the code base with custom icons
+ 3. Adding PostCSS and Tailwind
+
+Since these unplugins need to serve various different build tools, they differ in complexity. While transform IDs is
+rather straight-forward in most build tools, setting up PostCSS is not.
+
+The PostCSS/Tailwind part is configured via separate config files and follows their standard structure.
+
+CSS is written with PostCSS and Tailwind in mind and uses `@apply` to apply Tailwind classes to other, larger component
+classes.
+
+Icons are stored as size-less SVGs and are served via unplugin-icons.
+
+## Folder structure
+
+The project root contains the following important folders:
+
+ * `src/` - the entire source code of the unplugin
+ * `test/` - end-to-end and unit tests
+ * `examples/` - various frameworks with minimal examples to use as a testing playground and to give examples
+ * `scripts/` - scripts to do cleanups and to generate an index file for all icons for TypeScript to pick up
+ * `types/` - Some extra types for TypeScript to pick up
+
+### `src/`
+
+The source code folder has a file for every build tool supported in it. These are standard unplugin code and come from the unplugin starter.
+They are used to import the plugin necessary for a build tool for example `@kanton-basel-stadt/designsystem/vite` for the
+Vite plugin.
+
+The `core/` folder contains the core with the following subfolders:
+
+ * `assets/` - all CSS files, videos, icons, images, etc. used
+ * `configs/` - all config files needed for PostCSS and Tailwind
+ * `unplugins/` - the three unplugins
+ * `utils/` - some often-used utility functions
+
+### `test/`
+
+The test folder contains all end-to-end tests and unit tests. The tests are written in Vitest. End-to-end tests use
+puppeteer to set up various examples (Astro, Nuxt, Vanilla Vite, etc.), take screenshots and compare them to a baseline image.
+Github allows us to execute these tests on different operating systems as well, ensuring functionality over various combinations.
+
+### `examples/`
+
+Purely used to experiment and showcase.
+
+## Testing the Unplugin
+
+A safe way to test it is by executing the tests. They ensure that at least the baseline works (i.e. loading the CSS,
+loading the fonts and loading icons) and fail if any visual regression has taken place.
+
+Another way is to use one of the examples. Since we've installed the Unplugin with a reference on disk, rather than
+installing on NPM, executing `npm run build` in the project root is enough to update the package within the examples.
+
+## Publishing a new version
+
+First, commit and push your changes. Once you're adapting the Unplugin, make sure the build passes (linting + test execution)
+and verify that it builds by executing `npm run build`.
+
+In order to release a new version, you need to be a member of the NpmJS organization. You can then execute
+`npm run release` and follow the on-screen instructions.
+
+Please be aware, that a new Git tag will be created. It will be pushed and a browser window with Github will open where
+you can add a changelog, describe what the new version does, etc. Once that's done, you can return to your terminal and
+follow the rest of the on-screen instructions.
+
+Once a new version is release, don't forget to inform all necessary people and update the version of the Unplugin within
+Storybook as well.
+</Unstyled>

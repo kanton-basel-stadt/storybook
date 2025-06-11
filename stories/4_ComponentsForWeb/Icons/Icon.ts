@@ -5,7 +5,6 @@ import type { ClassInfo } from 'lit-html/directives/class-map'
 import '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import toClassString from '../../../helpers/toClassString'
-
 export type IconName = (typeof IconsIndex.iconNames)[number]
 
 export const Icon = (iconName: IconName, classes?: ClassInfo) => {

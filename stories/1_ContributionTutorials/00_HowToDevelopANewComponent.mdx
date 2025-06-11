@@ -5,5 +5,193 @@ import { Meta, Unstyled } from '@storybook/blocks'
 <Unstyled>
 # 2.1. How to develop a new component
 
-TODO.
+New components that should be added to Storybook generally stem from Figma designs first. Usually, if a component
+is only used in a single specific case, adding it to Storybook isn't necessary, but as soon as it becomes a more-often
+used element, adding it to Storybook may become wished and necessary.
+
+This guide aims to explain how to add a new component to Storybook and, if necessary, adjust the Unplugin to contain
+new CSS.
+
+**Keep in mind that components do not offer logic. Logic needs to implemented in the target framework of choice and can,
+therefore, not be generalized easily. This is intentional.**
+
+## Steps to create a brand new component
+
+### 1. Identify the component itself
+
+Usually, Figma designs come in packages of entire pages to showcase their context. A single component can then, for
+example, be a new kind of form input, such as a matrix select, a super-sized file drag-and-drop field, or something
+entirely new, such as a new kind of teaser.
+
+If such a single unit can be identified and is used in multiple different cases, that's likely a new component.
+
+### 2. Isolate the component
+
+Think: What is the least amount of surrounding elements (blocks, background colours, grid, etc.) that the component
+needs to be functional? Could it be used in different settings (different background colours, different grid sizes,
+different boxes, etc.)?
+
+But also: Is the component a composite of other components? Does it use buttons, icons, internal grids, images, etc.?
+
+Make a list of the sub-components the component uses and try to remove as much of the surrounding elements as possible.
+
+### 3. Implement the component
+
+Once you have an idea of what the component looks like, what its building blocks are and how it's structured, you can go
+ahead an implement it.
+
+For that, we first need to find the right category. If it's an email component, it should go in the
+`5_ComponentsForEmails` folder, if it's a component for web pages, it needs to go into `4_ComponentsForWeb`.
+
+In there, try to find a general category for your component. Is it a form input? A box? Is it Alva-related? A new Teaser?
+
+Once you know where to put it, the component needs a name. As a rule of thumb: As short as possible, but as descriptive
+as necessary. For example, `Box` is very short, but non-descriptive. `Contact Box`, on the other hand, describes what
+the component is used for.
+
+Then, we need to create two files. One for the component (`YourComponentName.ts`) and one for the Story (`YourComponentName.stories.ts`).
+
+In the component file, you can implement the new component using **Lit**. Lit is a micro-framework for building Web
+components that can be used in Storybook. If you're unsure how to approach it, take a look at other components.
+
+**Important**: Make sure you think about possible parameters of the component and already implement them. Usually, most
+things that are content should be configurable, such as link URLs, images, text, names, etc. The story will then provide
+default values.
+
+An example "HelloWorld" component could look something like this:
+
+```
+import { html } from 'lit'
+
+export const HelloWorld = (name: string) => {
+  return html`
+    <div class="text-3xl font-bold">
+      Hello, ${name}!
+    </div>
+  `
+}
+```
+
+You can also use other components inside your component, too. For that, import the component function and use it with
+it's parameters. For example, to render an icon, you can use the following:
+
+```
+import { html } from 'lit'
+import { Icon } from '../Icons/Icon'
+
+export const HelloWorld = (personName: string) => {
+  return html`
+    <div class="text-3xl font-bold">
+      Hello, ${personName}!  ${Icon('hinweise_no_rounded', {
+        '[&_svg]:size-30': true,
+        '-ml-2': true,
+      })}
+    </div>
+  `
+}
+```
+
+Keep in mind that this works with any component. Components do not offer slots, however. So, for example, instead of
+using the [Container component](/story/5-components-for-the-web-page-frame-container--default), you need to use its code directly.
+
+### 4. Implement the story
+
+Next, implement the story. In this Storybook instance, we've created a helper function called `defineStory` with the
+following signature:
+
+```
+function defineStory(
+  component: (...args: any[]) => TemplateResult,
+  args: object,
+  defaultArgs: object,
+  figmaUrl: string
+)
+```
+
+ * The first parameter is the component function.
+ * The second is an object of arguments for the component. They are
+structurally story parameters (See [official documentation](https://storybook.js.org/docs/writing-stories/parameters))
+that define a name, a control and, optionally, options.
+ * The third parameter is an object of default values for these arguments.
+ * The last parameter is a URL to the component itself on Figma. If it doesn't exist in an isolated manner yet, please
+ request the creation of one.
+
+For convenience reasons, we introduced [The `lorem-ipsum` package](https://www.npmjs.com/package/lorem-ipsum) to
+generate default values for stories.
+
+The story for the HelloWorld component above could look something like this:
+
+```
+import { HelloWorld } from './HelloWorld'
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  HelloWorld,
+  {
+    personName: {
+      name: 'Person name',
+      control: 'text',
+    },
+  },
+  {
+    personName: loremIpsum({ count: 2, units: 'words' }),
+  },
+  'https://www.figma.com/design/...'
+)
+
+export default {
+  title: '5. Components for the web/HellWorld/Hello World',
+  ...StoryDefinition,
+}
+
+export const Default = DefaultStory
+```
+
+### 4. Test the story
+
+Execute `npm run dev` in the project root of Storybook and have a look at your story. Does it work? Do the controls
+work? Does it look as intended?
+
+## Steps to adapt an existing component
+
+Sometimes, a component needs adjustment. The following steps help you adapt existing components to new designs.
+
+### 1. Identifying the component
+
+First, find the component in the tree view. If the component does not yet exist, a new one can be built instead.
+
+### 2. Adapt the component
+
+Once identified, open the component file (for example, `SomeComponent.ts`) and start adapting it. If new parameters
+become necessary, for example, by extending its content, adding a new link or an optional icon, we later need to add
+them to the story.
+
+### 3. Adapt the story
+
+Once the component is adjusted, the story (for example, `SomeComponent.stories.ts`) may need some adjustments too.
+
+If new parameters got added, they can be added to the second parameter of the `defineStory` call of the story file. They
+also need additional default parameters, so the third parameter also might need adjustment.
+
+### 4. Test the story
+
+Execute `npm run dev` in the project root of Storybook and have a look at your story. Does it work? Do the controls
+work? Does it look as intended?
+
+## When to adjust the Unplugin
+
+In some cases, working with Tailwind can become tedious. Especially in very often used components, such as buttons, form
+inputs, links or typography cases, not using Tailwind and instead creating custom CSS classes can be beneficial.
+
+As a rule of thumb, we try to keep the amount of custom non-Tailwind related classes to an absolute minimum necessary and
+only add new CSS if really necessary.
+
+However, in some cases, existing CSS needs adjustment. In that case, you can identify which CSS needs adjustment by
+looking at the Storybook component. If a component, for example, a button, needs adjustment, you can identify the custom
+class in the DOM by looking for non-Tailwind classes. These are provided by the Unplugin.
+
+## How to adjust the Unplugin
+
+To learn how to work within the Unplugin, have a look at [2.3 How to contribute to the Unplugin](/docs/2-contribution-tutorials-3-how-to-contribute-to-the-unplugin--docs).
+
 </Unstyled>

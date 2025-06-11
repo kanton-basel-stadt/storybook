@@ -27,6 +27,21 @@ Beware, though, that the list depends on the state of the component. For example
 component to have a calendar icon, only the calendar icon will be shown as a necessary import. The rule of thumb is,
 that only icons are included that are currently visible on the screen.
 
+### Named imports
+
+Some frameworks, like Svelte, require you to use named imports. So, importing them standalone, like `import `'@@kanton-basel-stadt/designsystem/icons/symbol/baselstab'`
+won't work. Instead, you need to import them as **named imports** and use their imported name, like so:
+
+```html
+<script lang="ts">
+import IconSymbolBaselstab from '@@kanton-basel-stadt/designsystem/icons/symbol/baselstab'
+</script>
+
+<IconSymbolBaselstab />
+```
+
+You can toggle the mode you want (standalone vs named imports) **in the "Used icons from DDS panel"**. The import code and the HTML code will be adjusted automatically.
+
 ### Going through the "Icons" component
 
 Under "4. Components For The Web/Icons", there is a component called "Icon". This component offers a dropdown under the

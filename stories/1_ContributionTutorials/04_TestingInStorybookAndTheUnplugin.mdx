@@ -5,5 +5,27 @@ import { Meta, Unstyled } from '@storybook/blocks'
 <Unstyled>
 # 2.5. Testing in Storybook and the Unplugin
 
-TODO.
+## Automated tests
+
+Both Storybook and the Unplugin offer automated tests with pipelines on Github using Github Actions.
+
+### Storybook
+
+Storybook's automated tests test for accessibility and validity of the HTML offered by the stories/components.
+
+Since no extra logic is provided, nothing else is being tested. Storybook uses its own test runner to check
+validty and accessibility for every story. So, no extra code is necessary.
+
+### Unplugin
+
+The test folder in the Unplugin contains all end-to-end tests and unit tests. The tests are written in Vitest. End-to-end tests use
+puppeteer to set up various examples (Astro, Nuxt, Vanilla Vite, etc.), take screenshots and compare them to a baseline image.
+Github allows us to execute these tests on different operating systems as well, ensuring functionality over various combinations.
+
+When support for a new framework is added, new tests need to be added, too. The same goes for unit tests.
+
+## Manual tests
+
+Both Storybook and the Unplugin can also be tested manually. Since Storybook is a user of the Unplugin, it can serve
+as a testing instance for the Unplugin, but the Unplugin should also be tested with other examples provided in its repository.
 </Unstyled>

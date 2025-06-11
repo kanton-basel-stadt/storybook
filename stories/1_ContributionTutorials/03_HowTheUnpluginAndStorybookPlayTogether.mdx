@@ -5,5 +5,12 @@ import { Meta, Unstyled } from '@storybook/blocks'
 <Unstyled>
 # 2.4. How the Unplugin and Storybook play together
 
-TODO.
+The Unplugin serves all the assets (CSS, fonts, icons, videos, etc.), whereas Storybook showcases different components
+with HTML.
+
+The Unplugin is meant to provide a unified CI/CD to several clients, Storybook itself is also a client and uses the
+Unplugin for both its own appearance and the component styling.
+
+Storybook itself does have little to no own styling (except to overwrite parts of its own theme) and, therefore, showcases
+itself how a client could use the Unplugin with additional CSS.
 </Unstyled>

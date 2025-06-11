@@ -7,11 +7,12 @@ addons.register(PANEL_ID, (api) => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
     title: () => {
-      const [{ icons }] = useAddonState(PANEL_ID, {
+      const [{ icons, isNamedImports }] = useAddonState(PANEL_ID, {
         icons: [],
+        isNamedImports: false,
       })
 
-      return `Used icons from DDS (${icons.length})`
+      return `Used icons from DDS (${icons.length} | ${isNamedImports ? 'named' : 'anonymous'} imports)`
     },
     render: ({ active }) => (
       <AddonPanel active={active}>

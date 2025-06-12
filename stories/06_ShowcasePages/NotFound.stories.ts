@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '7. Showcase Pages/Not Found Page',
+  title: '6. Showcase Pages/Not Found Page',
   ...StoryDefinition,
 }
 

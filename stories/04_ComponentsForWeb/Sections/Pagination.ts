@@ -14,7 +14,7 @@ export const Pagination = () => {
         <a href="?page=1" class="">
           <span class="sr-only">Weiter zur Seite</span> 1
         </a>
-        <a class="is-active" href="?page=2">
+        <a class="is-active" href="?page=2" :aria-current="page">
           <span class="sr-only">Seite</span> 2
         </a>
         <a class="" href="?page=3" aria-current="date">

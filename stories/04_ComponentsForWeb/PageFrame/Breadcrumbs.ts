@@ -29,7 +29,7 @@ export const Breadcrumbs = (links: BreadcrumbLink[]) => {
             >
               <a
                 href="/"
-                class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700"
+                class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700 focus-visible:bg-blue-50 focus-visible:-outline-offset-2 focus-visible:outline-blue-600"
                 itemprop="item"
               >
                 <span itemprop="name" class="whitespace-nowrap"
@@ -49,7 +49,7 @@ export const Breadcrumbs = (links: BreadcrumbLink[]) => {
                 >
                   <a
                     href="${link.href}"
-                    class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700"
+                    class="breadcrumb-link breadcrumb-caret block overflow-hidden text-ellipsis border-t border-t-gray-400 py-15 font-medium text-blue-900 before:top-0 hover:text-blue-700 focus-visible:bg-blue-50 focus-visible:-outline-offset-2 focus-visible:outline-blue-600"
                     itemprop="item"
                   >
                     <span itemprop="name" class="whitespace-nowrap"

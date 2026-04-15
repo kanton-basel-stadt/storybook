@@ -90,7 +90,7 @@ export const QuestionsBox = (questions: string[], showConsentBox: boolean) => {
                         class="block w-full rounded-large border border-primary-600 bg-primary-50 p-20 text-left transition-all duration-250 ease-in-out hover:border-purple-600 hover:shadow-[0_12px_32px_-10px_rgba(169,122,196,0.40)] focus:border-blue-900 lg:px-50 lg:py-30"
                       >
                         <span
-                          class="block text-balance text-lg font-medium italic text-blue-900 before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] lg:text-2xl"
+                          class="block text-balance text-lg font-medium text-blue-900 before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] lg:text-2xl"
                         >
                           ${question}
                         </span>

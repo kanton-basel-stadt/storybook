@@ -17,6 +17,14 @@ const { StoryDefinition, DefaultStory } = defineStory(
       name: 'Links',
       control: 'object',
     },
+    isInverted: {
+      name: 'Is Inverted',
+      control: 'boolean',
+    },
+    hideDescription: {
+      name: 'Hide Description',
+      control: 'boolean',
+    },
   },
   {
     title: 'An info box',
@@ -33,6 +41,8 @@ const { StoryDefinition, DefaultStory } = defineStory(
         url: 'https://www.bs.ch/',
       },
     ],
+    isInverted: false,
+    hideDescription: false,
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-23213&t=FznYmIANb8uB5p92-1'
 )

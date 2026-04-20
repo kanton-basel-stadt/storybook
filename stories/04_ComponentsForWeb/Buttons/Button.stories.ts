@@ -52,7 +52,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     size: 'Standard',
     types: [],
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System?node-id=23980-16818&t=B9MJv5oNO1xT39Yb-4'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'
 )
 
 export default {

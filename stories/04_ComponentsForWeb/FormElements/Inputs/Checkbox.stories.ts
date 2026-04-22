@@ -27,7 +27,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     name: 'my-checkbox',
     id: 'checkbox-123',
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24420-67804&t=7ckDtzrsJy0SZZlH-4'
 )
 
 export default {

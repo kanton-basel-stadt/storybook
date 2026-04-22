@@ -28,7 +28,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       { label: 'Freitag' },
     ],
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24658-8831'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=33350-25997&t=7ckDtzrsJy0SZZlH-4'
 )
 
 export default {

@@ -5,34 +5,52 @@ export type Link = {
   url: string
 }
 
-export const FrequentlyAsked = (links: Link[]) => {
+export type FrequentlyAskedProps = {
+  title: string
+  description: string
+  links: Link[]
+}
+
+export const FrequentlyAsked = (
+  title: string,
+  description: string,
+  links: Link[]
+) => {
   return html`
     <section
-      class="!mt-0 border-t border-t-gray-200 bg-white py-25 lg:py-30 xl:py-40"
+      class="paragraph--padded bg-primary-600 py-25 lg:py-30 xl:py-40"
+      id="haeufig-gesucht"
     >
       <div class="container">
-        <h2
-          class="pre-heading sticky top-sticky-top z-40 mb-20 bg-white/80 py-15 text-primary-700 backdrop-blur-md transition-all duration-250 ease-in-out mobile-only:-mx-15 mobile-only:px-15"
-        >
-          Häufig nachgefragt
-        </h2>
-        <div>
-          <ul
-            class="mt-20 grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-20"
+        <header class="mb-10 lg:mb-20 xl:mb-30">
+          <h2 class="h2 hyphens-auto break-words text-white">${title}</h2>
+          <p
+            class="mt-20 hyphens-auto break-words text-white lg:text-lg xl:w-4/6"
           >
+            ${description}
+          </p>
+        </header>
+        <div>
+          <div class="grid gap-15 md:grid-cols-2 lg:gap-20">
             ${links.map((link) => {
               return html`
-                <li>
-                  <a
-                    class="link with-icon text-lg xl:text-xl"
-                    href="${link.url}"
-                  >
-                    ${link.label}
-                  </a>
-                </li>
+                <ul class="rounded bg-white md:rounded-large">
+                  <li>
+                    <a
+                      class="link with-icon h-full auto-rows-min justify-start hyphens-auto p-15 pl-10 lg:pl-[12px] lg:text-lg"
+                      href="${link.url}"
+                    >
+                      <span
+                        class="col-start-2 row-start-1 hyphens-auto font-bold"
+                      >
+                        ${link.label}
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               `
             })}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

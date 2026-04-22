@@ -119,7 +119,7 @@ export const Input = (
         name="${name}"
         id="${id}"
         rows="4"
-        class="input ${fieldMaxClass} box-border block min-h-[120px] w-full resize-y"
+        class="input ${fieldMaxClass} box-border block min-h-[120px] resize-y"
         .value=${value}
       ></textarea>
     `

@@ -5,7 +5,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
   HeroSearchInput,
   {},
   {},
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-21126&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24248-21126&t=w3NqFs5FkutCgMQS-4'
 )
 
 export default {

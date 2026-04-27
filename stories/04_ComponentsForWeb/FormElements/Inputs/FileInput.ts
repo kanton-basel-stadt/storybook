@@ -186,7 +186,7 @@ function fileRow(row: FileUploadRow, rootId: string): TemplateResult {
             class="flex h-40 w-full items-center gap-[4px] rounded border border-blue-900 bg-white pl-8 pr-10 text-left"
           >
             <span
-              class="min-w-0 flex-1 text-left text-base font-medium text-gray-500"
+              class="min-w-0 flex-1 text-left text-base font-medium text-gray-700"
             >
               Bitte auswählen
             </span>
@@ -318,7 +318,7 @@ export const FileInput = (
               <p>${dragLine2}</p>
             </div>
             <div
-              class="max-w-[344px] text-base font-medium leading-snug text-gray-600"
+              class="max-w-[344px] text-base font-medium leading-snug text-gray-700"
             >
               <p>${allowedFormatsLine}</p>
               <p>${maxSizeLine}</p>
@@ -339,7 +339,7 @@ export const FileInput = (
         </div>
       </div>
       ${description
-        ? html`<p class="mt-10 px-2 text-sm text-gray-600" id="${descId}">
+        ? html`<p class="mt-10 px-2 text-sm text-gray-700" id="${descId}">
             ${description}
           </p>`
         : nothing}

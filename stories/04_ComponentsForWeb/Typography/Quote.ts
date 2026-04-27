@@ -74,7 +74,7 @@ export const Quote = (
               : null}
             <div class="flex flex-col text-end sm:flex-row sm:gap-10">
               <strong class="block text-nowrap sm:inline">${name}</strong>
-              <span class="text-gray-600">${role}</span>
+              <span class="text-gray-700">${role}</span>
             </div>
           </figcaption>
         </figure>

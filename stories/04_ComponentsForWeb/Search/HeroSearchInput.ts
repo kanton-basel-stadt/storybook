@@ -30,9 +30,7 @@ export const HeroSearchInput = () => {
                   name="searchterm"
                   class="search-input relative h-[48px] w-full bg-white pl-20 pr-30 text-gray-900 placeholder:text-gray-700 focus:outline-none"
                   spellcheck="false"
-                  aria-controls="searchterm-suggestions"
                   aria-autocomplete="list"
-                  aria-expanded="false"
                   aria-label="Suchbegriff eingeben"
                   placeholder="Frage oder Suchbegriff"
                 />

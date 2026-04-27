@@ -16,7 +16,7 @@ export const Radio = (
   const error = fieldState === 'error'
 
   return html`
-    <label for="${id}" class="radio" data-field-state="${fieldState}">
+    <label class="radio" data-field-state="${fieldState}">
       <input
         type="radio"
         name="${name}"

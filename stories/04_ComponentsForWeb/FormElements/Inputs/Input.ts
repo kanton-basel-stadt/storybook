@@ -58,7 +58,7 @@ export const Input = (
       ${labelTpl}
       <div class="${affixOuterClass} gap-[4px]">
         <span
-          class="shrink-0 text-base font-medium tabular-nums leading-snug text-gray-600"
+          class="shrink-0 text-base font-medium tabular-nums leading-snug text-gray-700"
           aria-hidden="true"
           >CHF</span
         >
@@ -90,7 +90,7 @@ export const Input = (
           placeholder="0"
         />
         <span
-          class="shrink-0 text-base font-medium tabular-nums leading-snug text-gray-600"
+          class="shrink-0 text-base font-medium tabular-nums leading-snug text-gray-700"
           aria-hidden="true"
           >%</span
         >

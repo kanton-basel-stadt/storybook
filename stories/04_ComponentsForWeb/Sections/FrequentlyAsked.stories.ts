@@ -1,30 +1,38 @@
 import { FrequentlyAsked } from './FrequentlyAsked'
-import { loremIpsum } from 'lorem-ipsum'
 import defineStory from '../../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   FrequentlyAsked,
   {
+    title: {
+      name: 'Title',
+      control: 'text',
+    },
+    description: {
+      name: 'Description',
+      control: 'text',
+    },
     links: {
       name: 'Links',
       control: 'object',
     },
   },
   {
+    title: 'Häufig gesucht',
+    description:
+      'Über die folgenden Links haben Sie Zugriff auf häufig gesuchte Dienstleistungen und Informationen zum Thema «Mobilität».',
     links: [
       {
-        label: loremIpsum(),
-        description: loremIpsum({ count: 2 }),
-        url: 'https://www.bs.ch/foobar.pdf',
+        label: 'Parkkarten',
+        url: '/',
       },
       {
-        label: loremIpsum(),
-        description: loremIpsum({ count: 2 }),
-        url: 'https://www.bs.ch/',
+        label: 'Wo parkieren?',
+        url: '/',
       },
     ],
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22758&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=30269-16312&t=w3NqFs5FkutCgMQS-4'
 )
 
 export default {

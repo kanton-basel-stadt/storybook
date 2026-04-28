@@ -15,31 +15,34 @@ export const HeroSearchInput = () => {
         <form>
           <div class="relative h-50">
             <div
-              class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 transition-all duration-150 ease-in-out focus-within:!border-purple-500 focus-within:!shadow-purple-600 hover:shadow-purple-600-small"
+              class="grid w-full grid-cols-[1fr_auto] overflow-hidden rounded-[24px] border bg-white text-gray-600 transition-all duration-150 ease-in-out focus-within:!border-purple-500 focus-within:!shadow-purple-600 hover:border-purple-600"
               role="search"
             >
               <label
                 for="searchinput"
                 class="relative col-span-1 row-start-1 block"
               >
-                <span class="sr-only">Suchbegriff</span>
+                <span class="sr-only">Frage oder Suchbegriff</span>
                 <input
                   id="searchinput"
                   type="search"
                   autocomplete="off"
                   name="searchterm"
-                  class="search-input relative h-[48px] w-full bg-white pl-20 text-gray-900 placeholder-gray-700 focus:outline-none"
+                  class="search-input relative h-[48px] w-full bg-white pl-20 pr-30 text-gray-900 placeholder:text-gray-700 focus:outline-none"
                   spellcheck="false"
+                  aria-autocomplete="list"
                   aria-label="Suchbegriff eingeben"
-                  placeholder="Suchbegriff eingeben"
+                  placeholder="Frage oder Suchbegriff"
                 />
               </label>
               <button
                 type="submit"
-                class="button is-strong mobile-only:is-icon-only row-start-1 m-[4px]"
+                class="button is-icon-only row-start-1 m-[4px] border-gray-300 bg-gray-300 text-gray-700 hover:bg-blue-900 hover:text-white"
               >
-                ${Icon('search')}
-                <span class="sr-only md:not-sr-only">Suchen</span>
+                ${Icon('arrow-north', {
+                  '[&_svg]:size-30': true,
+                })}
+                <span class="sr-only">Frage stellen</span>
               </button>
             </div>
           </div>

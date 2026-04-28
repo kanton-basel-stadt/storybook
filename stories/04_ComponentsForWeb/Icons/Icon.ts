@@ -14,7 +14,7 @@ export const Icon = (iconName: IconName, classes?: ClassInfo) => {
     template += ` class="${toClassString(classes)}"`
   }
 
-  template += ' />'
+  template += `></icon-symbol-${iconName}>`
 
   return html` ${unsafeHTML(template)} `
 }

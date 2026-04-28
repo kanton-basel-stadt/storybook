@@ -2,7 +2,11 @@ import { TestRunnerConfig } from '@storybook/test-runner'
 import { injectAxe, checkA11y } from 'axe-playwright'
 import { HtmlValidate, Report } from 'html-validate'
 
-const validator = new HtmlValidate()
+const validator = new HtmlValidate({
+  rules: {
+    'attribute-boolean-style': ['error', { style: 'empty' }],
+  },
+})
 
 export function validateHtml(html: string, storyId: string) {
   const report: Report = validator.validateStringSync(html)

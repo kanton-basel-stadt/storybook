@@ -9,7 +9,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       control: 'text',
     },
     value: {
-      name: 'Target href',
+      name: 'Value',
       control: 'text',
     },
     name: {
@@ -20,14 +20,22 @@ const { StoryDefinition, DefaultStory } = defineStory(
       name: 'ID',
       control: 'text',
     },
+    fieldState: {
+      name: 'Field state',
+      control: 'select',
+      options: ['default', 'inactive', 'validated', 'error'],
+      description:
+        'inactive = disabled (gray fill); validated = selected + circle-check; error = red outline + circle-error.',
+    },
   },
   {
-    label: 'Click me!',
-    value: 'yes',
-    name: 'my-radio',
-    id: 'radio-123',
+    label: 'Radiobutton',
+    value: 'option-a',
+    name: 'demo-radio',
+    id: 'radio-demo',
+    fieldState: 'default',
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24154-30025&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24420-67804&t=7ckDtzrsJy0SZZlH-4'
 )
 
 export default {
@@ -36,3 +44,30 @@ export default {
 }
 
 export const Default = DefaultStory
+
+/** inactive — node 2202:37961 */
+export const Inactive = {
+  ...DefaultStory,
+  args: {
+    ...DefaultStory.args,
+    fieldState: 'inactive',
+  },
+}
+
+/** validated — selected radio + Check (symbol 2256:36734; Hover-Mock unter 2202:37976) */
+export const Validated = {
+  ...DefaultStory,
+  args: {
+    ...DefaultStory.args,
+    fieldState: 'validated',
+  },
+}
+
+/** error — node 2202:37964 */
+export const ErrorState = {
+  ...DefaultStory,
+  args: {
+    ...DefaultStory.args,
+    fieldState: 'error',
+  },
+}

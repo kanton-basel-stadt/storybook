@@ -8,9 +8,9 @@ export const Table = () => {
           <th>
             <span class="sr-only">Groups</span>
           </th>
-          <th class="!text-primary-600">First column</th>
-          <th class="!text-primary-600">Second column</th>
-          <th class="!text-primary-600">Third column</th>
+          <th class="!text-primary-700">First column</th>
+          <th class="!text-primary-700">Second column</th>
+          <th class="!text-primary-700">Third column</th>
         </tr>
       </thead>
       <tbody>

@@ -26,13 +26,23 @@ const { StoryDefinition, DefaultStory } = defineStory(
       name: 'Author role',
       control: 'text',
     },
+    quoteSourceTitle: {
+      name: 'Quote source title (optional)',
+      control: 'text',
+    },
+    quoteSourceUrl: {
+      name: 'Quote source URL (optional; link when set)',
+      control: 'text',
+    },
   },
   {
     title: loremIpsum(),
     quote: loremIpsum({ count: 10 }),
     imageUrl: 'https://thispersondoesnotexist.com',
-    name: 'Jackie Example',
-    role: 'Head of Examples',
+    name: 'Jackie Muster',
+    role: 'Head of Sales',
+    quoteSourceTitle: 'Kanton Basel-Stadt',
+    quoteSourceUrl: 'https://www.bs.ch',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58026&t=FznYmIANb8uB5p92-1'
 )

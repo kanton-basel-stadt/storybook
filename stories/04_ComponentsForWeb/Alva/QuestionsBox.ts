@@ -87,10 +87,10 @@ export const QuestionsBox = (questions: string[], showConsentBox: boolean) => {
                   (question) => html`
                     <li>
                       <button
-                        class="block w-full rounded-large border border-primary-600 bg-primary-50 p-20 text-left transition-all duration-250 ease-in-out hover:border-purple-600 hover:shadow-[0_12px_32px_-10px_rgba(169,122,196,0.40)] focus:border-blue-900 lg:px-50 lg:py-30"
+                        class="group relative block w-full overflow-hidden rounded-[16px] border border-transparent bg-[linear-gradient(285deg,rgba(232,218,244,0.65)_0.01%,rgba(219,249,255,0.65)_34.18%,rgba(221,236,222,0.65)_102.14%)] p-20 text-left shadow-[0_12px_32px_-10px_rgba(232,218,244,0)] transition-shadow duration-250 ease-in-out before:absolute before:inset-0 before:h-full before:w-full before:bg-[radial-gradient(231.99%_123.23%_at_9.04%_16.86%,#f2f7f3_65.38%,#e8f8f7_100%)] before:opacity-100 before:shadow-none before:transition-opacity before:duration-250 before:ease-in-out before:content-[''] focus-within:border-purple-600 focus-within:shadow-[0_12px_32px_-10px_rgba(169,122,196,0.4)] focus-within:outline-none hover:shadow-[0_12px_32px_-10px_rgba(232,218,244,0.5)] hover:before:opacity-0 focus:border-purple-600 focus:shadow-[0_12px_32px_-10px_rgba(169,122,196,0.4)] focus:outline-none focus-visible:border-purple-600 focus-visible:shadow-[0_12px_32px_-10px_rgba(169,122,196,0.4)] focus-visible:outline-none lg:px-50 lg:py-30"
                       >
                         <span
-                          class="block text-balance text-lg font-medium text-blue-900 before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] lg:text-2xl"
+                          class="relative block text-balance text-lg font-medium italic text-blue-900 before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] lg:text-2xl"
                         >
                           ${question}
                         </span>

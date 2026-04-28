@@ -49,7 +49,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     imageUrlXl: 'https://placehold.co/334x188',
     imageCaption: loremIpsum(),
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24445-62209&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24248-22760&t=Czf6ufotzznVEA1h-0'
 )
 
 export default {

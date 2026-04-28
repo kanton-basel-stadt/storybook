@@ -51,7 +51,7 @@ export const FocusTeaser = (
     'md:text-5xl': true,
     'text-3xl': true,
     'pb-25': true,
-    'text-primary-500': color === 'light',
+    'text-primary-700': color === 'light',
     'text-white': color === 'dark',
   }
 

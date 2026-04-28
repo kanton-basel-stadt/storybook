@@ -31,8 +31,7 @@ export const Gallery = (
     'print:text-xl': true,
     'print:!text-body': true,
     'hyphens-auto': true,
-    'text-primary-500': color === 'green',
-    'text-blue-900': color === 'white',
+    'text-green-700': color === 'white' || color === 'green',
     'text-white': color === 'blue',
   }
 
@@ -43,8 +42,7 @@ export const Gallery = (
     'lg:text-lg': true,
     'md:mb-5': true,
     'print:!text-body': true,
-    'text-gray-700': color === 'white',
-    'text-gray-800': color === 'green',
+    'text-gray-700': color === 'white' || color === 'green',
     'text-white': color === 'blue',
   }
 

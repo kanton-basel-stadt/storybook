@@ -35,7 +35,7 @@ export const SearchHeader = (isSearchButtonDisabled: boolean) => {
                 />
               </label>
               <button
-                class="button is-strong is-icon-only row-start-1 m-[4px]"
+                class="is-grey-strong·is-icon-only·row-start-1·m-[4px]·border-0·bg-gray-300·hover:bg-blue-90"
                 type="submit"
                 ?disabled="${isSearchButtonDisabled}"
               >

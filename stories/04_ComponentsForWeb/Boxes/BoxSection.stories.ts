@@ -30,4 +30,7 @@ export default {
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Box section',
+}

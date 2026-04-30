@@ -9,8 +9,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Typography/Horizontal Rule',
+  title: '4. Components for the web/Typography/Horizontal rule',
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Horizontal rule',
+}

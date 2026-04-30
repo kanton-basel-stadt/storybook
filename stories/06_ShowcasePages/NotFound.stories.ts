@@ -8,9 +8,12 @@ const { StoryDefinition, DefaultStory } = defineStory(
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24278-17857&t=FznYmIANb8uB5p92-1'
 )
 
+
 export default {
-  title: '6. Showcase Pages/Not Found Page',
+  title: '6. Showcase pages/Not found page',
   ...StoryDefinition,
 }
-
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Not found page',
+}

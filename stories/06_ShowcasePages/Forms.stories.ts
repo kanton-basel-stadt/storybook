@@ -9,8 +9,10 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '6. Showcase Pages/Forms',
+  title: '6. Showcase pages/Forms',
   ...StoryDefinition,
 }
-
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Forms',
+}

@@ -9,8 +9,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Page Frame/Page Footer',
+  title: '4. Components for the web/Page frame/Page footer',
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Page footer',
+}

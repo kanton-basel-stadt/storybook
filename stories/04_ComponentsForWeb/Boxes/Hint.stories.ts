@@ -36,7 +36,9 @@ export default {
   },
 }
 
-export const Default = {}
+export const Default = {
+  name: 'Hint within a bubble',
+}
 
 type HintStoryArgs = {
   multipleHints: boolean

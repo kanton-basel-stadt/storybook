@@ -20,5 +20,7 @@ export default {
   title: '5. Components for emails/Frame/Email footer',
   ...StoryDefinition,
 }
-
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Email footer',
+}

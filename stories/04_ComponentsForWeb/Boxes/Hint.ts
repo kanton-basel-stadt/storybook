@@ -8,11 +8,9 @@ export const Hint = (hints: string[]) => {
       class="mb-30 rounded-large border border-gray-300 bg-green-50 p-20 shadow"
     >
       <div class="grid grid-cols-[auto_1fr] gap-10">
-        <div
-          class="flex size-20 items-center justify-between rounded-full border-2 border-current pl-2 text-green-700"
-        >
-          ${Icon('hinweise_no_rounded', {
-            'size-[13px]': true,
+        <div class="mt-2 text-green-700">
+          ${Icon('hinweise_rounded', {
+            'size-[20px]': true,
           })}
         </div>
         <div>

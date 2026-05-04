@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'main'
-      - '**'
-  pull_request:
 
 permissions:
   contents: read
@@ -55,7 +53,6 @@ jobs:
             "npx wait-on tcp:127.0.0.1:6006 && npm run test"
 
   deploy:
-    if: always()
     needs: [lint, test]
     runs-on: ubuntu-latest
     steps:

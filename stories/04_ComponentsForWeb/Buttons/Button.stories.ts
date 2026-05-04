@@ -2,8 +2,32 @@ import { Button } from './Button'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import defineStory from '../../../helpers/defineStory'
 
-const excludedIconNames = ['alva-still', 'arrow-east-thin', 'bettingenkelch', 'breadcrumb', 'card', 'check', 'circle-check', 'circle-error', 'circle-ko', 'circle-ok', 'circle-warning', 'cloud-upload', 'easy-to-read', 'file', 'hands', 'hinweise_no_rounded', 'hinweise_rounded', 'map-pin-coloured', 'pin', 'play', 'print']
-const iconsForButton = IconsIndex.iconNames.filter(iconName => !excludedIconNames.includes(iconName))
+const excludedIconNames = [
+  'alva-still',
+  'arrow-east-thin',
+  'bettingenkelch',
+  'breadcrumb',
+  'card',
+  'check',
+  'circle-check',
+  'circle-error',
+  'circle-ko',
+  'circle-ok',
+  'circle-warning',
+  'cloud-upload',
+  'easy-to-read',
+  'file',
+  'hands',
+  'hinweise_no_rounded',
+  'hinweise_rounded',
+  'map-pin-coloured',
+  'pin',
+  'play',
+  'print',
+]
+const iconsForButton = IconsIndex.iconNames.filter(
+  (iconName) => !excludedIconNames.includes(iconName)
+)
 const { StoryDefinition, DefaultStory } = defineStory(
   Button,
   {
@@ -28,34 +52,17 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
     decorator: {
       name: 'Decorator',
-      options: [
-        'Link',
-        'Prev',
-        'Next',
-        'Close',
-        'Add',
-        'Reload',
-        'Check',
-      ],
+      options: ['Link', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check'],
       control: 'radio',
     },
     flavour: {
       name: 'Flavour',
-      options: [
-        'Strong',
-        'Feedback',
-        'Success',
-        'Failure',
-      ],
+      options: ['Strong', 'Feedback', 'Success', 'Failure'],
       control: 'radio',
     },
     styles: {
       name: 'Styles',
-      options: [
-        'Limited',
-        'Super',
-        'Action',
-      ],
+      options: ['Limited', 'Super', 'Action'],
       control: 'check',
     },
     notice: {
@@ -71,7 +78,8 @@ const { StoryDefinition, DefaultStory } = defineStory(
     decorator: [],
     flavour: [],
     styles: [],
-    notice: 'The control "Icon" above only propose icons that make sens for a button. We have more icons in the chapter "Icons".',
+    notice:
+      'The control "Icon" above only propose icons that make sens for a button. We have more icons in the chapter "Icons".',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'
 )

@@ -2,8 +2,16 @@ import { Icon } from './Icon'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import defineStory from '../../../helpers/defineStory'
 
-const excludedIconNames = ['arrow-east-thin', 'card', 'hinweise_no_rounded', 'map-pin-coloured', 'pin']
-const icons = IconsIndex.iconNames.filter(iconName => !excludedIconNames.includes(iconName))
+const excludedIconNames = [
+  'arrow-east-thin',
+  'card',
+  'hinweise_no_rounded',
+  'map-pin-coloured',
+  'pin',
+]
+const icons = IconsIndex.iconNames.filter(
+  (iconName) => !excludedIconNames.includes(iconName)
+)
 const { StoryDefinition, DefaultStory } = defineStory(
   Icon,
   {

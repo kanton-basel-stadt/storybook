@@ -16,17 +16,8 @@ export const Button = (
     | 'Reload'
     | 'Check'
   )[],
-  flavour: (
-    | 'Strong'
-    | 'Feedback'
-    | 'Success'
-    | 'Failure'
-    )[],
-  styles: (
-    | 'Limited'
-    | 'Super'
-    | 'Action'
-  )[]
+  flavour: ('Strong' | 'Feedback' | 'Success' | 'Failure')[],
+  styles: ('Limited' | 'Super' | 'Action')[]
 ) => {
   const classes = {
     button: true,

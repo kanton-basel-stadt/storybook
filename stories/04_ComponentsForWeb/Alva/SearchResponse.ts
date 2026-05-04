@@ -87,9 +87,9 @@ export const SearchResponse = (
           class="flex flex-col items-start justify-between gap-20 sm:flex-row sm:items-center"
         >
           <button
-            class="flex items-center gap-10 rounded-full border border-blue-900 bg-white px-15 py-10 text-base text-blue-700 transition-all duration-250 ease-in-out hover:border-blue-900 hover:bg-blue-200 focus:shadow-purple-600 focus:outline-blue-900"
+            class="flex items-center gap-10 rounded-full border border-blue-900 bg-blue-900 px-15 py-10 text-base text-white transition-all duration-250 ease-in-out hover:border-blue-900 hover:bg-blue-700 focus:shadow-purple-600 focus:outline-blue-900"
           >
-            <span>zu Alva</span>
+            <span>Gesamte Antwort</span>
             <span
               class="relative size-20 overflow-hidden rounded-full bg-gradient-to-b from-blue-400 to-blue-600 transition-all"
             >

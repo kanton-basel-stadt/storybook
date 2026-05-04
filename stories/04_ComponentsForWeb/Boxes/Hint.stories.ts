@@ -2,7 +2,7 @@ import { Hint } from './Hint'
 import { loremIpsum } from 'lorem-ipsum'
 
 export default {
-  title: '4. Components for the web/Boxes/Hint',
+  title: '4. Components for the web/Boxes/Hint within a bubble',
   render(args: HintStoryArgs) {
     const hints = args.multipleHints ? args.hintsMany : [args.hintSingle]
     return Hint(hints)
@@ -36,7 +36,9 @@ export default {
   },
 }
 
-export const Default = {}
+export const Default = {
+  name: 'Hint within a bubble',
+}
 
 type HintStoryArgs = {
   multipleHints: boolean

@@ -62,8 +62,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Page Frame/Content header',
+  title: '4. Components for the web/Page frame/Content header',
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Content header',
+}

@@ -17,8 +17,10 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '5. Components for emails/Frame/HTML Frame',
+  title: '5. Components for emails/Frame/HTML frame',
   ...StoryDefinition,
 }
-
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'HTML frame',
+}

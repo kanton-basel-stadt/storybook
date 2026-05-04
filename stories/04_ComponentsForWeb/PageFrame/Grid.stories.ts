@@ -58,8 +58,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Components for the web/Page Frame/Grid',
+  title: '4. Components for the web/Page frame/Grid',
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Grid',
+}

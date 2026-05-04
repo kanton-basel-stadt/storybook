@@ -18,7 +18,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     alvaResponse: loremIpsum({ count: 15 }),
     showConsentBox: false,
   },
-  'https://www.figma.com/design/NSk9SHyBS4rLSJGRgQHJl8/Basel-GPT-(Alva)?node-id=1370-56252'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=31153-22786&t=Z2uACZkdCxRByNc2-4'
 )
 
 export default {
@@ -26,4 +26,7 @@ export default {
   ...StoryDefinition,
 }
 
-export const Default = DefaultStory
+export const Default = {
+  ...DefaultStory,
+  name: 'Search response',
+}

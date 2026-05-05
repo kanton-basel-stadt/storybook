@@ -6,8 +6,9 @@ export const Button = (
   label: string,
   iconName: string,
   iconPlacement: 'No icon' | 'Icon left' | 'Icon right' | 'Icon only',
-  size: 'Standard' | 'Small',
-  decorator: (
+  size: 'Standard' | 'Small' | 'Super',
+  decorator:
+    'No decorator'
     | 'Link'
     | 'Prev'
     | 'Next'
@@ -15,17 +16,15 @@ export const Button = (
     | 'Add'
     | 'Reload'
     | 'Check'
-  )[],
-  flavour: ('Strong' | 'Feedback' | 'Success' | 'Failure')[],
-  styles: ('Limited' | 'Super' | 'Action')[]
+  ,
+  flavour: 'No flavour' | 'Strong' | 'Feedback' | 'Success' | 'Failure',
 ) => {
   const classes = {
     button: true,
-    'is-sm': size === 'Small',
-    'is-icon-only': iconPlacement === 'Icon only',
+    'is-sm': size.includes('Small'),
+    'is-super': size.includes('Super'),
+    'is-icon-only': iconPlacement.includes('Icon only'),
     'is-strong': flavour.includes('Strong'),
-    'is-super': styles.includes('Super'),
-    'is-action': styles.includes('Action'),
     'is-feedback': flavour.includes('Feedback'),
     'is-prev': decorator.includes('Prev'),
     'is-next': decorator.includes('Next'),
@@ -34,7 +33,6 @@ export const Button = (
     'is-reload': decorator.includes('Reload'),
     'is-check': decorator.includes('Check'),
     'is-link': decorator.includes('Link'),
-    'is-limited': styles.includes('Limited'),
     'is-success': flavour.includes('Success'),
     'is-failure': flavour.includes('Failure'),
   }
@@ -47,5 +45,10 @@ export const Button = (
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </button>
+    <p class="text-xs text-gray-600 mt-30">Notices:<br />
+      - The control "Icon" below only propose icons that make sens for a button. We have more icons in the chapter "Icons" of the left menu.<br />
+      - Some option combinations do not make much sense, such as using a "Close" decorator with a "Success" flavour.<br />
+      - The size "Super" is to be used with the icon placement "No icon" and with a decorator.
+    </p>
   `
 }

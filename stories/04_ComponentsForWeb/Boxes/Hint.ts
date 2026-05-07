@@ -7,14 +7,14 @@ export const Hint = (hints: string[]) => {
     <div
       class="mb-30 rounded-large border border-gray-300 bg-green-50 p-20 shadow"
     >
-      <div class="grid grid-cols-[auto_1fr] gap-10">
-        <div class="mt-2 text-green-700">
+      <div class="grid grid-cols-[auto_1fr] gap-10 items-center text-green-700">
+        <div>
           ${Icon('hinweise_rounded', {
             'size-[20px]': true,
           })}
         </div>
         <div>
-          <legend class="mb-10 text-base font-bold text-green-700">
+          <legend class="text-base font-bold">
             Hinweis:
           </legend>
         </div>

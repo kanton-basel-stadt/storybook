@@ -16,73 +16,44 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
   return html`
     <table
       style="--grid-cols: ${cols.length + 1}"
-      class="grid grid-cols-[repeat(var(--grid-cols),minmax(125px,1fr))] gap-10"
+      class="weekday-percentage-input"
     >
-      <thead class="contents">
-        <tr class="contents">
-          <th class="min-w-[125px]">
+      <thead>
+        <tr>
+          <th>
             <span class="sr-only">Rows</span>
           </th>
           ${cols.map(
             (c) => html`
-              <th
-                class="flex min-w-[125px] items-center justify-center gap-10 py-5 font-normal"
-              >
-                ${c.label}
-
-                <button
-                  class="rounded-full border border-blue-900 bg-white text-blue-900 transition-all duration-250 ease-in-out hover:border-blue-400 hover:bg-blue-400 hover:text-white"
-                >
-                  ${Icon('add', {
-                    '[&_svg]:size-20': true,
-                  })}
-                  <span class="sr-only"> Ganze Spalte anwählen </span>
+              <th>
+                <button class="header-button">
+                  <span class="sr-only">Alle Tagesabschnitte auswählen am</span>
+                  ${c.label}
+                  ${Icon('add')}
                 </button>
               </th>
             `
           )}
         </tr>
       </thead>
-      <tbody class="contents">
+      <tbody>
         ${rows.map(
           (r) => html`
-            <tr class="contents">
-              <td class="flex items-center justify-end gap-10 py-5">
-                ${r.label}
-
-                <button
-                  class="rounded-full border border-blue-900 bg-white text-blue-900 transition-all duration-250 ease-in-out hover:border-blue-400 hover:bg-blue-400 hover:text-white"
-                >
-                  ${Icon('add', {
-                    '[&_svg]:size-20': true,
-                  })}
-                  <span class="sr-only"> Ganze Zeile anwählen </span>
+            <tr>
+              <td class="flex items-center justify-end">
+                <button class="header-button font-bold">
+                  <span class="sr-only">Alle Tage auswählen für</span>
+                  ${r.label}
+                  ${Icon('add')}
                 </button>
               </td>
               ${cols.map((c) => {
-                const buttonClasses = {
-                  flex: true,
-                  'items-center': true,
-                  'justify-center': true,
-                  'cursor-pointer': true,
-                  'transition-all': true,
-                  'ease-in-out': true,
-                  'duration-250': true,
-                  rounded: true,
-                  border: true,
-                  'border-blue-900': true,
-                  'hover:border-blue-400': true,
-                  'bg-gray-100': true,
+                const cellButtonClasses = {
                   '[:checked~&]:bg-blue-900': true,
-                  'hover:bg-blue-400': true,
-                  'text-gray-100': true,
                   '[:checked~&]:text-white': true,
-                  'hover:text-white': true,
-                  'w-full': true,
                   'h-[30px]': !r.isLarge,
                   'h-[90px]': r.isLarge,
                 }
-
                 return html`
                   <td class="min-w-[125px]">
                     <input
@@ -92,19 +63,15 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
                       id="${slugify(c.label) + '-' + slugify(r.label)}"
                       value="1"
                     />
-
                     <label
-                      class="${classMap(buttonClasses)}"
+                      class="${classMap(cellButtonClasses)}"
                       for="${slugify(c.label) + '-' + slugify(r.label)}"
                     >
                       <span class="sr-only"> ${c.label} ${r.label} </span>
-
                       ${Icon('add', {
-                        '[&_svg]:size-20': true,
                         '[:checked~label>&]:hidden': true,
                       })}
                       ${Icon('remove', {
-                        '[&_svg]:size-20': true,
                         hidden: true,
                         '[:checked~label>&]:block': true,
                       })}

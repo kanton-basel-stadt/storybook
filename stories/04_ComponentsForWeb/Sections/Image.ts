@@ -7,11 +7,9 @@ export const Image = (
   imageUrlSm: string,
   imageCaption: string,
   imageAlt: string,
-  imageCopyRight: string,
-
+  imageCopyRight: string
 ) => {
-  return html`
-    <div class="container">
+  return html` <div class="container">
     <figure class="flex w-full flex-col items-center justify-center">
       <picture>
         <source media="(min-width: 1209px)" srcset="${imageUrlXl}" />
@@ -26,10 +24,12 @@ export const Image = (
           width="400"
         />
       </picture>
-      <figcaption class="text-xs text-gray-700 md:flex md:w-full justify-between mt-10">
+      <figcaption
+        class="mt-10 justify-between text-xs text-gray-700 md:flex md:w-full"
+      >
         <div>${imageCaption}</div>
         <div>©${imageCopyRight}</div>
       </figcaption>
-  </figure>
-    </div>`
+    </figure>
+  </div>`
 }

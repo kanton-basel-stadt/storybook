@@ -45,7 +45,7 @@ export const Button = (
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </button>
-    <p class="text-xs text-gray-600 mt-30">Notices:<br />
+    <p class="text-xs text-gray-700 mt-30">Notices:<br />
       - The control "Icon" below only propose icons that make sens for a button. We have more icons in the chapter "Icons" of the left menu.<br />
       - Some option combinations do not make much sense, such as using a "Close" decorator with a "Success" flavour.<br />
       - The size "Super" is to be used with the icon placement "No icon" and with a decorator.

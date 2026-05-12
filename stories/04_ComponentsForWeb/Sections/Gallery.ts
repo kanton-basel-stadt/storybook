@@ -4,10 +4,10 @@ import { classMap } from 'lit-html/directives/class-map.js'
 export const Gallery = (
   title: string,
   color: 'white' | 'green' | 'blue',
-  imageUrlSm: string,
-  imageUrlMd: string,
-  imageUrlLg: string,
   imageUrlXl: string,
+  imageUrlLg: string,
+  imageUrlMd: string,
+  imageUrlSm: string,
   imageCaption: string,
   imageAlt: string,
   imageCopyRight: string
@@ -82,18 +82,10 @@ export const Gallery = (
                       sizes="(min-width: 1209px) 1040px, (min-width: 1023px) 796px, (min-width: 767px) 728px, (min-width: 479px) 400px"
                       src="${imageUrlSm}"
                       srcset="
-                        ${imageUrlSm}   400w,
-                        ${imageUrlSm}   600w,
-                        ${imageUrlSm}   800w,
-                        ${imageUrlMd}   728w,
-                        ${imageUrlMd}  1092w,
-                        ${imageUrlMd} 1456w,
-                        ${imageUrlLg}  796w,
-                        ${imageUrlLg} 1194w,
-                        ${imageUrlLg} 1592w,
-                        ${imageUrlXl} 1040w,
-                        ${imageUrlXl} 1560w,
-                        ${imageUrlXl} 2080w
+                        ${imageUrlSm}  400w,
+                        ${imageUrlMd}  800w,
+                        ${imageUrlLg} 1024w,
+                        ${imageUrlXl} 1680w
                       "
                       width="1600"
                     />

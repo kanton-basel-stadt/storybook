@@ -13,20 +13,20 @@ const { StoryDefinition } = defineStory(
       name: 'Color',
       control: 'hidden',
     },
-    imageUrlSm: {
-      name: 'Image URL for SM',
-      control: 'text',
-    },
-    imageUrlMd: {
-      name: 'Image URL for MD',
+    imageUrlXl: {
+      name: 'Image URL for XL',
       control: 'text',
     },
     imageUrlLg: {
       name: 'Image URL for LG',
       control: 'text',
     },
-    imageUrlXl: {
-      name: 'Image URL for XL',
+    imageUrlMd: {
+      name: 'Image URL for MD',
+      control: 'text',
+    },
+    imageUrlSm: {
+      name: 'Image URL for SM',
       control: 'text',
     },
     imageCaption: {
@@ -34,11 +34,11 @@ const { StoryDefinition } = defineStory(
       control: 'text',
     },
     imageAlt: {
-      name: 'Image caption',
+      name: 'Image alt',
       control: 'text',
     },
     imageCopyRight: {
-      name: 'Image caption',
+      name: 'Image copyright',
       control: 'text',
     },
   },
@@ -55,10 +55,10 @@ export const White = {
   args: {
     title: loremIpsum(),
     color: 'white',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlLg: 'https://placehold.co/1024x576',
     imageUrlXl: 'https://placehold.co/1680x945',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlSm: 'https://placehold.co/400x225',
     imageCaption: loremIpsum(),
     imageAlt: loremIpsum(),
     imageCopyRight: loremIpsum(),
@@ -75,10 +75,10 @@ export const Green = {
   args: {
     title: loremIpsum(),
     color: 'green',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlLg: 'https://placehold.co/1024x576',
     imageUrlXl: 'https://placehold.co/1680x945',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlSm: 'https://placehold.co/400x225',
     imageCaption: loremIpsum(),
     imageAlt: loremIpsum(),
     imageCopyRight: loremIpsum(),
@@ -95,10 +95,10 @@ export const Blue = {
   args: {
     title: loremIpsum(),
     color: 'blue',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlLg: 'https://placehold.co/1024x576',
     imageUrlXl: 'https://placehold.co/1680x945',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlSm: 'https://placehold.co/400x225',
     imageCaption: loremIpsum(),
     imageAlt: loremIpsum(),
     imageCopyRight: loremIpsum(),

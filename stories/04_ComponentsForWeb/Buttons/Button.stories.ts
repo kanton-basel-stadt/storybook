@@ -47,27 +47,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
     size: {
       name: 'Size',
-      options: ['Standard', 'Small'],
+      options: ['Standard', 'Small', 'Super'],
       control: 'radio',
     },
     decorator: {
       name: 'Decorator',
-      options: ['Link', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check'],
+      options: ['No decorator', 'Link', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check'],
       control: 'radio',
     },
     flavour: {
       name: 'Flavour',
-      options: ['Strong', 'Feedback', 'Success', 'Failure'],
+      options: ['No flavour', 'Strong', 'Feedback', 'Success', 'Failure'],
       control: 'radio',
-    },
-    styles: {
-      name: 'Styles',
-      options: ['Limited', 'Super', 'Action'],
-      control: 'check',
-    },
-    notice: {
-      name: 'Notice',
-      control: 'text',
     },
   },
   {
@@ -75,11 +66,8 @@ const { StoryDefinition, DefaultStory } = defineStory(
     iconName: 'baselstab',
     iconPlacement: 'Icon left',
     size: 'Standard',
-    decorator: [],
-    flavour: [],
-    styles: [],
-    notice:
-      'The control "Icon" above only propose icons that make sens for a button. We have more icons in the chapter "Icons".',
+    decorator: 'No decorator',
+    flavour: 'No flavour',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'
 )

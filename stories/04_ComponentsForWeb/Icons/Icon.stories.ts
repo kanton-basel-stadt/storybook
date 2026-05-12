@@ -5,7 +5,6 @@ import defineStory from '../../../helpers/defineStory'
 const excludedIconNames = [
   'arrow-east-thin',
   'card',
-  'hinweise_no_rounded',
   'map-pin-coloured',
   'pin',
 ]

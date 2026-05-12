@@ -28,8 +28,7 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
               <th>
                 <button class="header-button">
                   <span class="sr-only">Alle Tagesabschnitte auswählen am</span>
-                  ${c.label}
-                  ${Icon('add')}
+                  ${c.label} ${Icon('add')}
                 </button>
               </th>
             `
@@ -43,8 +42,7 @@ export const SelectableMatrix = (rows: Row[], cols: Columns[]) => {
               <td class="flex items-center justify-end">
                 <button class="header-button font-bold">
                   <span class="sr-only">Alle Tage auswählen für</span>
-                  ${r.label}
-                  ${Icon('add')}
+                  ${r.label} ${Icon('add')}
                 </button>
               </td>
               ${cols.map((c) => {

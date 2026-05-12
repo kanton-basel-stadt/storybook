@@ -52,7 +52,16 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
     decorator: {
       name: 'Decorator',
-      options: ['No decorator', 'Link', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check'],
+      options: [
+        'No decorator',
+        'Link',
+        'Prev',
+        'Next',
+        'Close',
+        'Add',
+        'Reload',
+        'Check',
+      ],
       control: 'radio',
     },
     flavour: {

@@ -18,10 +18,12 @@ export const InformationLinkAttachment = (
     <div
       class="info-box ${isInverted
         ? 'bg-primary-700'
-        : 'bg-primary-50'} w-full md:col-span-7 p-15 lg:p-20 rounded-large lg:max-w-box lg:pr-30"
+        : 'bg-primary-50'} w-full rounded-large p-15 md:col-span-7 lg:max-w-box lg:p-20 lg:pr-30"
     >
       <div
-        class="grid grid-cols-[auto_1fr] gap-10 items-center ${isInverted ? 'text-white' : 'text-primary-700'}"
+        class="${isInverted
+          ? 'text-white'
+          : 'text-primary-700'} grid grid-cols-[auto_1fr] items-center gap-10"
       >
         <div>
           ${Icon('hinweise_rounded', {
@@ -29,11 +31,14 @@ export const InformationLinkAttachment = (
           })}
         </div>
         <div>
-          <legend class="text-base font-bold ${isInverted ? 'text-white' : 'text-primary-700'}">
+          <legend
+            class="${isInverted
+              ? 'text-white'
+              : 'text-primary-700'} text-base font-bold"
+          >
             ${title}
           </legend>
         </div>
-      
       </div>
       <div
         class="ck-content is-small info-box-floater ${isInverted

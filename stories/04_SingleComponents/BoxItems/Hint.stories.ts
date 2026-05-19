@@ -34,6 +34,12 @@ export default {
       loremIpsum({ count: 1 }),
     ],
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=32116-39665&t=uE07ro0CYT8jUMKb-4',
+    },
+  },
 }
 
 export const Default = {

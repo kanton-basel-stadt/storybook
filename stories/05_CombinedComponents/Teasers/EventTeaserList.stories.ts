@@ -16,18 +16,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
@@ -37,18 +37,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
@@ -58,18 +58,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
@@ -79,18 +79,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
@@ -100,18 +100,18 @@ const { StoryDefinition, DefaultStory } = defineStory(
       {
         url: 'https://www.bs.ch/',
         title: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         date: '01. Januar',
         time: 'Ganztags',
         venue: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         imageUrl: 'https://placehold.co/309x147',
         imageCaption: loremIpsum({
-          count: Math.floor(Math.random() * (5 - 0 + 1) + 0),
+          count: Math.floor(Math.random() * (5 + 1)),
           units: 'words',
         }),
         hasMultiple: Math.random() > 0.5,
@@ -120,7 +120,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       },
     ],
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24445-62190&t=FznYmIANb8uB5p92-1s'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

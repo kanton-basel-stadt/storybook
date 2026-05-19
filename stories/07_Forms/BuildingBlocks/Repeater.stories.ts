@@ -18,7 +18,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     legend: 'Some fieldset',
     content: loremIpsum({ count: 3 }),
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24359-23028&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-98772&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

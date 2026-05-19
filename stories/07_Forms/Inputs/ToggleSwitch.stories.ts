@@ -29,7 +29,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     id: 'toggle-123',
     isReversed: false,
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24420-67803&t=w3NqFs5FkutCgMQS-4'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-98946&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

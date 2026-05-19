@@ -5,7 +5,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
   Table,
   {},
   {},
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-28117&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-36255&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

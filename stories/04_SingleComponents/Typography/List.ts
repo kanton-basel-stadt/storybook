@@ -4,12 +4,12 @@ export const List = (kind: 'ordered' | 'unordered') => {
   if (kind === 'ordered') {
     return html`
       <ol class="ol">
-        <li>Element 1</li>
-        <li>Element 2</li>
+        <li>Item</li>
+        <li>Item</li>
         <li>
           <ol class="ol">
-            <li>Nested 1</li>
-            <li>Nested 2</li>
+            <li>Sub-item</li>
+            <li>Sub-item</li>
           </ol>
         </li>
       </ol>
@@ -18,12 +18,12 @@ export const List = (kind: 'ordered' | 'unordered') => {
 
   return html`
     <ul class="ul">
-      <li>Element 1</li>
-      <li>Element 2</li>
+      <li>Item</li>
+      <li>Item</li>
       <li>
         <ul class="ul">
-          <li>Nested 1</li>
-          <li>Nested 2</li>
+          <li>Sub-item</li>
+          <li>Sub-item</li>
         </ul>
       </li>
     </ul>

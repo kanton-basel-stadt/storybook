@@ -61,7 +61,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     ],
     numberOfColumns: 1,
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58027&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-35074&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

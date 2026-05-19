@@ -22,7 +22,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     ],
     showConsentBox: false,
   },
-  'https://www.figma.com/design/NSk9SHyBS4rLSJGRgQHJl8/Basel-GPT-(Alva)?node-id=1370-56252'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26617&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

@@ -38,7 +38,7 @@ export const Light = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=29912-35901&t=S6Kp5hYoxeTqRyve-0',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
     },
   },
 }
@@ -52,7 +52,7 @@ export const Standard = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=29912-35901&t=S6Kp5hYoxeTqRyve-0',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
     },
   },
 }
@@ -66,7 +66,7 @@ export const Dark = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=29912-35901&t=S6Kp5hYoxeTqRyve-0',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
     },
   },
 }

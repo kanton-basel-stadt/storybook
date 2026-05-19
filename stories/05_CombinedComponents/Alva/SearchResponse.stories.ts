@@ -18,7 +18,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     alvaResponse: loremIpsum({ count: 15 }),
     showConsentBox: false,
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=31153-22786&t=Z2uACZkdCxRByNc2-4'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=28233-22965&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

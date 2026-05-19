@@ -1,6 +1,5 @@
 import { Teaser } from './Teaser'
 import { loremIpsum } from 'lorem-ipsum'
-
 import defineStory from '../../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
@@ -49,7 +48,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     imageUrlXl: 'https://placehold.co/334x188',
     imageCaption: loremIpsum(),
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24248-22760&t=Czf6ufotzznVEA1h-0'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26145&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

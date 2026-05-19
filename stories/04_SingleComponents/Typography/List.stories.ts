@@ -26,7 +26,7 @@ export const Ordered = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24245-15335&t=FznYmIANb8uB5p92-1',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-20978&t=uE07ro0CYT8jUMKb-4',
     },
   },
 }
@@ -38,7 +38,7 @@ export const Unordered = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24245-15335&t=FznYmIANb8uB5p92-1',
+      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-20978&t=uE07ro0CYT8jUMKb-4',
     },
   },
 }

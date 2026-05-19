@@ -15,7 +15,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       control: 'text',
     },
     imageUrl: {
-      name: 'URL for the image (for full responsiveness, provide srcset in the <img> tag)',
+      name: 'URL for the image (for full responsiveness, provide srcset in the img tag)',
       control: 'text',
     },
     name: {
@@ -44,7 +44,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     quoteSourceTitle: 'Kanton Basel-Stadt',
     quoteSourceUrl: 'https://www.bs.ch',
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58026&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-31979&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

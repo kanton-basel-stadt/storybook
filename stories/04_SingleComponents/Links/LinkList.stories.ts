@@ -24,7 +24,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       },
     ],
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24420-58028&t=FznYmIANb8uB5p92-1'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-37522&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {

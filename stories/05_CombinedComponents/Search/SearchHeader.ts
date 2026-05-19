@@ -1,7 +1,7 @@
 import { Icon } from '../../03_Basics/Icon'
 import { html } from 'lit'
 
-export const SearchHeader = (isSearchButtonDisabled: boolean) => {
+export const SearchHeader = () => {
   return html`
     <section>
       <div class="container">
@@ -35,13 +35,12 @@ export const SearchHeader = (isSearchButtonDisabled: boolean) => {
                 />
               </label>
               <button
-                class="is-grey-strong·is-icon-only·row-start-1·m-[4px]·border-0·bg-gray-300·hover:bg-blue-90"
+                class="is-grey-strong is-icon-only row-start-1 m-[4px] h-40 w-40 rounded-full border-0 bg-gray-300 pl-6 text-gray-700 hover:bg-blue-900 hover:text-white"
                 type="submit"
-                ?disabled="${isSearchButtonDisabled}"
               >
                 ${Icon('arrow-east-thin', {
                   '[&_svg]:size-30': true,
-                  'rotate-[-90deg]': true,
+                  '[&_svg]:rotate-[-90deg]': true,
                 })}
                 <span class="sr-only">Suchen</span>
               </button>

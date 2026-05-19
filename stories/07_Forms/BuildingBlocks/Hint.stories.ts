@@ -2,7 +2,7 @@ import { Hint } from './Hint'
 import { loremIpsum } from 'lorem-ipsum'
 
 export default {
-  title: '4. Single components/Box items/Hint-box',
+  title: '7. Forms/Building blocks/Hint box',
   render(args: HintStoryArgs) {
     const hints = args.multipleHints ? args.hintsMany : [args.hintSingle]
     return Hint(hints)
@@ -43,7 +43,7 @@ export default {
 }
 
 export const Default = {
-  name: 'Hint-box',
+  name: 'Hint box',
 }
 
 type HintStoryArgs = {

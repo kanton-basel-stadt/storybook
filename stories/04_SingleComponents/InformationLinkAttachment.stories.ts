@@ -1,6 +1,6 @@
 import { InformationLinkAttachment } from './InformationLinkAttachment'
 import { loremIpsum } from 'lorem-ipsum'
-import defineStory from '../../../helpers/defineStory'
+import defineStory from '../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   InformationLinkAttachment,
@@ -48,11 +48,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Single components/Box items/Info-box',
+  title: '4. Single components/Info box',
   ...StoryDefinition,
 }
 
 export const Default = {
   ...DefaultStory,
-  name: 'Info-box',
+  name: 'Info box',
 }

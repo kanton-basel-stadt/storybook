@@ -1,4 +1,4 @@
-import { Icon } from '../../03_Basics/Icon'
+import { Icon } from '../03_Basics/Icon'
 import { html } from 'lit'
 
 export type Link = {

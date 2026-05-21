@@ -17,7 +17,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
       control: 'text',
     },
     id: {
-      name: 'ID',
+      name: 'Id',
       control: 'text',
     },
   },

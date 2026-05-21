@@ -1,11 +1,15 @@
-import { Slider } from './Slider'
+import { InputCHF } from './InputCHF'
 import defineStory from '../../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
-  Slider,
+  InputCHF,
   {
     label: {
       name: 'Label',
+      control: 'text',
+    },
+    value: {
+      name: 'Value',
       control: 'text',
     },
     name: {
@@ -18,19 +22,20 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
   },
   {
-    label: 'Slide me (needs logic provided by you to properly work)!',
-    name: 'my-checkbox',
-    id: 'checkbox-123',
+    label: 'My label for amount in CHF',
+    value: "1’234.50'",
+    name: 'my-input',
+    id: 'input-123',
   },
-  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-98960&t=uE07ro0CYT8jUMKb-4'
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=28822-8603&t=7ckDtzrsJy0SZZlH-4'
 )
 
 export default {
-  title: '7. Forms/Inputs/Slider',
+  title: '7. Forms/Inputs/CHF Amount',
   ...StoryDefinition,
 }
 
 export const Default = {
   ...DefaultStory,
-  name: 'Slider',
+  name: 'CHF Amount',
 }

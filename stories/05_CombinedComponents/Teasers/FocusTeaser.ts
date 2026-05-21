@@ -23,8 +23,8 @@ export const FocusTeaser = (
     'lg:py-30': true,
     'xl:py-40': true,
     'paragraph--padded': true,
-    'bg-blue-900': variant === 'dark',
-    'bg-primary-100': variant === 'light',
+    'bg-blue-900': variant === 'blue',
+    'bg-primary-100': variant === 'green',
   }
 
   const headingClasses = {
@@ -40,10 +40,10 @@ export const FocusTeaser = (
     'ease-in-out': true,
     'backdrop-blur-md': true,
     'mb-20': true,
-    'text-white': variant === 'dark',
-    'bg-blue-900/80': variant === 'dark',
-    'text-primary-700': variant === 'light',
-    'bg-primary-100/80': variant === 'light',
+    'text-white': variant === 'blue',
+    'bg-blue-900/80': variant === 'blue',
+    'text-primary-700': variant === 'green',
+    'bg-primary-100/80': variant === 'green',
   }
 
   const titleClasses = {
@@ -51,19 +51,19 @@ export const FocusTeaser = (
     'md:text-5xl': true,
     'text-3xl': true,
     'pb-25': true,
-    'text-primary-700': variant === 'light',
-    'text-white': variant === 'dark',
+    'text-primary-700': variant === 'green',
+    'text-white': variant === 'blue',
   }
 
   const figureClass = {
-    'text-white': variant === 'dark',
+    'text-white': variant === 'blue',
   }
 
   const linkClasses = {
     link: true,
     'with-icon': true,
     'xl:text-lg': true,
-    'is-inverted': variant === 'dark',
+    'is-inverted': variant === 'blue',
   }
 
   return html`

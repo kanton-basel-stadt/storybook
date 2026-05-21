@@ -8,7 +8,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     variant: {
       name: 'Variant',
       control: 'radio',
-      options: ['light', 'dark'],
+      options: ['green', 'blue'],
     },
     title: {
       name: 'Title',
@@ -48,7 +48,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
   },
   {
-    variant: 'light',
+    variant: 'green',
     title: loremIpsum(),
     mainUrl: 'https://www.bs.ch/',
     links: [

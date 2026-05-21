@@ -59,7 +59,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
         ],
       },
     ],
-    numberOfColumns: 1,
+    numberOfColumns: '1',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-35074&t=uE07ro0CYT8jUMKb-4'
 )

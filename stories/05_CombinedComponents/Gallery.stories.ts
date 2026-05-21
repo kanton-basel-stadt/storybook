@@ -5,14 +5,14 @@ import defineStory from '../../helpers/defineStory'
 const { StoryDefinition, DefaultStory } = defineStory(
   Gallery,
   {
-    title: {
-      name: 'Title',
-      control: 'text',
-    },
     variant: {
       name: 'Variant',
       control: 'radio',
       options: ['white', 'green', 'blue'],
+    },
+    title: {
+      name: 'Title',
+      control: 'text',
     },
     imageUrlXl: {
       name: 'Image URL for XL',
@@ -44,8 +44,8 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
   },
   {
-    title: loremIpsum(),
     variant: 'white',
+    title: loremIpsum(),
     imageUrlXl: 'https://placehold.co/1680x945',
     imageUrlLg: 'https://placehold.co/1024x576',
     imageUrlMd: 'https://placehold.co/800x450',

@@ -5,14 +5,14 @@ import defineStory from '../../../helpers/defineStory'
 const { StoryDefinition, DefaultStory } = defineStory(
   Tag,
   {
-    content: {
-      name: 'Sample content',
-      control: 'text',
-    },
     variant: {
       name: 'Variant',
       control: 'radio',
       options: ['standard', 'light', 'dark'],
+    },
+    content: {
+      name: 'Sample content',
+      control: 'text',
     },
     iconName: {
       name: 'Icon',
@@ -21,8 +21,8 @@ const { StoryDefinition, DefaultStory } = defineStory(
     },
   },
   {
-    content: 'Some tag',
     variant: 'standard',
+    content: 'Some tag',
     iconName: 'baselstab',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4'

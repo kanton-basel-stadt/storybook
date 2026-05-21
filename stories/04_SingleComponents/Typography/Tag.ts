@@ -3,8 +3,8 @@ import { Icon, IconName } from '../../03_Basics/Icon'
 import { classMap } from 'lit/directives/class-map.js'
 
 export const Tag = (
-  content: string,
   variant: 'light' | 'standard' | 'dark',
+  content: string,
   iconName: IconName
 ) => {
   const classes = {

@@ -2,8 +2,8 @@ import { html } from 'lit'
 import { classMap } from 'lit-html/directives/class-map.js'
 
 export const Gallery = (
-  title: string,
   variant: 'white' | 'green' | 'blue',
+  title: string,
   imageUrlXl: string,
   imageUrlLg: string,
   imageUrlMd: string,

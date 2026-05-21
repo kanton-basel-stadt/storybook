@@ -7,6 +7,7 @@ export type Link = {
 }
 
 export const FocusTeaser = (
+  variant: string,
   title: string,
   mainUrl: string,
   links: Link[],
@@ -15,16 +16,15 @@ export const FocusTeaser = (
   imageUrlLg: string,
   imageUrlXl: string,
   imageCaption: string,
-  imageAlt: string,
-  color: 'light' | 'dark'
+  imageAlt: string
 ) => {
   const paragraphClasses = {
     'py-25': true,
     'lg:py-30': true,
     'xl:py-40': true,
     'paragraph--padded': true,
-    'bg-blue-900': color === 'dark',
-    'bg-primary-100': color === 'light',
+    'bg-blue-900': variant === 'dark',
+    'bg-primary-100': variant === 'light',
   }
 
   const headingClasses = {
@@ -40,10 +40,10 @@ export const FocusTeaser = (
     'ease-in-out': true,
     'backdrop-blur-md': true,
     'mb-20': true,
-    'text-white': color === 'dark',
-    'bg-blue-900/80': color === 'dark',
-    'text-primary-700': color === 'light',
-    'bg-primary-100/80': color === 'light',
+    'text-white': variant === 'dark',
+    'bg-blue-900/80': variant === 'dark',
+    'text-primary-700': variant === 'light',
+    'bg-primary-100/80': variant === 'light',
   }
 
   const titleClasses = {
@@ -51,19 +51,19 @@ export const FocusTeaser = (
     'md:text-5xl': true,
     'text-3xl': true,
     'pb-25': true,
-    'text-primary-700': color === 'light',
-    'text-white': color === 'dark',
+    'text-primary-700': variant === 'light',
+    'text-white': variant === 'dark',
   }
 
   const figureClass = {
-    'text-white': color === 'dark',
+    'text-white': variant === 'dark',
   }
 
   const linkClasses = {
     link: true,
     'with-icon': true,
     'xl:text-lg': true,
-    'is-inverted': color === 'dark',
+    'is-inverted': variant === 'dark',
   }
 
   return html`

@@ -1,44 +1,27 @@
 import { List } from './List'
 import defineStory from '../../../helpers/defineStory'
 
-const { StoryDefinition } = defineStory(
+const { StoryDefinition, DefaultStory } = defineStory(
   List,
   {
-    kind: {
-      name: 'Kind',
-      control: 'select',
+    type: {
+      name: 'Type',
+      control: 'radio',
       options: ['ordered', 'unordered'],
     },
   },
-  {},
-  null
+  {
+    type: 'unordered',
+  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-20978&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {
-  title: '4. Single components/Typography styles/Lists',
+  title: '4. Single components/Typography styles/Bullet and numbered lists',
   ...StoryDefinition,
 }
 
-export const Ordered = {
-  args: {
-    kind: 'ordered',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-20978&t=uE07ro0CYT8jUMKb-4',
-    },
-  },
-}
-
-export const Unordered = {
-  args: {
-    kind: 'unordered',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-20978&t=uE07ro0CYT8jUMKb-4',
-    },
-  },
+export const Default = {
+  ...DefaultStory,
+  name: 'Bullet and numbered lists',
 }

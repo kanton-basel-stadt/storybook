@@ -3,7 +3,7 @@ import { classMap } from 'lit-html/directives/class-map.js'
 
 export const Gallery = (
   title: string,
-  color: 'white' | 'green' | 'blue',
+  variant: 'white' | 'green' | 'blue',
   imageUrlXl: string,
   imageUrlLg: string,
   imageUrlMd: string,
@@ -17,9 +17,9 @@ export const Gallery = (
     'lg:py-40': true,
     'xl:pt-50': true,
     'paragraph--padded': true,
-    'bg-blue-900': color === 'blue',
-    'print:!bg-white': color === 'blue',
-    'bg-primary-100': color === 'green',
+    'bg-blue-900': variant === 'blue',
+    'print:!bg-white': variant === 'blue',
+    'bg-primary-100': variant === 'green',
   }
 
   const titleClasses = {
@@ -31,8 +31,8 @@ export const Gallery = (
     'print:text-xl': true,
     'print:!text-body': true,
     'hyphens-auto': true,
-    'text-green-700': color === 'white' || color === 'green',
-    'text-white': color === 'blue',
+    'text-green-700': variant === 'white' || variant === 'green',
+    'text-white': variant === 'blue',
   }
 
   const captionClasses = {
@@ -42,15 +42,15 @@ export const Gallery = (
     'lg:text-lg': true,
     'md:mb-5': true,
     'print:!text-body': true,
-    'text-gray-700': color === 'white' || color === 'green',
-    'text-white': color === 'blue',
+    'text-gray-700': variant === 'white' || variant === 'green',
+    'text-white': variant === 'blue',
   }
 
   const copyrightClasses = {
     'text-xs': true,
-    'text-gray-700': color === 'white',
-    'text-primary-900/75': color === 'green',
-    'text-white/75': color === 'blue',
+    'text-gray-700': variant === 'white',
+    'text-primary-900/75': variant === 'green',
+    'text-white/75': variant === 'blue',
   }
 
   return html`

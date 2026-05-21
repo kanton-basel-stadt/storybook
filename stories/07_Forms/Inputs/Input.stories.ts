@@ -21,14 +21,13 @@ const { StoryDefinition, DefaultStory } = defineStory(
       control: 'text',
     },
     type: {
-      name: 'Type',
-      control: 'select',
+      name: 'Type (only relevant for the input "Default")',
+      control: 'radio',
       options: ['text', 'date', 'number', 'email', 'password', 'tel', 'week'],
-      description: 'Nur für Variante «Standard» relevant (HTML input type).',
     },
     variant: {
-      name: 'Variante',
-      control: 'select',
+      name: 'Input type',
+      control: 'radio',
       options: [
         'default',
         'chf',
@@ -37,8 +36,9 @@ const { StoryDefinition, DefaultStory } = defineStory(
         'textarea',
         'freetext-icon',
       ],
-      description:
-        '220 px max., CHF, %, number, Textarea, Freitext mit «mehr-text»-Ecke.',
+      table: {
+        disable: true,
+      },
     },
   },
   {
@@ -59,7 +59,14 @@ export default {
 
 export const Default = {
   ...DefaultStory,
-  name: 'Input',
+  args: {
+    label: 'My input label',
+    value: 'free text',
+    name: 'my_input',
+    id: 'my_id',
+    type: 'text',
+    variant: 'default',
+  },
 }
 
 export const CHFBetrag = {

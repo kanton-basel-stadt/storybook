@@ -3,13 +3,13 @@ import { classMap } from 'lit/directives/class-map.js'
 
 export const Paragraph = (
   content: string,
-  kind: 'preheading' | 'lead' | 'paragraph' | 'small paragraph'
+  type: 'pre-heading' | 'lead' | 'standard' | 'small'
 ) => {
   const classes = {
-    p: kind === 'paragraph' || kind === 'small paragraph',
-    'is-small': kind === 'small paragraph',
-    'pre-heading': kind === 'preheading',
-    lead: kind === 'lead',
+    p: type === 'standard' || type === 'small',
+    'is-small': type === 'small',
+    'pre-heading': type === 'pre-heading',
+    lead: type === 'lead',
   }
 
   return html` <p class="${classMap(classes)}">${content}</p> `

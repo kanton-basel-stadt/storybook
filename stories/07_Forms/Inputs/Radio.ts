@@ -5,11 +5,11 @@ import { Icon } from '../../03_Basics/Icon'
 export type RadioFieldState = 'default' | 'inactive' | 'validated' | 'error'
 
 export const Radio = (
+  fieldState: RadioFieldState = 'default',
   label: string,
   value: string,
   name: string,
-  id: string,
-  fieldState: RadioFieldState = 'default'
+  id: string
 ) => {
   const inactive = fieldState === 'inactive'
   const validated = fieldState === 'validated'

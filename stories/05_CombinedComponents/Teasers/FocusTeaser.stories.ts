@@ -2,12 +2,13 @@ import { FocusTeaser } from './FocusTeaser'
 import { loremIpsum } from 'lorem-ipsum'
 import defineStory from '../../../helpers/defineStory'
 
-const { StoryDefinition } = defineStory(
+const { StoryDefinition, DefaultStory } = defineStory(
   FocusTeaser,
   {
-    color: {
-      name: 'Color',
-      control: 'hidden',
+    variant: {
+      name: 'Variant',
+      control: 'radio',
+      options: ['light', 'dark'],
     },
     title: {
       name: 'Title',
@@ -46,8 +47,28 @@ const { StoryDefinition } = defineStory(
       control: 'text',
     },
   },
-  {},
-  null
+  {
+    variant: 'light',
+    title: loremIpsum(),
+    mainUrl: 'https://www.bs.ch/',
+    links: [
+      {
+        label: loremIpsum(),
+        url: 'https://www.bs.ch/',
+      },
+      {
+        label: loremIpsum(),
+        url: 'https://www.bs.ch/',
+      },
+    ],
+    imageUrlSm: 'https://placehold.co/382x215',
+    imageUrlMd: 'https://placehold.co/224x126',
+    imageUrlLg: 'https://placehold.co/252x142',
+    imageUrlXl: 'https://placehold.co/334x188',
+    imageCaption: loremIpsum(),
+    imageAlt: loremIpsum(),
+  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22761&t=FznYmIANb8uB5p92-1'
 )
 
 export default {
@@ -55,62 +76,7 @@ export default {
   ...StoryDefinition,
 }
 
-export const Light = {
-  args: {
-    title: loremIpsum(),
-    mainUrl: 'https://www.bs.ch/',
-    links: [
-      {
-        label: loremIpsum(),
-        url: 'https://www.bs.ch/',
-      },
-      {
-        label: loremIpsum(),
-        url: 'https://www.bs.ch/',
-      },
-    ],
-    imageUrlSm: 'https://placehold.co/382x215',
-    imageUrlMd: 'https://placehold.co/224x126',
-    imageUrlLg: 'https://placehold.co/252x142',
-    imageUrlXl: 'https://placehold.co/334x188',
-    imageCaption: loremIpsum(),
-    imageAlt: loremIpsum(),
-    color: 'light',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22761&t=FznYmIANb8uB5p92-1',
-    },
-  },
-}
-
-export const Dark = {
-  args: {
-    title: loremIpsum(),
-    mainUrl: 'https://www.bs.ch/',
-    links: [
-      {
-        label: loremIpsum(),
-        url: 'https://www.bs.ch/',
-      },
-      {
-        label: loremIpsum(),
-        url: 'https://www.bs.ch/',
-      },
-    ],
-    imageUrlSm: 'https://placehold.co/382x215',
-    imageUrlMd: 'https://placehold.co/224x126',
-    imageUrlLg: 'https://placehold.co/252x142',
-    imageUrlXl: 'https://placehold.co/334x188',
-    imageCaption: loremIpsum(),
-    imageAlt: loremIpsum(),
-    color: 'dark',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24248-22761&t=FznYmIANb8uB5p92-1',
-    },
-  },
+export const Default = {
+  ...DefaultStory,
+  name: 'Focus teaser',
 }

@@ -2,16 +2,17 @@ import { Gallery } from './Gallery'
 import { loremIpsum } from 'lorem-ipsum'
 import defineStory from '../../helpers/defineStory'
 
-const { StoryDefinition } = defineStory(
+const { StoryDefinition, DefaultStory } = defineStory(
   Gallery,
   {
     title: {
       name: 'Title',
       control: 'text',
     },
-    color: {
-      name: 'Color',
-      control: 'hidden',
+    variant: {
+      name: 'Variant',
+      control: 'radio',
+      options: ['white', 'green', 'blue'],
     },
     imageUrlXl: {
       name: 'Image URL for XL',
@@ -42,8 +43,18 @@ const { StoryDefinition } = defineStory(
       control: 'text',
     },
   },
-  {},
-  null
+  {
+    title: loremIpsum(),
+    variant: 'white',
+    imageUrlXl: 'https://placehold.co/1680x945',
+    imageUrlLg: 'https://placehold.co/1024x576',
+    imageUrlMd: 'https://placehold.co/800x450',
+    imageUrlSm: 'https://placehold.co/400x225',
+    imageCaption: loremIpsum(),
+    imageAlt: loremIpsum(),
+    imageCopyRight: loremIpsum(),
+  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1'
 )
 
 export default {
@@ -51,62 +62,7 @@ export default {
   ...StoryDefinition,
 }
 
-export const White = {
-  args: {
-    title: loremIpsum(),
-    color: 'white',
-    imageUrlXl: 'https://placehold.co/1680x945',
-    imageUrlLg: 'https://placehold.co/1024x576',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageCaption: loremIpsum(),
-    imageAlt: loremIpsum(),
-    imageCopyRight: loremIpsum(),
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
-    },
-  },
-}
-
-export const Green = {
-  args: {
-    title: loremIpsum(),
-    color: 'green',
-    imageUrlXl: 'https://placehold.co/1680x945',
-    imageUrlLg: 'https://placehold.co/1024x576',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageCaption: loremIpsum(),
-    imageAlt: loremIpsum(),
-    imageCopyRight: loremIpsum(),
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
-    },
-  },
-}
-
-export const Blue = {
-  args: {
-    title: loremIpsum(),
-    color: 'blue',
-    imageUrlXl: 'https://placehold.co/1680x945',
-    imageUrlLg: 'https://placehold.co/1024x576',
-    imageUrlMd: 'https://placehold.co/800x450',
-    imageUrlSm: 'https://placehold.co/400x225',
-    imageCaption: loremIpsum(),
-    imageAlt: loremIpsum(),
-    imageCopyRight: loremIpsum(),
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System-(DDS)?node-id=24564-18369&t=FznYmIANb8uB5p92-1',
-    },
-  },
+export const Default = {
+  ...DefaultStory,
+  name: 'Gallery',
 }

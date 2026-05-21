@@ -1,7 +1,7 @@
 import { html } from 'lit'
 
-export const List = (kind: 'ordered' | 'unordered') => {
-  if (kind === 'ordered') {
+export const List = (type: 'ordered' | 'unordered') => {
+  if (type === 'ordered') {
     return html`
       <ol class="ol">
         <li>Item</li>

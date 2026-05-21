@@ -2,7 +2,7 @@ import { Tag } from './Tag'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import defineStory from '../../../helpers/defineStory'
 
-const { StoryDefinition } = defineStory(
+const { StoryDefinition, DefaultStory } = defineStory(
   Tag,
   {
     content: {
@@ -12,7 +12,7 @@ const { StoryDefinition } = defineStory(
     variant: {
       name: 'Variant',
       control: 'radio',
-      options: ['light', 'standard', 'dark'],
+      options: ['standard', 'light', 'dark'],
     },
     iconName: {
       name: 'Icon',
@@ -20,8 +20,12 @@ const { StoryDefinition } = defineStory(
       options: IconsIndex.iconNames,
     },
   },
-  {},
-  null
+  {
+    content: 'Some tag',
+    variant: 'standard',
+    iconName: 'baselstab',
+  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4'
 )
 
 export default {
@@ -29,44 +33,7 @@ export default {
   ...StoryDefinition,
 }
 
-export const Light = {
-  args: {
-    content: 'Some tag',
-    variant: 'light',
-    iconName: 'baselstab',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
-    },
-  },
-}
-
-export const Standard = {
-  args: {
-    content: 'Some tag',
-    variant: 'standard',
-    iconName: 'baselstab',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
-    },
-  },
-}
-
-export const Dark = {
-  args: {
-    content: 'Some tag',
-    variant: 'dark',
-    iconName: 'baselstab',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-26650&t=uE07ro0CYT8jUMKb-4',
-    },
-  },
+export const Default = {
+  ...DefaultStory,
+  name: 'Tag',
 }

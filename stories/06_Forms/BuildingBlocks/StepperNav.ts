@@ -2,7 +2,7 @@ import { html } from 'lit'
 
 export const StepperNav = (numberOfSteps: number, activeStep: number) => {
   return html`
-    <div class="stepper-nav container !px-60" role="tablist">
+    <div class="stepper-nav container mx-0" role="tablist">
       ${Array.from({ length: numberOfSteps }, (_, i) => i + 1).map(
         (n) => html`
           <button

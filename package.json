@@ -55,7 +55,7 @@
     "typescript-eslint": "^8.18.1"
   },
   "dependencies": {
-    "@kanton-basel-stadt/designsystem": "^1.2.0-dev.14",
+    "@kanton-basel-stadt/designsystem": "^1.2.0",
     "@storybook/addon-backgrounds": "^8.4.7",
     "@storybook/addon-controls": "^8.4.7",
     "@storybook/addon-docs": "^8.4.7",

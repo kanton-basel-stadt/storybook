@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026
+
+### May
+
+- use designsystem 1.2.0
+- refactor the structure and the content of the documentation
+
 ## 2025
 
 ### June

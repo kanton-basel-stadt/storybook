@@ -1,0 +1,42 @@
+import { Link } from './Link'
+
+import defineStory from '../../../helpers/defineStory'
+
+const { StoryDefinition, DefaultStory } = defineStory(
+  Link,
+  {
+    withIcon: {
+      name: 'With link icon (files, arrows, etc., changes itself based on URL)',
+      control: 'boolean',
+    },
+    isInline: {
+      name: 'Is inline link (for use in text)',
+      control: 'boolean',
+    },
+    label: {
+      name: 'Label',
+      control: 'text',
+    },
+    href: {
+      name: 'Target href',
+      control: 'text',
+    },
+  },
+  {
+    withIcon: false,
+    isInline: false,
+    label: 'Click me!',
+    href: '#',
+  },
+  'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=35712-21042&t=uE07ro0CYT8jUMKb-4'
+)
+
+export default {
+  title: '4. Single components/Links/Link',
+  ...StoryDefinition,
+}
+
+export const Default = {
+  ...DefaultStory,
+  name: 'Link',
+}

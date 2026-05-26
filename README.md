@@ -25,7 +25,7 @@ npm run test
 To execute linting, run:
 
 ```
-npm run lint
+npm run lint:fix
 ```
 
 ## Contribution

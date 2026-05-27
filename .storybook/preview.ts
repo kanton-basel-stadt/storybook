@@ -46,6 +46,20 @@ const preview: Preview = {
           .innerHTML.replace(/&amp;/g, '&')
       },
     },
+    options: {
+      storySort: {
+        order: [
+          '1. About the BS.ch Design System',
+          '2. Tutorials',
+          '3. Basics',
+          '4. Single components',
+          '5. Combined components',
+          '6. Forms',
+          '7. Templates',
+          '8. Emails',
+        ],
+      },
+    },
   },
 }
 

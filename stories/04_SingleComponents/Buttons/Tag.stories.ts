@@ -29,7 +29,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Single components/Typography styles/Tag',
+  title: '4. Single components/Buttons/Tag',
   ...StoryDefinition,
 }
 

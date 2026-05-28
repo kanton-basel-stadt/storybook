@@ -1,4 +1,4 @@
-import { Tag } from '../../04_SingleComponents/Typography/Tag'
+import { Tag } from '../../04_SingleComponents/Buttons/Tag'
 import { html } from 'lit'
 
 export type EventTeaserParams = {

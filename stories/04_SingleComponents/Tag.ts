@@ -3,19 +3,26 @@ import { Icon, IconName } from '../03_Basics/Icon'
 import { classMap } from 'lit/directives/class-map.js'
 
 export const Tag = (
-  variant: 'light' | 'standard' | 'dark' | 'red',
-  content: string,
-  iconName: IconName
+  label: string,
+  iconPlacement: 'No icon' | 'Icon left' | 'Icon right' | 'Icon only',
+  iconName: IconName,
+  variant: 'Standard' | 'Light' | 'Dark' | 'Red'
 ) => {
   const classes = {
     tag: true,
-    'is-light': variant === 'light',
-    'is-dark': variant === 'dark',
-    'is-red': variant === 'red',
+    'is-light': variant === 'Light',
+    'is-dark': variant === 'Dark',
+    'is-red': variant === 'Red',
   }
 
   return html`
-    <div class="${classMap(classes)}">${Icon(iconName)} ${content}</div>
+    <div class="${classMap(classes)}">
+      ${iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
+        ? Icon(iconName)
+        : ''}
+      ${iconPlacement === 'Icon only' ? '' : label}
+      ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
+    </div>
     <p class="mt-30 text-xs text-gray-700">
       Notices:<br />
       - A tag <b>is not a button</b> but <b>is a label</b> that only looks like

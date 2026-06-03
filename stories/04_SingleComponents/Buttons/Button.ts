@@ -4,9 +4,8 @@ import { classMap } from 'lit-html/directives/class-map.js'
 
 export const Button = (
   label: string,
-  iconName: string,
   iconPlacement: 'No icon' | 'Icon left' | 'Icon right' | 'Icon only',
-  size: 'Standard' | 'Small' | 'Super',
+  iconName: string,
   decorator:
     | 'No decorator'
     | 'Link'
@@ -16,6 +15,7 @@ export const Button = (
     | 'Add'
     | 'Reload'
     | 'Check',
+  size: 'Standard' | 'Small' | 'Super',
   variant: 'Standard' | 'Strong' | 'Feedback' | 'Success' | 'Failure'
 ) => {
   const classes = {

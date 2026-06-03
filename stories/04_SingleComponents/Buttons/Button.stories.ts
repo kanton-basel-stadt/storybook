@@ -35,20 +35,15 @@ const { StoryDefinition, DefaultStory } = defineStory(
       name: 'Label',
       control: 'text',
     },
-    iconName: {
-      name: 'Icon',
-      control: 'select',
-      options: iconsForButton,
-    },
     iconPlacement: {
       name: 'Icon placement',
       options: ['No icon', 'Icon left', 'Icon right', 'Icon only'],
       control: 'radio',
     },
-    size: {
-      name: 'Size',
-      options: ['Standard', 'Small'],
-      control: 'radio',
+    iconName: {
+      name: 'Icon',
+      control: 'select',
+      options: iconsForButton,
     },
     decorator: {
       name: 'Decorator',
@@ -64,6 +59,11 @@ const { StoryDefinition, DefaultStory } = defineStory(
       ],
       control: 'radio',
     },
+    size: {
+      name: 'Size',
+      options: ['Standard', 'Small'],
+      control: 'radio',
+    },
     variant: {
       name: 'Variant',
       options: ['Standard', 'Strong', 'Feedback', 'Success', 'Failure'],
@@ -72,10 +72,10 @@ const { StoryDefinition, DefaultStory } = defineStory(
   },
   {
     label: 'Click me!',
-    iconName: 'baselstab',
     iconPlacement: 'Icon left',
-    size: 'Standard',
+    iconName: 'baselstab',
     decorator: 'No decorator',
+    size: 'Standard',
     variant: 'Standard',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'

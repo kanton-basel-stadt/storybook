@@ -1,6 +1,6 @@
 import { Tag } from './Tag'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
-import defineStory from '../../../helpers/defineStory'
+import defineStory from '../../helpers/defineStory'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   Tag,
@@ -8,7 +8,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     variant: {
       name: 'Variant',
       control: 'radio',
-      options: ['standard', 'light', 'dark'],
+      options: ['standard', 'light', 'dark', 'red'],
     },
     content: {
       name: 'Sample content',
@@ -29,7 +29,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
 )
 
 export default {
-  title: '4. Single components/Buttons/Tag',
+  title: '4. Single components/Tag',
   ...StoryDefinition,
 }
 

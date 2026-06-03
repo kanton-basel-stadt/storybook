@@ -64,9 +64,9 @@ const { StoryDefinition, DefaultStory } = defineStory(
       ],
       control: 'radio',
     },
-    flavour: {
-      name: 'Flavour',
-      options: ['No flavour', 'Strong', 'Feedback', 'Success', 'Failure'],
+    variant: {
+      name: 'Variant',
+      options: ['Standard', 'Strong', 'Feedback', 'Success', 'Failure'],
       control: 'radio',
     },
   },
@@ -76,7 +76,7 @@ const { StoryDefinition, DefaultStory } = defineStory(
     iconPlacement: 'Icon left',
     size: 'Standard',
     decorator: 'No decorator',
-    flavour: 'No flavour',
+    variant: 'Standard',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'
 )

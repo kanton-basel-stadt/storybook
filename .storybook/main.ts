@@ -1,4 +1,6 @@
+import path from 'node:path'
 import remarkGfm from 'remark-gfm'
+import { mergeConfig } from 'vite'
 
 const config = {
   core: {
@@ -16,31 +18,43 @@ const config = {
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
+  
+  viteFinal: async (config) =>
+    mergeConfig(config, {
+      plugins: [
+        {
+          name: 'fix-storybook-mdx-react-shim-file-url',
+          enforce: 'pre',
+          resolveId(source) {
+            if (
+              source ===
+              'file://./node_modules/@storybook/addon-docs/dist/mdx-react-shim.js'
+            ) {
+              return path.resolve(
+                process.cwd(),
+                'node_modules/@storybook/addon-docs/dist/mdx-react-shim.js'
+              )
+            }
+
+            return null
+          },
+        },
+      ],
+    }),
 
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-viewport',
     {
-      name: '@storybook/addon-docs',
-      options: {
-        csfPluginOptions: null,
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
+    name: '@storybook/addon-docs',
+    options: {
+      csfPluginOptions: null,
+      mdxPluginOptions: {
+        mdxCompileOptions: {
+          remarkPlugins: [remarkGfm],
         },
       },
     },
-    '@storybook/addon-controls',
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-measure',
-    '@storybook/addon-outline',
-    '@whitespace/storybook-addon-html',
-    '@storybook/addon-a11y',
-    '@storybook/addon-designs',
-    './src/iconSymbolAddon/register.tsx',
-  ],
+  }, '@whitespace/storybook-addon-html', '@storybook/addon-a11y', '@storybook/addon-designs'],
 
   framework: {
     name: '@storybook/web-components-vite',

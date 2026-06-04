@@ -1,6 +1,6 @@
-import { useChannel } from '@storybook/preview-api'
-import type { DecoratorFunction } from '@storybook/types'
-import { WebComponentsRenderer } from '@storybook/web-components'
+import { useChannel } from 'storybook/preview-api'
+import type { DecoratorFunction } from '@storybook/internal/types'
+import { WebComponentsRenderer } from '@storybook/web-components-vite'
 
 type NestedValues = {
   values?: NestedValues[] | string[] | undefined

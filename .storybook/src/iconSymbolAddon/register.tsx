@@ -1,5 +1,5 @@
-import { addons, types, useAddonState } from '@storybook/manager-api'
-import { AddonPanel } from '@storybook/components'
+import { addons, types, useAddonState } from 'storybook/manager-api'
+import { AddonPanel } from '@storybook/internal/components'
 import { PANEL_ID, IconSymbolPanel } from './IconSymbolPanel'
 import * as React from 'react'
 

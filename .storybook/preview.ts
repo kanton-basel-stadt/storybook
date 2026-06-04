@@ -1,7 +1,7 @@
 import './storybook.css'
 import CodeBlock from './components/CodeBlock'
 import Table from './components/Table'
-import type { Preview } from '@storybook/web-components'
+import type { Preview } from '@storybook/web-components-vite'
 import { withIconsSymbols } from './src/iconSymbolAddon/withIconsSymbols'
 import toPascalCase from '../helpers/toPascalCase'
 

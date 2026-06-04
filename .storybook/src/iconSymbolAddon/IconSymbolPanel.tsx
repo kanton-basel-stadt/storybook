@@ -1,4 +1,4 @@
-import { type API, useAddonState, useChannel } from '@storybook/manager-api'
+import { type API, useAddonState, useChannel } from 'storybook/manager-api'
 import * as React from 'react'
 import toPascalCase from '../../../helpers/toPascalCase'
 import toKebabCase from '../../../helpers/toKebabCase'

@@ -13,16 +13,16 @@ const { StoryDefinition, DefaultStory } = defineStory(
       options: ['Link', 'Prev', 'Next', 'Close', 'Add', 'Reload', 'Check'],
       control: 'radio',
     },
-    flavour: {
-      name: 'Flavour',
-      options: ['No flavour', 'Strong', 'Feedback', 'Success', 'Failure'],
+    variant: {
+      name: 'Variant',
+      options: ['Standard', 'Strong', 'Feedback', 'Success', 'Failure'],
       control: 'radio',
     },
   },
   {
     label: 'Click me!',
     decorator: 'Link',
-    flavour: 'No flavour',
+    variant: 'Standard',
   },
   'https://www.figma.com/design/qtexxHxrzUzRg6olooUEmM/BS-Design-System--DDS-?node-id=24154-24737'
 )

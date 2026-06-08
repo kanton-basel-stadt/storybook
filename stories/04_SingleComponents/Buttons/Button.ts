@@ -4,9 +4,8 @@ import { classMap } from 'lit-html/directives/class-map.js'
 
 export const Button = (
   label: string,
-  iconName: string,
   iconPlacement: 'No icon' | 'Icon left' | 'Icon right' | 'Icon only',
-  size: 'Standard' | 'Small' | 'Super',
+  iconName: string,
   decorator:
     | 'No decorator'
     | 'Link'
@@ -16,15 +15,16 @@ export const Button = (
     | 'Add'
     | 'Reload'
     | 'Check',
-  flavour: 'No flavour' | 'Strong' | 'Feedback' | 'Success' | 'Failure'
+  size: 'Standard' | 'Small' | 'Super',
+  variant: 'Standard' | 'Strong' | 'Feedback' | 'Success' | 'Failure'
 ) => {
   const classes = {
     button: true,
     'is-sm': size.includes('Small'),
     'is-super': size.includes('Super'),
     'is-icon-only': iconPlacement.includes('Icon only'),
-    'is-strong': flavour.includes('Strong'),
-    'is-feedback': flavour.includes('Feedback'),
+    'is-strong': variant.includes('Strong'),
+    'is-feedback': variant.includes('Feedback'),
     'is-prev': decorator.includes('Prev'),
     'is-next': decorator.includes('Next'),
     'is-close': decorator.includes('Close'),
@@ -32,8 +32,8 @@ export const Button = (
     'is-reload': decorator.includes('Reload'),
     'is-check': decorator.includes('Check'),
     'is-link': decorator.includes('Link'),
-    'is-success': flavour.includes('Success'),
-    'is-failure': flavour.includes('Failure'),
+    'is-success': variant.includes('Success'),
+    'is-failure': variant.includes('Failure'),
   }
 
   return html`
@@ -49,7 +49,7 @@ export const Button = (
       - The control "Icon" below only proposes icons that make sense for a
       button. We have more icons in the chapter "Icons" of the left menu.<br />
       - Some option combinations do not make much sense, such as using a "Close"
-      decorator with a "Success" flavour.<br />
+      decorator with a "Success" variant.<br />
     </p>
   `
 }

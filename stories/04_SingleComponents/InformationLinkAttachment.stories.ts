@@ -1,6 +1,7 @@
 import { InformationLinkAttachment } from './InformationLinkAttachment'
 import { loremIpsum } from 'lorem-ipsum'
 import defineStory from '../../helpers/defineStory'
+import { html } from 'lit'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   InformationLinkAttachment,
@@ -55,4 +56,18 @@ export default {
 export const Default = {
   ...DefaultStory,
   name: 'Info box',
+  render: (args) => html`
+    ${InformationLinkAttachment(
+      args.title,
+      args.content,
+      args.links,
+      args.isInverted,
+      args.hideDescription
+    )}
+    <p class="mt-30 text-xs text-gray-700">
+      Notices:<br />
+      - This component is designed to include information, links to other URLs
+      or download links.
+    </p>
+  `,
 }

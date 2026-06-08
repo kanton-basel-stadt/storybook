@@ -23,12 +23,5 @@ export const Tag = (
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </div>
-    <p class="mt-30 text-xs text-gray-700">
-      Notices:<br />
-      - A tag <b>is not a button</b> but <b>is a label</b> that only looks like
-      a button.<br />
-      - The use case is to display an information without any action like a
-      click or any effect like a hover.<br />
-    </p>
   `
 }

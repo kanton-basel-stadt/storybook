@@ -73,10 +73,5 @@ export const InformationLinkAttachment = (
         })}
       </ul>
     </div>
-    <p class="mt-30 text-xs text-gray-700">
-      Notices:<br />
-      - This component is designed to include information, links to other URLs
-      or download links.
-    </p>
   `
 }

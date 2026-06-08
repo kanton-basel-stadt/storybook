@@ -18,7 +18,7 @@ const config = {
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
-  
+
   viteFinal: async (config) =>
     mergeConfig(config, {
       plugins: [
@@ -45,16 +45,20 @@ const config = {
   addons: [
     '@storybook/addon-links',
     {
-    name: '@storybook/addon-docs',
-    options: {
-      csfPluginOptions: null,
-      mdxPluginOptions: {
-        mdxCompileOptions: {
-          remarkPlugins: [remarkGfm],
+      name: '@storybook/addon-docs',
+      options: {
+        csfPluginOptions: null,
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
         },
       },
     },
-  }, '@whitespace/storybook-addon-html', '@storybook/addon-a11y', '@storybook/addon-designs'],
+    '@whitespace/storybook-addon-html',
+    '@storybook/addon-a11y',
+    '@storybook/addon-designs',
+  ],
 
   framework: {
     name: '@storybook/web-components-vite',

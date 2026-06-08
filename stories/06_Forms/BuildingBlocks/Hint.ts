@@ -34,9 +34,5 @@ export const Hint = (hints: string[]) => {
             `
           : ''}
     </div>
-    <p class="mt-30 text-xs text-gray-700">
-      Notices:<br />
-      - This hint bubble is to be included into a bubble containing it.
-    </p>
   `
 }

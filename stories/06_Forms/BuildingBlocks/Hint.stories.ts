@@ -1,5 +1,6 @@
 import { Hint } from './Hint'
 import { loremIpsum } from 'lorem-ipsum'
+import { html } from 'lit'
 
 export default {
   title: '6. Forms/Building blocks/Hint box',
@@ -44,6 +45,13 @@ export default {
 
 export const Default = {
   name: 'Hint box',
+  render: (args) => html`
+    ${Hint(args.hintsMany)}
+    <p class="mt-30 text-xs text-gray-700">
+      Notices:<br />
+      - This hint bubble is to be included into a bubble containing it.
+    </p>
+  `,
 }
 
 type HintStoryArgs = {

@@ -1,6 +1,7 @@
 import { Tag } from './Tag'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import defineStory from '../../helpers/defineStory'
+import { html } from 'lit'
 
 const { StoryDefinition, DefaultStory } = defineStory(
   Tag,
@@ -42,4 +43,14 @@ export default {
 export const Default = {
   ...DefaultStory,
   name: 'Tag',
+  render: (args) => html`
+    ${Tag(args.label, args.iconPlacement, args.iconName, args.variant)}
+    <p class="mt-30 text-xs text-gray-700">
+      Notices:<br />
+      - A tag <b>is not a button</b> but <b>is a label</b> that only looks like
+      a button.<br />
+      - The use case is to display an information without any action like a
+      click or any effect like a hover.<br />
+    </p>
+  `,
 }

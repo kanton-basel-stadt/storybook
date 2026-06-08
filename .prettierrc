@@ -3,6 +3,7 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
+  "endOfLine": "auto",
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindStylesheet": "./node_modules/@kanton-basel-stadt/designsystem/dist/assets/css/tailwind.css",
   "tailwindConfig": "./node_modules/@kanton-basel-stadt/designsystem/dist/configs/tailwind.config.ts"

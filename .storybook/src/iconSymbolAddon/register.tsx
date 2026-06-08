@@ -3,7 +3,7 @@ import { AddonPanel } from 'storybook/internal/components'
 import { PANEL_ID, IconSymbolPanel } from './IconSymbolPanel'
 import * as React from 'react'
 
-addons.register(PANEL_ID, (api) => {
+addons.register(PANEL_ID, () => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
     title: () => {
@@ -16,7 +16,7 @@ addons.register(PANEL_ID, (api) => {
     },
     render: ({ active }) => (
       <AddonPanel active={active}>
-        <IconSymbolPanel api={api} />
+        <IconSymbolPanel />
       </AddonPanel>
     ),
   })

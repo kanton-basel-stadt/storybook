@@ -8,6 +8,12 @@ import toPascalCase from '../helpers/toPascalCase'
 const preview: Preview = {
   decorators: [withIconsSymbols],
   parameters: {
+    actions: {
+      disable: true,
+    },
+    interactions: {
+      disable: true,
+    },
     docs: {
       components: {
         code: CodeBlock,

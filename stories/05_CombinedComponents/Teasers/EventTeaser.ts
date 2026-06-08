@@ -67,13 +67,20 @@ export const EventTeaser = (
         ${isRecurring
           ? html`
               <div class="mb-10">
-                ${Tag('Fortlaufender Termin', 'Icon left', 'calendar', 'Standard')}
+                ${Tag(
+                  'Fortlaufender Termin',
+                  'Icon left',
+                  'calendar',
+                  'Standard'
+                )}
               </div>
             `
           : ''}
         ${hasSignUp
           ? html`
-              <div class="mb-10">${Tag('Mit Anmeldung', 'Icon left', 'pen', 'Light')}</div>
+              <div class="mb-10">
+                ${Tag('Mit Anmeldung', 'Icon left', 'pen', 'Light')}
+              </div>
             `
           : ''}
         <div class="button is-link row-start-9">

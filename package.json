@@ -47,6 +47,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "storybook": "^10.4.2",
     "tailwind-config-viewer": "^2.0.4",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.18.1",
     "vite": "^7.2.6"
   },

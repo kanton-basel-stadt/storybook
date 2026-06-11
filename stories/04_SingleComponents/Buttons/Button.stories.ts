@@ -1,6 +1,7 @@
 import { Button } from './Button'
 import IconsIndex from '@kanton-basel-stadt/designsystem/dist/configs/icons-index'
 import defineStory from '../../../helpers/defineStory'
+import { html } from 'lit'
 
 const excludedIconNames = [
   'alva-still',
@@ -89,4 +90,21 @@ export default {
 export const Default = {
   ...DefaultStory,
   name: 'Standard',
+  render: (args) => html`
+    ${Button(
+      args.label,
+      args.iconPlacement,
+      args.iconName,
+      args.decorator,
+      args.size,
+      args.variant
+    )}
+    <p class="mt-30 text-xs text-gray-700">
+      Notices:<br />
+      - The control "Icon" below only proposes icons that make sense for a
+      button. We have more icons in the chapter "Icons" of the left menu.<br />
+      - Some option combinations do not make much sense, such as using a "Close"
+      decorator with a "Success" variant.<br />
+    </p>
+  `,
 }

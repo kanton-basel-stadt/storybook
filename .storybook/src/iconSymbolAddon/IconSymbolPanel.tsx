@@ -1,11 +1,11 @@
-import { type API, useAddonState, useChannel } from '@storybook/manager-api'
+import { useAddonState, useChannel } from 'storybook/manager-api'
 import * as React from 'react'
 import toPascalCase from '../../../helpers/toPascalCase'
 import toKebabCase from '../../../helpers/toKebabCase'
 
 export const PANEL_ID = 'icon-symbol-panel'
 
-export const IconSymbolPanel: React.FC<{ api: API }> = () => {
+export const IconSymbolPanel: React.FC = () => {
   const [{ icons, isNamedImports }, setIconsState] = useAddonState(PANEL_ID, {
     icons: [],
     isNamedImports: false,

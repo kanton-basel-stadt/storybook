@@ -4,3 +4,4 @@ static/tailwind_config_viewer
 storybook-static
 built-css/
 node_modules
+.idea

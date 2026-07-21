@@ -52,7 +52,7 @@
     "vite": "^7.2.6"
   },
   "dependencies": {
-    "@kanton-basel-stadt/designsystem": "^1.2.1",
+    "@kanton-basel-stadt/designsystem": "^1.2.2",
     "@storybook/addon-docs": "^10.4.2",
     "lorem-ipsum": "^2.0.8",
     "marked": "^15.0.3",

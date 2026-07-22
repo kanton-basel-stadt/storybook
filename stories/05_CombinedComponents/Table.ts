@@ -21,14 +21,14 @@ export const Table = () => {
           <td data-head-label="Third column">Cell 1/3</td>
         </tr>
         <tr>
-          <td data-head-label="">Cell 2/1</td>
-          <td data-head-label="First column">Cell 2/2</td>
-          <td data-head-label="Second column">Cell 2/3</td>
+          <td data-head-label="First column">Cell 2/1</td>
+          <td data-head-label="Second column">Cell 2/2</td>
+          <td data-head-label="Third column">Cell 2/3</td>
         </tr>
         <tr>
-          <td data-head-label="">Cell 3/1</td>
-          <td data-head-label="First column">Cell 3/2</td>
-          <td data-head-label="Second column">Cell 3/3</td>
+          <td data-head-label="First column">Cell 3/1</td>
+          <td data-head-label="Second column">Cell 3/2</td>
+          <td data-head-label="Third column">Cell 3/3</td>
         </tr>
         <tr>
           <td rowspan="3" data-head-label="">Row group 2</td>
@@ -37,14 +37,14 @@ export const Table = () => {
           <td data-head-label="Third column">Cell 4/3</td>
         </tr>
         <tr>
-          <td data-head-label="">Cell 5/1</td>
-          <td data-head-label="First column">Cell 5/2</td>
-          <td data-head-label="Second column">Cell 5/3</td>
+          <td data-head-label="First column">Cell 5/1</td>
+          <td data-head-label="Second column">Cell 5/2</td>
+          <td data-head-label="Third column">Cell 5/3</td>
         </tr>
         <tr>
-          <td data-head-label="">Cell 6/1</td>
-          <td data-head-label="First column">Cell 6/2</td>
-          <td data-head-label="Second column">Cell 6/3</td>
+          <td data-head-label="First column">Cell 5/1</td>
+          <td data-head-label="Second column">Cell 5/2</td>
+          <td data-head-label="Third column">Cell 5/3</td>
         </tr>
       </tbody>
     </table>

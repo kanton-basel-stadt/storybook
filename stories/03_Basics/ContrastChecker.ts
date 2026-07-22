@@ -157,9 +157,9 @@ export const ContrastChecker = (
               return html`
                 <td
                   class="size-[50px] border border-gray-600 text-center"
-                  style="background-color: ${contrast > 4.5
+                  style="background-color: ${contrast >= 4.5
                     ? '#B8D6BE'
-                    : '#FF6854'};"
+                    : '#EB887B'};"
                 >
                   ${Math.round(contrast * 100) / 100}
                 </td>

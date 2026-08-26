@@ -6,7 +6,7 @@ export const CookieBanner = () => {
       class="fixed bottom-0 z-[99999] w-full bg-green-100 px-20 py-40 shadow-[4px_0_20px_0_rgba(0,0,0,0.15)] md:px-50"
     >
       <div
-        class="flex flex-col gap-25 md:flex-row md:items-center md:gap-20 lg:container"
+        class="flex flex-col gap-25 lg:container md:flex-row md:items-center md:gap-20"
       >
         <div class="flex-1">
           <p class="mb-10 text-lg">

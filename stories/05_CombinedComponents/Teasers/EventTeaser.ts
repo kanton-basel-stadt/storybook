@@ -53,7 +53,7 @@ export const EventTeaser = (
           >${time}</time
         >
         <address
-          class="row-start-5 mb-40 block font-bold text-green-700 not-italic"
+          class="row-start-5 mb-40 block font-bold not-italic text-green-700"
         >
           ${venue}
         </address>

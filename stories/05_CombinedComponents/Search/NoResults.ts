@@ -20,7 +20,7 @@ export const NoResults = (
       </div>
       <div
         aria-live="polite"
-        class="mt-30 mb-40 flex min-h-30 flex-wrap items-center justify-between gap-10 text-lg"
+        class="mb-40 mt-30 flex min-h-30 flex-wrap items-center justify-between gap-10 text-lg"
       >
         <h3 class="flex min-h-[32px] items-center gap-5 font-bold">
           ${Icon('circle-warning', {

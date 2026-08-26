@@ -9,7 +9,7 @@ export const SearchHeader = () => {
           Suche
         </h2>
       </div>
-      <div class="border-t-2 border-gray-300 bg-green-100 pt-30 pb-20">
+      <div class="border-t-2 border-gray-300 bg-green-100 pb-20 pt-30">
         <form class="container">
           <div class="relative h-50">
             <div

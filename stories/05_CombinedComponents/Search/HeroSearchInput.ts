@@ -4,7 +4,7 @@ import { html } from 'lit'
 export const HeroSearchInput = () => {
   return html`
     <div
-      class="relative flex-1 bg-gradient-to-t from-body/45 from-30% to-body/0 pt-30 pb-15 md:pt-50 md:pb-20 lg:pt-90 xl:pt-100 xxl:pb-25"
+      class="relative flex-1 bg-gradient-to-t from-body/45 from-30% to-body/0 pb-15 pt-30 md:pb-20 md:pt-50 lg:pt-90 xl:pt-100 xxl:pb-25"
     >
       <div class="container lg:max-w-[750px]">
         <h2
@@ -28,7 +28,7 @@ export const HeroSearchInput = () => {
                   type="search"
                   autocomplete="off"
                   name="searchterm"
-                  class="search-input relative h-[48px] w-full bg-white pr-30 pl-20 text-gray-900 placeholder:text-gray-700 focus:outline-none"
+                  class="search-input relative h-[48px] w-full bg-white pl-20 pr-30 text-gray-900 placeholder:text-gray-700 focus:outline-none"
                   spellcheck="false"
                   aria-autocomplete="list"
                   aria-label="Suchbegriff eingeben"

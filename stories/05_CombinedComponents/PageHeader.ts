@@ -15,10 +15,10 @@ export const PageHeader = () => {
           class="page-header container is-wide relative grid items-center"
         >
           <h1 class="sr-only">Hauptnavigation</h1>
-          <div class="relative z-30 flex items-center grid-area-l">
+          <div class="grid-area-l relative z-30 flex items-center">
             <a class="inline-block hover:opacity-80" href="/static">
               <div
-                class="relative flex text-base leading-none whitespace-nowrap lg:text-lg xl:text-2xl"
+                class="relative flex whitespace-nowrap text-base leading-none lg:text-lg xl:text-2xl"
               >
                 ${Icon('baselstab', {
                   '[&_svg]:translate-y-1': true,
@@ -28,16 +28,16 @@ export const PageHeader = () => {
                   '[&_svg]:h-[1.7em]': true,
                 })}
                 <span
-                  class="ml-[0.3em] h-[1.2083em] border-l border-gray-900 pl-[0.25em] leading-[1.2em] font-bold"
+                  class="ml-[0.3em] h-[1.2083em] border-l border-gray-900 pl-[0.25em] font-bold leading-[1.2em]"
                   ><span class="sr-only">Herausgeber: </span> Kanton Basel-Stadt
                 </span>
               </div>
               <span class="sr-only"> (Dieser Link führt zur Startseite) </span>
             </a>
           </div>
-          <div class="flex justify-end gap-10 grid-area-m">
+          <div class="grid-area-m flex justify-end gap-10">
             <div
-              class="absolute inset-x-0 top-0 z-20 flex w-auto flex-row items-center justify-end gap-10 bg-white px-15 pt-60 pb-[14px] md:static md:!flex md:size-auto md:overflow-visible md:p-0"
+              class="absolute inset-x-0 top-0 z-20 flex w-auto flex-row items-center justify-end gap-10 bg-white px-15 pb-[14px] pt-60 md:static md:!flex md:size-auto md:overflow-visible md:p-0"
               style="display: none;"
             >
               <div class="md:relative">
@@ -83,7 +83,7 @@ export const PageHeader = () => {
               ${Icon('dots', { '[&_svg]:translate-y-1': true })}
             </button>
           </div>
-          <div class="relative z-10 flex justify-center grid-area-n">
+          <div class="grid-area-n relative z-10 flex justify-center">
             <div
               class="text-toggle-switch text-lg transition duration-300 ease-swing will-change-transform md:transition-none lg:text-sm xl:text-xl"
             >

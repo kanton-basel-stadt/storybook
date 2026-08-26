@@ -76,7 +76,7 @@ export const DropdownSelect = (
           <div
             class="${
               isOpen ? '' : 'hidden'
-            } pointer-events-auto !static absolute top-[100%] bottom-[auto] z-[999] max-h-[400px] min-w-[100%] overflow-auto"
+            } pointer-events-auto !static absolute bottom-[auto] top-[100%] z-[999] max-h-[400px] min-w-[100%] overflow-auto"
             id="${id}_popover"
           >
             <ul id="${id}_listbox" role="listbox">

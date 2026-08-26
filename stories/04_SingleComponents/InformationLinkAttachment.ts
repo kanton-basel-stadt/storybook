@@ -43,7 +43,7 @@ export const InformationLinkAttachment = (
       <div
         class="ck-content is-small info-box-floater ${
           isInverted ? 'text-white' : ''
-        } mt-20 text-base hyphens-auto"
+        } mt-20 hyphens-auto text-base"
       >
         <p>${content}</p>
       </div>
@@ -57,13 +57,13 @@ export const InformationLinkAttachment = (
                 } clear-both mt-20 w-full text-balance"
                 href="${link.url}"
               >
-                <span class="col-start-2 row-start-1 font-bold hyphens-auto">
+                <span class="col-start-2 row-start-1 hyphens-auto font-bold">
                   ${link.label}
                 </span>
                 <p
                   class="${
                     hideDescription ? 'hidden' : ''
-                  } col-start-2 row-start-2 mt-5 text-base font-normal hyphens-auto"
+                  } col-start-2 row-start-2 mt-5 hyphens-auto text-base font-normal"
                 >
                   ${link.description}
                 </p>

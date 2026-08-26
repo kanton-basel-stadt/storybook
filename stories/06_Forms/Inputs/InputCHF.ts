@@ -13,7 +13,7 @@ export const InputCHF = (
     ${labelTpl}
     <div class="${affixOuterClass} gap-[4px]">
       <span
-        class="shrink-0 text-base leading-snug font-medium text-gray-700 tabular-nums"
+        class="shrink-0 text-base font-medium tabular-nums leading-snug text-gray-700"
         aria-hidden="true"
         >CHF</span
       >

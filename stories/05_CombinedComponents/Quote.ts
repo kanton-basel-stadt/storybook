@@ -14,7 +14,7 @@ export const Quote = (
   const hasQuoteSource = Boolean(quoteSourceTitle?.trim())
 
   return html`
-    <div class="container paragraph--margin mt-30 mb-20">
+    <div class="container paragraph--margin mb-20 mt-30">
       <div class="rounded bg-primary-50">
         ${
           hasTitle
@@ -29,7 +29,7 @@ export const Quote = (
           <div class="mb-20 flex flex-col items-center md:flex-row md:gap-20">
             <blockquote>
               <p
-                class="mb-20 text-xl font-medium text-pretty italic before:text-primary-700 before:content-['«'] after:text-primary-700 after:content-['»'] md:mb-0 md:text-2xl mobile-only:hyphens-auto"
+                class="before:content-['«'] after:content-['»'] mb-20 text-pretty text-xl font-medium italic before:text-primary-700 after:text-primary-700 mobile-only:hyphens-auto md:mb-0 md:text-2xl"
               >
                 ${quote}
               </p>
@@ -37,7 +37,7 @@ export const Quote = (
             ${
               hasImage
                 ? html`<div
-                    class="mt-10 ml-auto size-140 shrink-0 overflow-hidden rounded-full md:mt-0"
+                    class="ml-auto mt-10 size-140 shrink-0 overflow-hidden rounded-full md:mt-0"
                   >
                     <img
                       src="${imageUrl}"

@@ -15,9 +15,9 @@ export const ContentHeader = (
 ) => {
   return html`
     <div class="container my-20 md:my-30 lg:my-40 xl:my-50">
-      <h1 class="h1 text-balance hyphens-auto text-green-600">${title}</h1>
+      <h1 class="h1 hyphens-auto text-balance text-green-600">${title}</h1>
       ${easyToReadUrl.length > 0 ? EasyToReadButton(easyToReadUrl) : ''}
-      <p class="lead mt-30 text-pretty hyphens-auto lg:hyphens-none">${lead}</p>
+      <p class="lead mt-30 hyphens-auto text-pretty lg:hyphens-none">${lead}</p>
       ${
         hasImage
           ? html`

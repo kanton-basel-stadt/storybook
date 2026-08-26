@@ -9,11 +9,11 @@ export const LinkList = (
         (link) => html`
           <li>
             <a class="link with-icon lg:text-lg" href="${link.url}">
-              <span class="col-start-2 row-start-1 font-bold hyphens-auto">
+              <span class="col-start-2 row-start-1 hyphens-auto font-bold">
                 ${link.label}
               </span>
               <p
-                class="col-start-2 row-start-2 mt-5 text-base font-normal hyphens-auto"
+                class="col-start-2 row-start-2 mt-5 hyphens-auto text-base font-normal"
               >
                 ${link.description}
               </p>

@@ -25,4 +25,10 @@ export const Default = {
     backgroundColor: 'gray',
   },
   name: 'Color contrast checker',
+  parameters: {
+    // This story exists to explore contrast failures; skip automated a11y checks.
+    a11y: {
+      test: 'off',
+    },
+  },
 }

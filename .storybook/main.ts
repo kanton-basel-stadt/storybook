@@ -58,6 +58,7 @@ const config = {
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
     '@storybook/addon-designs',
+    '@storybook/addon-vitest',
   ],
 
   framework: {

@@ -7,25 +7,38 @@ import toPascalCase from '../helpers/toPascalCase'
 
 const preview: Preview = {
   decorators: [withIconsSymbols],
+  async afterEach({ canvasElement, id }) {
+    // html-validate is Node-only; Vitest browser commands bridge to the Node process.
+    if (import.meta.env.VITEST_STORYBOOK !== 'true') {
+      return
+    }
+
+    const { commands } = await import('vitest/browser')
+    await commands.validateHtml(canvasElement.innerHTML, id)
+  },
   parameters: {
     actions: {
       disable: true,
     },
+
     interactions: {
       disable: true,
     },
+
     docs: {
       components: {
         code: CodeBlock,
         table: Table,
       },
     },
+
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
     },
+
     html: {
       removeEmptyComments: true,
       removeComments: true,
@@ -52,6 +65,7 @@ const preview: Preview = {
           .innerHTML.replace(/&amp;/g, '&')
       },
     },
+
     options: {
       storySort: {
         order: [
@@ -65,6 +79,11 @@ const preview: Preview = {
           '8. Emails',
         ],
       },
+    },
+
+    a11y: {
+      // Fail Vitest/CI on accessibility violations (matches previous test-runner behavior).
+      test: 'error',
     },
   },
 }

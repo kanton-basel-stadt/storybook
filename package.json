@@ -56,7 +56,7 @@
     "vitest": "^4.1.11"
   },
   "dependencies": {
-    "@kanton-basel-stadt/designsystem": "^2.0.0-beta.3",
+    "@kanton-basel-stadt/designsystem": "^2.0.0-beta.4",
     "@storybook/addon-docs": "^10.5.10",
     "lorem-ipsum": "^2.0.10",
     "marked": "^15.0.12",

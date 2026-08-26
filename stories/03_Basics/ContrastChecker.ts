@@ -100,10 +100,12 @@ export const ContrastChecker = (
         ${Object.keys(selectedForegroundShades).map(
           (key) =>
             html`<td class="rotated-text h-[120px] border border-gray-600">
-              ${selectedForgroundColor !== 'all' &&
-              selectedForgroundColor !== 'white'
-                ? selectedForgroundColor + '-'
-                : null}${key}
+              ${
+                selectedForgroundColor !== 'all' &&
+                selectedForgroundColor !== 'white'
+                  ? selectedForgroundColor + '-'
+                  : null
+              }${key}
             </td>`
         )}
       </tr>
@@ -136,10 +138,12 @@ export const ContrastChecker = (
           <tr>
             ${backgroundLabel}
             <td class="size-50 w-[120px] border border-gray-600">
-              ${selectedBackgroundColor !== 'all' &&
-              selectedBackgroundColor !== 'white'
-                ? selectedBackgroundColor + '-'
-                : null}${shade}
+              ${
+                selectedBackgroundColor !== 'all' &&
+                selectedBackgroundColor !== 'white'
+                  ? selectedBackgroundColor + '-'
+                  : null
+              }${shade}
             </td>
             <td
               class="size-[50px] border border-gray-600"
@@ -157,9 +161,9 @@ export const ContrastChecker = (
               return html`
                 <td
                   class="size-[50px] border border-gray-600 text-center"
-                  style="background-color: ${contrast >= 4.5
-                    ? '#B8D6BE'
-                    : '#EB887B'};"
+                  style="background-color: ${
+                    contrast >= 4.5 ? '#B8D6BE' : '#EB887B'
+                  };"
                 >
                   ${Math.round(contrast * 100) / 100}
                 </td>

@@ -112,7 +112,7 @@ export const FocusTeaser = (
                     <li>
                       <a class="${classMap(linkClasses)}" href="${link.url}">
                         <span
-                          class="col-start-2 row-start-1 hyphens-auto font-bold"
+                          class="col-start-2 row-start-1 font-bold hyphens-auto"
                         >
                           ${link.label}
                         </span>

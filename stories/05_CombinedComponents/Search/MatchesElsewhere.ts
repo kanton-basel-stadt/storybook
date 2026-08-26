@@ -22,14 +22,16 @@ export const MatchesElsewhere = (
             ${otherSearchLocations.map((l) => {
               return html`
                 <li class="mt-10">
-                  ${l.count === 0
-                    ? html`<span
-                        class="link with-icon pointer-events-none opacity-75"
-                        >${l.name} (${l.count})</span
-                      >`
-                    : html`<a class="link with-icon" href="${l.url}"
-                        >${l.name} (${l.count})</a
-                      >`}
+                  ${
+                    l.count === 0
+                      ? html`<span
+                          class="link with-icon pointer-events-none opacity-75"
+                          >${l.name} (${l.count})</span
+                        >`
+                      : html`<a class="link with-icon" href="${l.url}"
+                          >${l.name} (${l.count})</a
+                        >`
+                  }
                 </li>
               `
             })}

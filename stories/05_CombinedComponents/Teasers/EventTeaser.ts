@@ -53,36 +53,42 @@ export const EventTeaser = (
           >${time}</time
         >
         <address
-          class="row-start-5 mb-40 block font-bold not-italic text-green-700"
+          class="row-start-5 mb-40 block font-bold text-green-700 not-italic"
         >
           ${venue}
         </address>
-        ${hasMultiple
-          ? html`
-              <div class="mb-10">
-                ${Tag('Mehrere Termine', 'Icon left', 'calendar', 'Dark')}
-              </div>
-            `
-          : ''}
-        ${isRecurring
-          ? html`
-              <div class="mb-10">
-                ${Tag(
-                  'Fortlaufender Termin',
-                  'Icon left',
-                  'calendar',
-                  'Standard'
-                )}
-              </div>
-            `
-          : ''}
-        ${hasSignUp
-          ? html`
-              <div class="mb-10">
-                ${Tag('Mit Anmeldung', 'Icon left', 'pen', 'Light')}
-              </div>
-            `
-          : ''}
+        ${
+          hasMultiple
+            ? html`
+                <div class="mb-10">
+                  ${Tag('Mehrere Termine', 'Icon left', 'calendar', 'Dark')}
+                </div>
+              `
+            : ''
+        }
+        ${
+          isRecurring
+            ? html`
+                <div class="mb-10">
+                  ${Tag(
+                    'Fortlaufender Termin',
+                    'Icon left',
+                    'calendar',
+                    'Standard'
+                  )}
+                </div>
+              `
+            : ''
+        }
+        ${
+          hasSignUp
+            ? html`
+                <div class="mb-10">
+                  ${Tag('Mit Anmeldung', 'Icon left', 'pen', 'Light')}
+                </div>
+              `
+            : ''
+        }
         <div class="button is-link row-start-9">
           Details <span class="sr-only">zu dieser Veranstaltung</span>
         </div>

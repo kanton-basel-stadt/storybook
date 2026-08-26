@@ -20,19 +20,21 @@ export const Hint = (hints: string[]) => {
           <legend class="text-base font-bold">Hinweis:</legend>
         </div>
       </div>
-      ${hints?.length === 1
-        ? html` <p class="${hintClasses}">${unsafeHTML(hints[0])}</p> `
-        : hints?.length > 1
-          ? html`
-              <ul class="ml-10 list-disc pl-6">
-                ${hints.map(
-                  (hint) => html`
-                    <li class="${hintClasses}">${unsafeHTML(hint)}</li>
-                  `
-                )}
-              </ul>
-            `
-          : ''}
+      ${
+        hints?.length === 1
+          ? html` <p class="${hintClasses}">${unsafeHTML(hints[0])}</p> `
+          : hints?.length > 1
+            ? html`
+                <ul class="ml-10 list-disc pl-6">
+                  ${hints.map(
+                    (hint) => html`
+                      <li class="${hintClasses}">${unsafeHTML(hint)}</li>
+                    `
+                  )}
+                </ul>
+              `
+            : ''
+      }
     </div>
   `
 }

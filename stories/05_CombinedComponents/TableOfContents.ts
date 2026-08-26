@@ -11,7 +11,7 @@ export const TableOfContents = (
     >
       <a
         href="#table-of-contents"
-        class="pre-heading container flex justify-between py-20 text-green-700 mobile-only:text-lg lg:py-25"
+        class="pre-heading container flex justify-between py-20 text-green-700 lg:py-25 mobile-only:text-lg"
       >
         <span>Auf dieser Seite</span>
       </a>
@@ -30,7 +30,7 @@ export const TableOfContents = (
               <li>
                 <a
                   href="${c.target}"
-                  class="link with-icon text-balance text-lg xl:text-xl"
+                  class="link with-icon text-lg text-balance xl:text-xl"
                 >
                   <span>${c.label}</span>
                 </a>

@@ -35,7 +35,7 @@ export const Accordion = (
     <div class="mt-30 bg-green-100 py-25 lg:py-30 xl:py-40">
       <div class="container">
         <header class="mb-10 lg:mb-20 xl:mb-30">
-          <h2 class="h2 hyphens-auto break-words text-green-600">${title}</h2>
+          <h2 class="h2 break-words hyphens-auto text-green-600">${title}</h2>
         </header>
         <div>
           <div class="${classMap(containerClasses)}">
@@ -78,12 +78,12 @@ export const Accordion = (
                           (link) => html`
                             <a class="link with-icon" href="${link.url}">
                               <span
-                                class="col-start-2 row-start-1 hyphens-auto font-bold"
+                                class="col-start-2 row-start-1 font-bold hyphens-auto"
                               >
                                 ${link.label}
                               </span>
                               <p
-                                class="col-start-2 row-start-2 mt-5 hyphens-auto text-base font-normal"
+                                class="col-start-2 row-start-2 mt-5 text-base font-normal hyphens-auto"
                               >
                                 ${link.description}
                               </p>

@@ -23,9 +23,9 @@ export const FrequentlyAsked = (
     >
       <div class="container">
         <header class="mb-10 lg:mb-20 xl:mb-30">
-          <h2 class="h2 hyphens-auto break-words text-white">${title}</h2>
+          <h2 class="h2 break-words hyphens-auto text-white">${title}</h2>
           <p
-            class="mt-20 hyphens-auto break-words text-white lg:text-lg xl:w-4/6"
+            class="mt-20 break-words hyphens-auto text-white lg:text-lg xl:w-4/6"
           >
             ${description}
           </p>
@@ -37,11 +37,11 @@ export const FrequentlyAsked = (
                 <ul class="rounded bg-white md:rounded-large">
                   <li>
                     <a
-                      class="link with-icon h-full auto-rows-min justify-start hyphens-auto p-15 pl-10 lg:pl-[12px] lg:text-lg"
+                      class="link with-icon h-full auto-rows-min justify-start p-15 pl-10 hyphens-auto lg:pl-[12px] lg:text-lg"
                       href="${link.url}"
                     >
                       <span
-                        class="col-start-2 row-start-1 hyphens-auto font-bold"
+                        class="col-start-2 row-start-1 font-bold hyphens-auto"
                       >
                         ${link.label}
                       </span>

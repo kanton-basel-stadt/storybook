@@ -26,18 +26,22 @@ export const Radio = (
         ?checked=${validated}
       />
       ${label}
-      ${validated
-        ? Icon('circle-check', {
-            '[&_svg]:size-20': true,
-            '[&_svg]:text-green-700': true,
-          })
-        : nothing}
-      ${error
-        ? Icon('circle-error', {
-            '[&_svg]:size-20': true,
-            '[&_svg]:text-red-800': true,
-          })
-        : nothing}
+      ${
+        validated
+          ? Icon('circle-check', {
+              '[&_svg]:size-20': true,
+              '[&_svg]:text-green-700': true,
+            })
+          : nothing
+      }
+      ${
+        error
+          ? Icon('circle-error', {
+              '[&_svg]:size-20': true,
+              '[&_svg]:text-red-800': true,
+            })
+          : nothing
+      }
     </label>
   `
 }

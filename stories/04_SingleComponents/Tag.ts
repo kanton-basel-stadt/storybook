@@ -17,9 +17,11 @@ export const Tag = (
 
   return html`
     <div class="${classMap(classes)}">
-      ${iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
-        ? Icon(iconName)
-        : ''}
+      ${
+        iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
+          ? Icon(iconName)
+          : ''
+      }
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </div>

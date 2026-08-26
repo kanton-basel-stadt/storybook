@@ -38,9 +38,11 @@ export const Button = (
 
   return html`
     <button class="${classMap(classes)}">
-      ${iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
-        ? Icon(iconName)
-        : ''}
+      ${
+        iconPlacement === 'Icon left' || iconPlacement === 'Icon only'
+          ? Icon(iconName)
+          : ''
+      }
       ${iconPlacement === 'Icon only' ? '' : label}
       ${iconPlacement === 'Icon right' ? Icon(iconName) : ''}
     </button>

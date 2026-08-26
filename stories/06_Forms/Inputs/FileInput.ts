@@ -117,13 +117,13 @@ function fileRowMain(
     <div class="flex flex-col gap-8 text-left md:hidden">
       <div class="flex items-center gap-[4px]">
         <p
-          class="min-w-0 flex-1 text-left text-base font-medium leading-snug text-gray-900"
+          class="min-w-0 flex-1 text-left text-base leading-snug font-medium text-gray-900"
         >
           ${row.displayName}
         </p>
         ${removeButton()}
       </div>
-      <p class="text-left text-base font-medium leading-snug text-gray-900">
+      <p class="text-left text-base leading-snug font-medium text-gray-900">
         ${row.sizeLabel}
       </p>
       <div class="flex w-full items-center justify-start gap-[4px]">
@@ -133,20 +133,20 @@ function fileRowMain(
     </div>
     <div class="hidden w-full min-w-0 items-center gap-[4px] text-left md:flex">
       <p
-        class="min-w-0 flex-1 text-left text-base font-medium leading-snug text-gray-900"
+        class="min-w-0 flex-1 text-left text-base leading-snug font-medium text-gray-900"
       >
         ${row.displayName}
       </p>
       <div
-        class="${activeHeader
-          ? 'ml-20'
-          : ''} flex w-[200px] shrink-0 items-center justify-end gap-[4px]"
+        class="${
+          activeHeader ? 'ml-20' : ''
+        } flex w-[200px] shrink-0 items-center justify-end gap-[4px]"
       >
         <span class=${categoryLabelClass}>Dateikategorie</span>
         ${caretIcon(activeHeader ? 'up' : 'down')}
       </div>
       <p
-        class="w-[80px] shrink-0 text-right text-base font-medium leading-snug text-gray-900"
+        class="w-[80px] shrink-0 text-right text-base leading-snug font-medium text-gray-900"
       >
         ${row.sizeLabel}
       </p>
@@ -180,10 +180,10 @@ function fileRow(row: FileUploadRow, rootId: string): TemplateResult {
         >
           ${fileRowMain(row, 'activeHeader')}
         </div>
-        <div class="flex w-full flex-col gap-8 px-2 pb-8 pt-20 text-left">
+        <div class="flex w-full flex-col gap-8 px-2 pt-20 pb-8 text-left">
           <p class="text-base font-medium text-gray-700">Dateikategorie</p>
           <div
-            class="flex h-40 w-full items-center gap-[4px] rounded border border-blue-900 bg-white pl-8 pr-10 text-left"
+            class="flex h-40 w-full items-center gap-[4px] rounded border border-blue-900 bg-white pr-10 pl-8 text-left"
           >
             <span
               class="min-w-0 flex-1 text-left text-base font-medium text-gray-700"
@@ -205,7 +205,7 @@ function fileRow(row: FileUploadRow, rootId: string): TemplateResult {
         aria-busy="true"
       >
         <div
-          class="pointer-events-none absolute bottom-0 left-0 top-0 z-0 bg-blue-300 mix-blend-darken"
+          class="pointer-events-none absolute top-0 bottom-0 left-0 z-0 bg-blue-300 mix-blend-darken"
           style=${`width: ${pct}%;`}
         ></div>
         <div class="relative z-[1] w-full text-left">
@@ -220,7 +220,7 @@ function fileRow(row: FileUploadRow, rootId: string): TemplateResult {
       <div class="flex h-[18px] items-start gap-10 px-[2px]">
         <p
           id=${errorId}
-          class="min-w-0 flex-1 text-right text-xs font-medium leading-[18px] text-red-800"
+          class="min-w-0 flex-1 text-right text-xs leading-[18px] font-medium text-red-800"
         >
           ${row.errorMessage ?? 'Ungültiges Dateiformat'}
         </p>
@@ -287,9 +287,11 @@ export const FileInput = (
         }
       })}
     >
-      ${label
-        ? html`<div class="label" id="${labelId}">${label}</div>`
-        : nothing}
+      ${
+        label
+          ? html`<div class="label" id="${labelId}">${label}</div>`
+          : nothing
+      }
       <div class="relative">
         <input
           type="file"
@@ -312,20 +314,20 @@ export const FileInput = (
               'text-green-700': true,
             })}
             <div
-              class="max-w-[344px] text-base font-bold leading-snug text-green-700"
+              class="max-w-[344px] text-base leading-snug font-bold text-green-700"
             >
               <p>${dragLine1}</p>
               <p>${dragLine2}</p>
             </div>
             <div
-              class="max-w-[344px] text-base font-medium leading-snug text-gray-700"
+              class="max-w-[344px] text-base leading-snug font-medium text-gray-700"
             >
               <p>${allowedFormatsLine}</p>
               <p>${maxSizeLine}</p>
             </div>
             <label
               for="${id}"
-              class="max-w-full inline-flex w-fit cursor-pointer items-center gap-8 rounded-[30px] border border-solid border-blue-900 bg-[#f8f8f8] py-10 pl-10 pr-20 text-base font-medium leading-snug text-blue-900"
+              class="inline-flex w-fit max-w-full cursor-pointer items-center gap-8 rounded-[30px] border border-solid border-blue-900 bg-[#f8f8f8] py-10 pr-20 pl-10 text-base leading-snug font-medium text-blue-900"
             >
               ${Icon('upload', {
                 '[&_svg]:size-20': true,
@@ -338,11 +340,13 @@ export const FileInput = (
           ${files.map((row) => fileRow(row, id))}
         </div>
       </div>
-      ${description
-        ? html`<p class="mt-10 px-2 text-sm text-gray-700" id="${descId}">
-            ${description}
-          </p>`
-        : nothing}
+      ${
+        description
+          ? html`<p class="mt-10 px-2 text-sm text-gray-700" id="${descId}">
+              ${description}
+            </p>`
+          : nothing
+      }
       <p class="sr-only" id="${statusId}" aria-live="polite"></p>
     </div>
   `

@@ -38,11 +38,11 @@ export const Textarea = (
           name="${name}"
           id="${id}"
           rows="4"
-          class="input pb-24 pr-24 box-border block min-h-[120px] w-full resize-y pl-8 pt-10"
+          class="input pb-24 pr-24 box-border block min-h-[120px] w-full resize-y pt-10 pl-8"
           .value=${value}
         ></textarea>
         <span
-          class="pointer-events-none absolute bottom-10 right-10 flex items-end justify-end"
+          class="pointer-events-none absolute right-10 bottom-10 flex items-end justify-end"
           aria-hidden="true"
         >
           ${mehrTextCorner()}

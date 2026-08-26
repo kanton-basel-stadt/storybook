@@ -163,44 +163,45 @@ export const Button = (
                           href="${url}"
                           style="display:inline-block;background:#F8F8F8;color:#1E4557;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;font-weight:700;line-height:32px;margin:0;text-decoration:none;text-transform:none;padding:4px 20px 4px 20px;mso-padding-alt:0px;border-radius:21px;"
                           target="_blank"
-                          ><!--<!
-                          [endif]--><!--[--><!--[-->
+                          ><!--<![endif]--><!--[--><!--[-->
                           <table>
                             <tbody>
                               <tr>
-                                ${iconPath && iconPath.length > 0
-                                  ? html`
-                                      <td
-                                        valign="middle"
-                                        style="padding-right:8px;"
-                                      >
-                                        <!--[-->
-                                        <table
-                                          border="0"
-                                          cellpadding="0"
-                                          cellspacing="0"
-                                          role="presentation"
-                                          style="border-collapse:collapse;border-spacing:0px;"
-                                          data-mjml-tag="mj-image"
+                                ${
+                                  iconPath && iconPath.length > 0
+                                    ? html`
+                                        <td
+                                          valign="middle"
+                                          style="padding-right:8px;"
                                         >
-                                          <tbody>
-                                            <tr>
-                                              <td style="width:20px;">
-                                                <img
-                                                  height="20"
-                                                  src="${iconPath}"
-                                                  style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;"
-                                                  width="20"
-                                                  alt="Icon"
-                                                />
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                        <!--]-->
-                                      </td>
-                                    `
-                                  : ''}
+                                          <!--[-->
+                                          <table
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            role="presentation"
+                                            style="border-collapse:collapse;border-spacing:0px;"
+                                            data-mjml-tag="mj-image"
+                                          >
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:20px;">
+                                                  <img
+                                                    height="20"
+                                                    src="${iconPath}"
+                                                    style="border:0;display:block;outline:none;text-decoration:none;height:20px;width:100%;font-size:13px;"
+                                                    width="20"
+                                                    alt="Icon"
+                                                  />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--]-->
+                                        </td>
+                                      `
+                                    : ''
+                                }
                                 <td valign="middle">${label}</td>
                               </tr>
                             </tbody>

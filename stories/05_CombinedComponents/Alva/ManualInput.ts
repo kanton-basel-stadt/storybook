@@ -99,7 +99,7 @@ export const ManualInput = (showConsentBox: boolean) => {
                     type="search"
                     autocomplete="off"
                     name="searchterm"
-                    class="search-input relative h-[48px] w-full bg-white pl-20 pr-30 text-gray-900 placeholder:text-gray-700 focus:outline-none"
+                    class="search-input relative h-[48px] w-full bg-white pr-30 pl-20 text-gray-900 placeholder:text-gray-700 focus:outline-none"
                     spellcheck="false"
                     aria-label="Ihre Frage eingeben"
                     placeholder="Ihre Frage"

@@ -4,7 +4,7 @@ export const BoxSection = (boxes: { title: string; content: string }[]) => {
   return html`
     <div class="bg-gray-20 py-25 lg:py-30 xl:py-40">
       <div class="container">
-        <div class="grid grid-cols-1 gap md:grid-cols-2">
+        <div class="gap grid grid-cols-1 md:grid-cols-2">
           ${boxes.map(
             (box) => html`
               <div class="rounded-large bg-white p-10 md:p-15 lg:p-20">

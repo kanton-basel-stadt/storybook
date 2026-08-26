@@ -7,10 +7,10 @@ export const SearchResponse = (
 ) => {
   if (showConsentBox) {
     return html`
-      <section class="container relative mb-25 mt-30 scroll-m-10">
+      <section class="container relative mt-30 mb-25 scroll-m-10">
         <h2 class="mb-10 text-lg font-bold">KI-Assistent Alva</h2>
         <div
-          class="flex h-[390px] flex-col rounded-large border border-gray-100 bg-green-50 px-10 pb-25 pt-10 sm:h-[250px] sm:h-[280px] lg:px-15 lg:pb-10"
+          class="flex h-[390px] flex-col rounded-large border border-gray-100 bg-green-50 px-10 pt-10 pb-25 sm:h-[250px] sm:h-[280px] lg:px-15 lg:pb-10"
         >
           <div class="flex h-full flex-col rounded-[20px]">
             <div class="ck-content mb-40 flex-1 !text-base [&>p]:text-left">
@@ -73,10 +73,10 @@ export const SearchResponse = (
   }
 
   return html`
-    <section class="container relative mb-25 mt-30 scroll-m-10">
+    <section class="container relative mt-30 mb-25 scroll-m-10">
       <h2 class="mb-10 text-lg font-bold">KI-Assistent Alva</h2>
       <div
-        class="flex h-[390px] flex-col rounded-large border border-gray-100 bg-green-50 px-10 pb-25 pt-10 sm:h-[280px] lg:px-15 lg:pb-10"
+        class="flex h-[390px] flex-col rounded-large border border-gray-100 bg-green-50 px-10 pt-10 pb-25 sm:h-[280px] lg:px-15 lg:pb-10"
       >
         <div
           class="relative flex-1 overflow-y-hidden after:pointer-events-none after:absolute after:inset-0 after:bg-[linear-gradient(to_bottom,transparent_0%,transparent_120px,rgb(var(--color-primary-50)))] after:content-['']"

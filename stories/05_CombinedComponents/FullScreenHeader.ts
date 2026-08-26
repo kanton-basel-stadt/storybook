@@ -42,7 +42,7 @@ export const FullScreenHeader = (
         </picture>
       </figure>
       <div
-        class="pointer-events-none absolute left-0 top-0 z-10 size-full bg-body will-change-[opacity]"
+        class="pointer-events-none absolute top-0 left-0 z-10 size-full bg-body will-change-[opacity]"
         style="opacity: 0;"
       ></div>
       <div
@@ -57,7 +57,7 @@ export const FullScreenHeader = (
             </h1>
             <div>
               <p
-                class="mt-30 hyphens-auto text-lg font-bold md:text-xl lg:hyphens-none xl:text-2xl"
+                class="mt-30 text-lg font-bold hyphens-auto md:text-xl lg:hyphens-none xl:text-2xl"
               >
                 ${lead}
               </p>
